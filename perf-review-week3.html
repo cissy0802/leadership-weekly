@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>领导力 Week 3：性能评估的工艺</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.english{background:#eef0e8;padding:14px 18px;border-radius:4px;font-size:0.94rem;color:#3a4a20;border-left:3px solid #5c7a3a}
+.english .label{font-weight:700;color:#4a6a28;font-size:0.82rem;letter-spacing:2px;margin-bottom:8px;display:block}
+.english em{color:#5c8a3a;font-weight:600;font-style:normal}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.template{background:#f5efe0;padding:16px 18px;border-radius:4px;border:1px dashed #c4a878;font-family:"Courier New",monospace;font-size:0.88rem;color:#3a2f1c;white-space:pre-wrap;line-height:1.6;margin-top:10px}
+.template .label-inline{color:#a8702d;font-weight:700}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+<div class="container">
+
+<header>
+<div class="week-tag">Week 03 · 2026.06.03</div>
+<h1>性能评估的工艺：把一年压成两页，把两页压成一场对话</h1>
+<div class="meta"><span>主题：Performance Review</span><span>·</span><span>4 个原则</span></div>
+<div class="subtitle">"Your output as a manager is the output of your organization plus the output of the neighboring organizations under your influence." — Andrew Grove</div>
+</header>
+
+<div class="intro">
+<strong>本周的命题：</strong>性能评估是管理者一年里"被记住最久"的两小时。下属十年后忘了你给他派过的项目，但他记得你那次评他 Meets 时是不是看着他眼睛说出来的、记得"为什么不是 Exceeds"那段你的回答是不是绕开了问题。多数管理者把这件事做坏在四个地方：(1) 写得像述职报告而不是评判，(2) 进校准会才发现自己的故事撑不住，(3) 不知道自己的评分里塞了多少 bias，(4) 在"为什么不是更高"那个问题上转身就跑。这一周拆这四件事——从 Andy Grove 的 task-relevant maturity，到 Lattice/Google 的校准实践，到 Edmondson 的心理安全感如何被一次烂 review 一夜摧毁。读完你应该能立刻打开你下属的 review doc，开始重写。
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>Perf Review 的解剖学：评判 ≠ 总结
+<span class="en">The Anatomy of a Performance Review</span></h2>
+<span class="tag">Andy Grove</span><span class="tag">Camille Fournier</span><span class="tag">写作结构</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">Perf review 不是"他这半年做了什么"的清单——那是他的 brag doc。你的工作是回答一个问题：相对于他这个 level 的标准，他在哪些维度上 above/at/below？然后给出证据。先评判，再举证，最后给方向。顺序反了就成了状态会。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"The single most important thing a manager can do is to create the conditions for performance. Performance reviews are the place where you tell the truth about whether those conditions produced results — not a place to be diplomatic."</span>
+<span class="zh">管理者能做的最重要的一件事，是创造让下属能 perform 的环境。而 perf review 是你说真话评估那个环境有没有产出的地方——不是外交辞令的地方。</span>
+<span class="source">— Andrew Grove, High Output Management</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">写作结构（推荐模板）</div>
+<div class="template">
+<span class="label-inline">[OVERALL]</span> 一段 3-4 句话的核心评判。Above / At / Below + 主要原因。
+不要把这段留到最后——这是整篇 review 的论点。
+
+<span class="label-inline">[IMPACT]</span> 这半年最重要的 3 件事。每件 1 段：
+   • 做了什么（一句）
+   • 为什么 matters（business / team 影响）
+   • 你（manager）观察到的他的角色（不是项目角色，是他的工艺）
+
+<span class="label-inline">[STRENGTHS]</span> 2-3 个他这个 level 上做得 above expectation 的维度。
+   每条带一个具体证据（"在 X 项目里，他 Y"），不要"a great team player"。
+
+<span class="label-inline">[GROWTH AREAS]</span> 2-3 个他需要 close gap 的维度。
+   每条带：现象（一个具体场景）+ 影响（为什么这是 gap）+ 下半年想看到的变化。
+   不写"沟通需要改善"。写"在 design review 里，他常常等到结论出来后才提出方向性反对，
+   导致团队回滚两次。下半年想看到他在 RFC 阶段就 surface 这类异议。"
+
+<span class="label-inline">[NEXT HALF]</span> 1-2 个明确的发展焦点，不是 5 个。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">同一个工程师，同一个半年，两种写法的 OVERALL 段：</div>
+<div class="dialog bad">
+<div class="speaker">差版本</div>
+<p>"X 这半年贡献很大，完成了 payments 重构、参与了 onboarding 项目、做了 3 次 tech talk。是团队的核心 senior。Continues to meet expectations of his level."</p>
+</div>
+<div class="dialog good">
+<div class="speaker">好版本</div>
+<p>"X 这半年的表现高于 Senior 的标准、但还没有稳定到 Staff。他独立交付了 payments 重构（一个本属于 Staff 范围的项目），这是 promo 信号；但在跨组对齐和帮助同级解锁这两个 Staff 维度上，证据还不足。下半年若能在 1-2 个跨组项目里担任 technical lead，promo case 就成立了。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">写之前的检查表</div>
+<ul class="checklist">
+<li>我能用一句话说出这篇 review 的论点吗？如果不能，我还没想清楚。</li>
+<li>每个 strength / growth area 都有一个具体场景吗？没有的删掉——那是印象不是评价。</li>
+<li>我用了"sometimes / often / tends to"这种含糊副词吗？换成具体次数或场景。</li>
+<li>下半年的发展焦点是他能控制的吗？还是依赖别人/项目机会？</li>
+<li>如果他读完之后只记得一件事，那件事是我想让他记住的吗？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>清单式写作。</strong>把 brag doc 复制进 review 模板。这是他写的，不是你的评判。</li>
+<li><strong>把"沟通"当万能 growth area。</strong>它什么都没说。具体到哪个场景、哪种沟通、对谁。</li>
+<li><strong>OVERALL 写在最后、写得最虚。</strong>读者看了三页 strength 才看到一句"meets expectations"——他会困惑：那为什么不是 exceeds？</li>
+<li><strong>用 "next steps" 偷换 "growth areas"。</strong>把缺点伪装成"机会"是 Ruinous Empathy 的书面版。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref">
+<strong>Andrew Grove · High Output Management</strong>（第 13 章 "Performance Appraisal: Manager as Judge and Jury"）——把 manager 显式定位为 judge，而不是教练。读这一章纠正"我要不要评判他"的犹豫。<br>
+<strong>Camille Fournier · The Manager's Path</strong>（"The Process of Writing Performance Reviews"）——给出非常实战的写作流程，包括如何收集 peer feedback、如何处理 360。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">English Insight</div>
+<div class="english">
+<span class="label">原文表达 · 写 review 时常用</span>
+<p>• <em>"X consistently operates above the Senior bar in Y, and is approaching the Staff bar in Z."</em> — 把评级 anchor 在 level rubric，不是 anchor 在"他做了多少事"。</p>
+<p>• <em>"The pattern I'd like to see shift next half is..."</em> — 比 "he needs to improve" 更精确、更指向行为。</p>
+<p>• <em>"This is a strong half, but not yet a promotion case, because..."</em> — 直说，不绕。</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>校准会的真相：你不是去汇报，你是去打仗
+<span class="en">Calibration: Why Your Story Must Survive the Room</span></h2>
+<span class="tag">Calibration</span><span class="tag">Lara Hogan</span><span class="tag">跨组公平</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">校准会的本质：把每个 manager 私下的"我的人都很棒"主观叙事，放到一个房间里 force-rank。你的下属拿不拿到他应得的评级，取决于你能不能在 90 秒内讲清楚他的故事、并扛住 5 个其他 manager 的质疑。准备校准 = 写 review 的 60% 工作。</div>
+</div>
+
+<div class="section">
+<div class="section-label">为什么要校准（一张图）</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="30" width="160" height="220" fill="#f5e0d0" stroke="#b85c3a" stroke-width="1.5" rx="4"/>
+<text x="100" y="55" text-anchor="middle" font-family="Georgia" font-size="13" font-weight="700" fill="#5c3a18">没有校准</text>
+<text x="100" y="85" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">Manager A 的 Exceeds</text>
+<text x="100" y="102" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">≠</text>
+<text x="100" y="119" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">Manager B 的 Exceeds</text>
+<text x="100" y="155" text-anchor="middle" font-family="Georgia" font-size="10" fill="#a04020">→ 升职取决于</text>
+<text x="100" y="170" text-anchor="middle" font-family="Georgia" font-size="10" fill="#a04020">  你的 manager 给分松紧</text>
+<text x="100" y="200" text-anchor="middle" font-family="Georgia" font-size="10" fill="#a04020">→ 弱势人群</text>
+<text x="100" y="215" text-anchor="middle" font-family="Georgia" font-size="10" fill="#a04020">  系统性被低估</text>
+<text x="100" y="240" text-anchor="middle" font-family="Georgia" font-size="10" fill="#a04020">→ 团队丧失信任</text>
+<text x="280" y="145" text-anchor="middle" font-family="Georgia" font-size="20" fill="#a8702d">→</text>
+<rect x="380" y="30" width="160" height="220" fill="#e6efdc" stroke="#5c8a3a" stroke-width="1.5" rx="4"/>
+<text x="460" y="55" text-anchor="middle" font-family="Georgia" font-size="13" font-weight="700" fill="#5c3a18">有校准</text>
+<text x="460" y="85" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">所有 Exceeds</text>
+<text x="460" y="102" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">放在同一张桌子上</text>
+<text x="460" y="119" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">同 level 相互比较</text>
+<text x="460" y="155" text-anchor="middle" font-family="Georgia" font-size="10" fill="#4a6a28">→ 跨组评分有共同尺</text>
+<text x="460" y="170" text-anchor="middle" font-family="Georgia" font-size="10" fill="#4a6a28">→ Manager 需要</text>
+<text x="460" y="185" text-anchor="middle" font-family="Georgia" font-size="10" fill="#4a6a28">  公开为评分辩护</text>
+<text x="460" y="215" text-anchor="middle" font-family="Georgia" font-size="10" fill="#4a6a28">→ Bias 被同侪看见</text>
+<text x="460" y="240" text-anchor="middle" font-family="Georgia" font-size="10" fill="#4a6a28">→ 可问责</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Calibration is where bias goes to die — but only if you walk in armed with specifics. 'She's just really strong' will get steamrolled by another manager who shows up with three concrete cross-team artifacts."</span>
+<span class="zh">校准会是 bias 该死的地方——但前提是你带着具体证据进去。"她真的很强"会被另一个带着三份跨组具体产出的 manager 直接碾过。</span>
+<span class="source">— Lara Hogan, Resilient Management</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：你为下属辩护的 90 秒</div>
+<div class="scene">
+<div class="setup">校准会上，主持人："下一位，X，你提的是 Exceeds。说一下。"你只有大约 90 秒。</div>
+<div class="dialog bad">
+<div class="speaker">差版本（会被房间打回）</div>
+<p>"X 这半年特别 solid。完成了所有 OKR，团队都很喜欢她。她是我组里最靠谱的 senior，我觉得她绝对到了 Exceeds。"</p>
+<p style="margin-top:8px;color:#7a2a1a;font-size:0.88rem;">→ 没有 anchor 到 level rubric、没有具体跨组证据、用了"团队喜欢"这种校准会无法验证的话。第二个 manager 一开口就能扳倒。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">好版本</div>
+<p>"X 提 Exceeds，基于 Senior rubric 的三条：(1) Scope—她独立 own 了 payments 重构，原本 scoped 给 Staff，下交付出来质量我让 Z（公认的 Staff）评过，他说 promo-ready；(2) Multiplier—她带的两个 mid 这半年都晋升了 Senior，她写的 onboarding doc 现在被另外两个组在用；(3) Cross-team—她在 infra/billing/growth 的 RFC 里都有 substantive 评论被采纳。我对照了房间里其他三个 Exceeds 的人，她至少在 Multiplier 这条上更强。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">校准前一周的检查表</div>
+<ul class="checklist">
+<li>我能用 60-90 秒、不看稿、讲完这个人的故事吗？如果不能，我没准备好。</li>
+<li>我有没有读过 level rubric？我能不能逐条对应？(Scope / Impact / Multiplier / Cross-team)</li>
+<li>我能不能举出 1 个跨组的人作为 anchor——"和 Y 同 level，她在 X 维度更强"？</li>
+<li>对每个我打 Exceeds 的人，我有没有"如果有人质疑，我先认这点 weakness，但..."的预案？</li>
+<li>对每个我打 Meets 的人，我准备好回答"为什么不是 Below"和"为什么不是 Exceeds"两面吗？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>把校准会当通报。</strong>校准会是一场谈判 + 集体仲裁。你不为他辩护，没有人会替你辩护。</li>
+<li><strong>过度提名 Exceeds。</strong>每人都 Exceeds = 你失去信用，下次校准你的所有评分都会被打折看。Grove 说："Performance ratings are signals — inflated signals are noise."</li>
+<li><strong>只为"明星"准备，对 Meets 的人裸跑。</strong>Meets 的人在校准会上常常是被往下推到 Below 的。你需要为他守住。</li>
+<li><strong>不知道 calibration 完后哪些评分被改。</strong>会后第一件事：拿到最终评级表，对你下属做差异分析——哪些被往上推、哪些被往下推、原因是什么。这是下次校准你的弹药。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref">
+<strong>Lara Hogan · Resilient Management</strong>——给出 manager 在校准会上为下属辩护的具体话术框架。<br>
+<strong>Will Larson · An Elegant Puzzle</strong>（"Productivity in the age of hypergrowth" 一节附近）——讨论校准如何防止评分 inflation，以及 manager 信用的累积。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">English Insight</div>
+<div class="english">
+<span class="label">校准会原文表达</span>
+<p>• <em>"I'd like to anchor her against Y, who's a calibrated Exceeds — on multiplier she's stronger; on scope they're equivalent."</em></p>
+<p>• <em>"I hear the concern. Let me concede X, but the case still holds on Y and Z."</em> — 让步小点，守住核心。</p>
+<p>• <em>"This is a Meets, not a Below — and here's why the room shouldn't push it down."</em> — 主动防御。</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>公平性：你的评分里塞了多少你没看见的 Bias
+<span class="en">Fairness: The Biases You're Smuggling In</span></h2>
+<span class="tag">DEI</span><span class="tag">Bias 缓解</span><span class="tag">证据基线</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">"公平"不是一种愿望，是一种工艺。研究反复证明：女性、少数族裔、内向者、远程员工、不爱自我推销的人，在 perf review 里被系统性低估——不是因为 manager 是坏人，是因为大脑用"印象"代替"证据"。公平的 review 靠流程压制 bias，不靠你的善意。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"In performance reviews, women are 1.4 times more likely than men to receive critical subjective feedback. Men are more likely to receive feedback tied to specific business outcomes — feedback they can act on."</span>
+<span class="zh">在性能评估里，女性比男性多 1.4 倍可能拿到主观批评（"too aggressive", "abrasive"），而男性更可能拿到挂钩具体业务结果的反馈——那种他们能据此行动的反馈。</span>
+<span class="source">— Stanford VMware Women's Leadership Lab, 2014 (Snyder)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">最常见的 5 种 Bias（与对应解药）</div>
+<div class="template">
+<span class="label-inline">1. RECENCY BIAS</span> 你只记得过去 6 周的事。
+   解药：写 review 前翻完整本 1:1 doc + 项目里程碑。Camille Fournier 建议
+        "整个评估周期内每月写 3 行 running notes"。
+
+<span class="label-inline">2. HALO / HORNS</span> 一个突出印象覆盖所有维度。
+   解药：每个维度单独评、单独举证。不要"她整体很强 → 每项都 Exceeds"。
+
+<span class="label-inline">3. SIMILARITY BIAS</span> 和你相像的人显得"更 senior"。
+   解药：问自己——如果这个人换成另一种沟通风格 / 性别 / 背景，
+        我对同样的产出会给同样评级吗？
+
+<span class="label-inline">4. ATTRIBUTION BIAS</span> 男性的失败 = 环境；女性的失败 = 能力。
+        男性的成功 = 能力；女性的成功 = 运气 / 团队。
+   解药：写 review 时把姓名遮住读一遍。如果性别一换你想改评语，那评语就是 biased 的。
+
+<span class="label-inline">5. SELF-PROMOTION BIAS</span> 爱写 brag doc 的人显得贡献更大。
+   解药：你的工作是看见沉默的人。
+        "他没主动提的影响"是 manager 的功课，不是他的失职。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：审稿你自己的 review</div>
+<div class="scene">
+<div class="setup">你给 X（女性 senior）写完了 review，准备提交。在点 submit 之前——</div>
+<div class="dialog bad">
+<div class="speaker">原句（你写的）</div>
+<p>"X is sometimes too assertive in design discussions, which can make junior engineers hesitant to push back."</p>
+</div>
+<div class="dialog good">
+<div class="speaker">改写后（去除性别化叙事）</div>
+<p>"In 3 design reviews this half (Q1 payments, Q2 onboarding redesign, Q2 search migration), X arrived with a strong proposed solution. In 2 of those, junior engineers told me afterward they had alternative ideas they didn't raise. Next half, I'd like to see X open these reviews with the problem framing only, and invite proposals before sharing her own."</p>
+<p style="margin-top:8px;color:#4a6a28;font-size:0.88rem;">→ 同样的行为观察，但 (1) 有具体次数和场景，(2) 评语指向行为不指向"性格"，(3) 给出可执行的下半年方向。原句里的 "too assertive" 是 Snyder 研究里典型的女性化语言。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">提交前的 Bias 检查表</div>
+<ul class="checklist">
+<li>这篇 review 里所有形容词，我能换成"具体场景 + 具体行为"吗？</li>
+<li>如果把 X 的名字换成男同事的名字，我会改任何一句话吗？如果会，为什么？</li>
+<li>"sometimes / often / can be"这种主观频率词——我有具体次数支撑吗？</li>
+<li>我有没有把"她不爱自我推销"误判成"她影响力不够"？</li>
+<li>批评维度是否都挂在 business outcome 上，而不是 personality 上？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">女性视角提示</div>
+<div class="female">
+<span class="female-label">Female Lens · 双向警觉</span>
+<p>作为女性 leader，你在 perf review 里要两面警觉：</p>
+<p><strong>(1) 对你写的 review：</strong>研究显示女性 manager 给女性下属的评分有时反而更严苛——这叫 "Queen Bee" 现象，但更准确的解释是你下意识用更高的标准要求"和你像的人"。每次给女性下属写完，问自己："如果他是男性，我会用同样的措辞吗？"</p>
+<p><strong>(2) 对你拿到的 review：</strong>如果你的 review 出现 "abrasive / too direct / intimidating / needs to be more collaborative" 这类词，要求 manager 给出具体业务影响。Sandberg 在《Lean In》里讲她在 Google 第一次拿到这类反馈时，没接受 "这是建议"，而是问："Can you tell me which decisions would have been better if I'd been less direct?" 那个对话改变了之后她拿反馈的方式——也改变了反馈本身的质量。</p>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref">
+<strong>Kieran Snyder · "The abrasiveness trap" (Fortune, 2014)</strong>——研究 248 份 perf review 的语言性别差异，是这个领域被引用最多的文章。<br>
+<strong>Lara Hogan · "Questions for our first 1:1"</strong> 之外的博客 "Writing performance reviews" 系列——实操的 bias-check 清单。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">English Insight</div>
+<div class="english">
+<span class="label">替换语言库</span>
+<p>• 不要写 <em>"abrasive"</em> → 写 <em>"In meeting X, she interrupted Y twice; this is the pattern I'd like to shift."</em></p>
+<p>• 不要写 <em>"not a team player"</em> → 写 <em>"declined to take on 2 cross-team requests that the team needed."</em></p>
+<p>• 不要写 <em>"too quiet"</em> → 写 <em>"in our design reviews, his strongest ideas surface in 1:1 afterwards rather than in the room — I'd like to help him bring them into the room."</em></p>
+</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>"为什么不是 Exceeds"：那场你最想跳过的对话
+<span class="en">The "Why Not Exceeds" Conversation</span></h2>
+<span class="tag">难对话</span><span class="tag">Meets ≠ 失败</span><span class="tag">Kim Scott</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">绝大部分人是 Meets。绝大部分人会问"为什么不是 Exceeds"。你的回答如果是"你做得很好，只是今年比例有限制"，你已经骗了他、毁了他对系统的信任、并把他推向 next half 的脱发懈怠。诚实的回答是：Meets 不是失败，但 Exceeds 有具体门槛——告诉他那道门槛是什么、他差在哪。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"When you withhold honest feedback to be 'kind,' you're actually being unkind — you're robbing the person of the information they need to grow. The kindest thing is to tell them exactly what would have made the difference."</span>
+<span class="zh">当你为了"善良"而藏起诚实的反馈时，你其实在不善良——你剥夺了他成长所需的信息。最善良的事，是准确告诉他：什么会让结果不一样。</span>
+<span class="source">— Kim Scott, Radical Candor</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：那段 60 秒对话</div>
+<div class="scene">
+<div class="setup">下属 X，被你评 Meets。Review 对话进行到 30 分钟，他问："我能问一下为什么不是 Exceeds 吗？我觉得这半年我做了挺多事。"</div>
+<div class="dialog bad">
+<div class="speaker">坑 1：甩锅给系统</div>
+<p>"嗯…其实你做得很好，是公司今年 Exceeds 比例 cap 在 15%，校准会上确实激烈。你这次很接近，下次应该可以。"</p>
+<p style="margin-top:8px;color:#7a2a1a;font-size:0.88rem;">→ 把责任推给"系统"。他会得出结论："不是我的问题，是运气问题。"下半年他不会改任何东西。</p>
+</div>
+<div class="dialog bad">
+<div class="speaker">坑 2：含糊鼓励</div>
+<p>"你 Senior 的位置上做得很 solid。再多一点 visibility、再多一点 ownership，就到了。继续保持！"</p>
+<p style="margin-top:8px;color:#7a2a1a;font-size:0.88rem;">→ "Visibility / ownership"是空话。他不知道下半年具体做什么，只知道你给的评语很温柔。Ruinous Empathy 的教科书版。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">好版本：先承认、再拆门槛</div>
+<p>"这是好问题。先说：Meets 不是我对你这半年不满意——你确实交付了 payments 重构和 onboarding 的两个核心模块，质量稳。<br><br>
+Exceeds 在我们这个 level 的门槛具体是两条：(1) Scope expansion——独立 own 一个原本属于 Staff 范围的 ambiguous 问题；(2) Multiplier——可量化地让团队里别人的产出更高。第一条这半年你做到了一半，payments 重构原本是 staff-sized，但 scoping 阶段是 Y 做的、你是接手执行。第二条我看到信号但还不稳——你 mentor 了 Z，但你的 design doc 没有被组外采用，没有产生 leverage。<br><br>
+所以这不是"差一点点"，是有两个具体动作没做满。下半年如果你能在 search 那个 ambiguous 项目里从 problem framing 开始 own，并且把你的 caching pattern 写出来推到 platform 组采用，那 Exceeds 的案子就成立了。我会把这两件事写进你的 next half 焦点。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">这场对话之前的检查表</div>
+<ul class="checklist">
+<li>我能用 1 句话说出"他差在哪"吗？不是"差不多了"——具体差在哪个维度。</li>
+<li>那个 gap 是他下半年可控的吗？（如果不可控，他没法行动，对话无意义）</li>
+<li>如果他不问，我会主动说吗？(不会说 = 你心里其实知道答案站不住)</li>
+<li>我准备好接受他可能哭、可能不满、可能 push back 吗？</li>
+<li>我有没有提前想过——如果他说"那 Y 凭什么 Exceeds"，我怎么答（不能聊别人的评分，但可以聊 rubric）？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>把评级当成"奖品"。</strong>Meets 不是"安慰奖"。在健康的系统里它是绝大多数高 perform 的人的评级。如果你的语气把 Meets 说得像失败，你是在为评级 inflation 加柴。</li>
+<li><strong>评级讨论时间过短。</strong>很多 manager 在 1 小时 review 里花 5 分钟讲评级。结果下属带着困惑离场。规则：评级理由 + 下半年方向应该占至少 25 分钟。</li>
+<li><strong>不重复主要论点。</strong>对话结束时，复述一次："今天我想让你记住的三件事是 X / Y / Z。"否则一周后他只记得情绪、不记得内容。</li>
+<li><strong>review 之后没有 written follow-up。</strong>口头对话 + 24 小时内一封 2 段总结邮件 = "他记得"的概率提高 5 倍。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">女性视角提示</div>
+<div class="female">
+<span class="female-label">Female Lens · 拿到 Meets 时</span>
+<p>作为女性 leader，如果你自己拿到 Meets 而期待是 Exceeds，研究显示你比男同事更可能：(a) 立刻接受、不质疑、回去自责"我应该更努力"；(b) 把"为什么不是 Exceeds"的问题憋住不问，觉得问出来"显得 ungrateful"；(c) 默默 burn out 而不是去要资源/scope。</p>
+<p>正确的姿势是 Sandberg 那一招："Can you walk me through what would have made this an Exceeds — specifically, which scope or which artifact?" 这不是 ungrateful，这是 professional。你不问，下半年你拿到的还是同样模糊的反馈、同样的 Meets，循环到第三年你以为是自己天花板。</p>
+<p>反过来，作为给女性下属 Meets 的 manager：要主动开"为什么不是 Exceeds"那个口子。不要等她问——很多人不会问。</p>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref">
+<strong>Kim Scott · Radical Candor</strong>（"Get Stuff Done Wheel" 章节）——为什么"含糊鼓励"是最不善良的版本。<br>
+<strong>Ben Horowitz · The Hard Thing About Hard Things</strong>（"Lead Bullets" 一章附近的反馈哲学）——Horowitz 认为 vague positive feedback 是 manager 给自己舒服、给下属伤害的典型例子。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">English Insight</div>
+<div class="english">
+<span class="label">这场对话里有用的句式</span>
+<p>• <em>"Meets is not a consolation prize — let me first say what made this a strong half."</em> — 开场，定调。</p>
+<p>• <em>"The two specific things that would have made this Exceeds are..."</em> — 切到核心，不绕。</p>
+<p>• <em>"This is concretely actionable. Let's put it in your next-half focus."</em> — 收尾，转向未来。</p>
+<p>• 避免 <em>"You were close" / "Next time" / "It was competitive"</em> — 这三句话是 perf review 里的废话三连。</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>本周习作 · Your Week 3 Action</h3>
+<p>本周如果你正在写或刚写完 perf review——做这件事，再 submit：</p>
+<div class="action">
+<strong>(1) 挑你下一个要 submit 的 review</strong>，把 OVERALL 段拿出来重写：能否用一句话说出你对这个人的论点（above / at / below + 主因）？不能 → 还没想清楚，先停。<br><br>
+<strong>(2) 性别名字遮蔽测试</strong>：把姓名/性别代词全替换成另一个性别，自己读一遍。如果你想改任何一句话——那一句话原本就是 biased 的，改了再 submit。<br><br>
+<strong>(3) 提前演练"为什么不是 Exceeds"</strong>：对每一个你打 Meets 的下属，写下你 60 秒的回答（具体门槛 + 具体差在哪 + 下半年的可执行动作）。如果你写不出，意味着你给他的 Meets 评级本身缺乏论证——回去补。<br><br>
+<strong>(4) 校准前一天</strong>：把你提的每个 Exceeds / Below 用 90 秒大声讲一遍，对着镜子或录音。能讲就能扛；讲不下来，那个评级在房间里也守不住。<br><br>
+诚实地说：这一周你不会有时间做完所有 review 的所有动作。但即便只对最重要的 1-2 个下属做这个流程，他们半年内对你的信任会改变——他们会发现你是"那种认真评判我的 manager"，而不是"那种把 review 当流程的 manager"。
+</div>
+</div>
+
+<nav class="footer-nav">
+<a href="index.html">← 返回目录</a>
+</nav>
+
+<footer>BigCat · Leadership Weekly · Week 03 · 2026.06.03</footer>
+</div>
+
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+<script src="https://cissy0802.github.io/index-button.js" defer></script>
+</body>
+</html>
