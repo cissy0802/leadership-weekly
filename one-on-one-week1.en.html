@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Week 1: Designing the 1:1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.english{background:#eef0e8;padding:14px 18px;border-radius:4px;font-size:0.94rem;color:#3a4a20;border-left:3px solid #5c7a3a}
+.english .label{font-weight:700;color:#4a6a28;font-size:0.82rem;letter-spacing:2px;margin-bottom:8px;display:block}
+.english em{color:#5c8a3a;font-weight:600;font-style:normal}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Week 01 · 2026.05.22</div>
+<h1>Designing the 1:1: Turning 30 Minutes Into Leverage</h1>
+<div class="meta"><span>Topic: One-on-One Meetings</span><span>·</span><span>4 Principles</span></div>
+<div class="subtitle">"As a manager, the single most important thing you do is hold one-on-ones." — Andy Grove</div>
+</header>
+
+<div class="intro">
+<strong>This week's premise:</strong> A 1:1 is not a status update, not a project check-in, and not a polite "how are things." It is the highest-leverage 30 minutes you'll spend on this person this week. Andy Grove did the math in <em>High Output Management</em>: a well-prepared 1:1 can lift the quality of your report's work for two weeks afterward. The question isn't whether to hold them — it's how to hold them so you're not wasting two people's time. The four principles this week cover: the physical design of cadence and agenda, the trust-building 1:1 for the first 90 days, the questions that get past "I'm fine," and how to spot and repair a 1:1 that has decayed into a status meeting.
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>The Physical Design of 30 Minutes: They Own the Agenda
+<span class="en">Their Agenda, Your Calendar</span></h2>
+<span class="tag">Cadence</span><span class="tag">Agenda</span><span class="tag">Ownership</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-line principle</div>
+<div class="principle">The 1:1 is your report's meeting, not yours. Weekly, 30 minutes, agenda written by them, fixed location, never canceled (and if it must move, move it in advance — not the day of).</div>
+</div>
+
+<div class="section">
+<div class="section-label">In the author's own words</div>
+<div class="quote">
+<span class="en">"The one-on-one is, in fact, the subordinate's meeting, with its agenda and tone set by him. The supervisor's role is one of consultant—and of asking questions."</span>
+<span class="source">— Andy Grove, <em>High Output Management</em>, Ch. 4</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Setup: You have a 1:1 with a senior engineer Monday. You open your calendar and there's no agenda doc.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The default move</div>
+<p>Ten minutes before, you scribble three talking points: last week's sprint progress, the upcoming feature ship, this month's OKR check-in. The meeting becomes you pushing the agenda and them answering passively. At the end they say "yeah, good" — and you have no idea what they're actually thinking.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The repair</div>
+<p><strong>Build the mechanism:</strong> Share a Google Doc / Notion page titled "BigCat &lt;&gt; XX 1:1." Before each meeting they write 3–5 bullets at the top: whatever they want to talk about. You add one or two of yours underneath. The meeting follows their list; you only get the last 5–10 minutes for yours.</p>
+<p><strong>When you launch the practice, say it plainly:</strong> "This meeting is yours. I want you to drop three things in the doc 24 hours before we meet — anything: blockers, people stuff, career, feedback for me, questions about the company. If the doc is empty, I'll cancel the meeting."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Prep checklist (5 minutes before)</div>
+<ul class="checklist">
+<li>Did they write their agenda? If it's empty, did I nudge them?</li>
+<li>Did I follow up on action items from last week? (They may not raise it, but they're watching whether you did.)</li>
+<li>What observation about them — good or bad — do I have to deliver face-to-face this week?</li>
+<li>What open-ended question am I going to ask? (Not a yes/no question.)</li>
+<li>What's my own emotional state right now? Distracted or rushed will tank this meeting.</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common pitfalls</div>
+<div class="pitfall">
+<ul>
+<li><strong>Canceling first when you're busy.</strong> The 1:1 is the first thing to go. Your report remembers every cancellation.</li>
+<li><strong>Using 1:1 as a project review.</strong> Status belongs in Slack, standup, and Jira. This time is too expensive for that.</li>
+<li><strong>Talking for 30 minutes without writing anything down.</strong> Three weeks later you forget what you promised. They don't.</li>
+<li><strong>Reducing frequency as people get more senior.</strong> Wrong. Senior people need different topics (strategy, career) — not fewer meetings.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Andy Grove, <em>High Output Management</em></strong> (Ch. 4 "Meetings — The Medium of Managerial Work") — the founding articulation of "the agenda belongs to the report."<br><strong>Julie Zhuo, <em>The Making of a Manager</em></strong> (Ch. 4) — modern, operational template for "they own the meeting."</div>
+</div>
+
+<div class="section">
+<div class="section-label">Language to steal</div>
+<div class="english">
+<span class="label">Phrases worth keeping verbatim</span>
+<p>"Your direct report <em>owns the agenda</em>." — Not "controls." <em>Owns.</em> Ownership language.</p>
+<p>"This is <em>your time</em>, not a status check." — Say this, word for word, in the first 1:1.</p>
+<p>"What's <em>on your mind</em>?" — The plainest opener, and the best. Beats "How are things?" every time.</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>The 90-Day Trust 1:1: The Window for Psychological Safety
+<span class="en">Onboarding 1:1s — The 90-Day Trust Window</span></h2>
+<span class="tag">Onboarding</span><span class="tag">Trust building</span><span class="tag">First 90 days</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-line principle</div>
+<div class="principle">The 1:1s in a new hire's first 90 days are not about projects. They are about establishing a contract: "telling the truth here will not be punished." Once that window closes, reopening it costs ten times as much.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In the author's own words</div>
+<div class="quote">
+<span class="en">"Psychological safety is a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns, or mistakes."</span>
+<span class="source">— Amy Edmondson, <em>The Fearless Organization</em></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">90-day 1:1 agenda template</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#a8702d"/><stop offset="1" stop-color="#5c3a18"/></linearGradient>
+</defs>
+<rect x="20" y="30" width="200" height="220" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="240" y="30" width="200" height="220" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="460" y="30" width="220" height="220" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<text x="120" y="60" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">Day 1–30 · Listen</text>
+<text x="120" y="82" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b">Build the baseline</text>
+<text x="35" y="115" font-family="Georgia" font-size="12" fill="#3a2f1c">· Best manager you've had —</text>
+<text x="35" y="135" font-family="Georgia" font-size="12" fill="#3a2f1c">  what did they do right?</text>
+<text x="35" y="160" font-family="Georgia" font-size="12" fill="#3a2f1c">· Worst — what to avoid?</text>
+<text x="35" y="185" font-family="Georgia" font-size="12" fill="#3a2f1c">· How do you take in info?</text>
+<text x="35" y="210" font-family="Georgia" font-size="12" fill="#3a2f1c">· How do you like recognition?</text>
+<text x="35" y="235" font-family="Georgia" font-size="12" fill="#3a2f1c">· Red flags vs green lights</text>
+
+<text x="340" y="60" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">Day 30–60 · Calibrate</text>
+<text x="340" y="82" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b">Align expectations</text>
+<text x="255" y="115" font-family="Georgia" font-size="12" fill="#3a2f1c">· 30-day retro:</text>
+<text x="255" y="135" font-family="Georgia" font-size="12" fill="#3a2f1c">  reality vs expectation</text>
+<text x="255" y="160" font-family="Georgia" font-size="12" fill="#3a2f1c">· Where are you stuck?</text>
+<text x="255" y="185" font-family="Georgia" font-size="12" fill="#3a2f1c">· What has surprised you</text>
+<text x="255" y="205" font-family="Georgia" font-size="12" fill="#3a2f1c">  about me / the team?</text>
+<text x="255" y="235" font-family="Georgia" font-size="12" fill="#3a2f1c">· Set 60-day goals</text>
+
+<text x="570" y="60" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">Day 60–90 · Feedback</text>
+<text x="570" y="82" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b">First real exchange</text>
+<text x="475" y="115" font-family="Georgia" font-size="12" fill="#3a2f1c">· I give you specific feedback</text>
+<text x="475" y="140" font-family="Georgia" font-size="12" fill="#3a2f1c">· You give me specific feedback</text>
+<text x="475" y="165" font-family="Georgia" font-size="12" fill="#3a2f1c">· 90-day retro:</text>
+<text x="475" y="185" font-family="Georgia" font-size="12" fill="#3a2f1c">  what worked / to improve</text>
+<text x="475" y="210" font-family="Georgia" font-size="12" fill="#3a2f1c">· Long-term direction</text>
+<text x="475" y="235" font-family="Georgia" font-size="12" fill="#3a2f1c">· Formal conversion decision</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Setup: A newly hired senior PM, Day 7, their first 1:1 with you.</div>
+<div class="dialog good">
+<div class="speaker">✓ Lara Hogan "New Manager Assimilation" style</div>
+<p>"For the next six weeks I'm going to use the same set of questions in our 1:1s. The goal is for me to learn, fast, how to work well with you. First one: <strong>think of the best manager you've ever had — what did they do right?</strong>"</p>
+<p>(After the answer:) "Now the worst. I don't need names. I want to know what behaviors you'd rather not see again."</p>
+<p>"<strong>How do you want me to recognize your work?</strong> Public shout-out? Quiet Slack message? Email cc'ing my manager?"</p>
+<p>"<strong>What would make you feel I've let you down?</strong> You don't have to answer today — next week is fine."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The five user-manual questions for the first 30 days</div>
+<ul class="checklist">
+<li>What did the best manager you ever had do right? The worst, do wrong? (Behaviors, not people.)</li>
+<li>How do you prefer to receive feedback? Right away vs. written first then discussed? Verbal vs. Slack?</li>
+<li>How do you absorb information? Sync meetings vs. async docs? Long-form vs. bullets?</li>
+<li>What would feel like unfair treatment to you? What are your hard lines?</li>
+<li>Outside of work, what rhythms should I know about? (School pickup, chronic illness, religious holidays.)</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common pitfalls</div>
+<div class="pitfall">
+<ul>
+<li><strong>Talking about projects in the very first 1:1.</strong> Projects can be discussed anytime. The contract-building window happens once.</li>
+<li><strong>Rushing to "prove you're a good boss."</strong> What you say doesn't matter — they watch what you do. Promise less, deliver on time.</li>
+<li><strong>Asking the user-manual questions but not writing the answers down.</strong> They say "I like async feedback," and three weeks later you critique them in standup. Window broken.</li>
+<li><strong>Skipping the Day-60 "what surprised you" question.</strong> That's the last time they'll feel safe to surface friction.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Women's perspective</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Research consistently shows that during onboarding, reports — especially male reports — are more likely to interpret a woman manager's "gentle questioning" as "she hasn't made up her mind yet." Counter-move: open the first 1:1 with explicit ownership language — "I'm your manager. I'll ask a lot of questions, but the decisions land with me" — and <em>then</em> move into the user-manual section. That sentence isn't bravado; it sets the frame that lets the open questions land as curiosity, not indecision.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Lara Hogan, <em>Resilient Management</em></strong> — the "User Manual" and "New Manager Assimilation" chapters.<br><strong>Michael Watkins, <em>The First 90 Days</em></strong> — written for the person being onboarded, but read in reverse it's a map for onboarding others.</div>
+</div>
+
+<div class="section">
+<div class="section-label">Language to steal</div>
+<div class="english">
+<span class="label">Phrases worth keeping verbatim</span>
+<p>"Tell me about <em>your user manual</em> — how do you like to be managed?" — Lara Hogan made this metaphor famous.</p>
+<p>"What would make you feel I've <em>let you down</em>?" — "Let down" is more concrete than "disappoint."</p>
+<p>"I'm <em>here to learn how to work with you</em>, not the other way around." — A disarming opener.</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>Questions That Surface the Truth: From "I'm Fine" to "Actually…"
+<span class="en">Questions That Surface The Truth</span></h2>
+<span class="tag">Questions</span><span class="tag">Coaching</span><span class="tag">Psychological safety</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-line principle</div>
+<div class="principle">"How's it going?" is dead. Replace it with concrete, low-risk, directional questions — and then be prepared to sit in silence for eight seconds.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In the author's own words</div>
+<div class="quote">
+<span class="en">"To make Radical Candor work, you have to solicit it before you can dish it out. If they tell you they are 'fine,' you have to push harder."</span>
+<span class="source">— Kim Scott, <em>Radical Candor</em></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene: rebuild your question library</div>
+<div class="scene">
+<div class="setup">Setup: Every 1:1 your report says "yeah, things are fine, nothing special." You have no idea whether they actually are.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Dead questions (too much noise, too little signal)</div>
+<p>"How are things?" → "Good."<br>
+"Anything I should know?" → "Not really."<br>
+"Any blockers?" → "Nope, all good."<br>
+"How can I help?" → "I'm fine, thanks."</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Replace them (specific + time anchor + direction)</div>
+<p>· "What moment last week was the most <strong>frustrating</strong>?" (emotion + time anchor)<br>
+· "If you were me, what would you prioritize <strong>this week</strong> that I'm not doing?" (role swap)<br>
+· "Who have you worked with recently who <strong>drains your energy</strong>?" (specific behavior)<br>
+· "If you were leaving next week, what would you warn your replacement about?" (Kim Scott classic)<br>
+· "What's one thing I've done that <strong>you wanted to push back on but didn't</strong>?" (invite criticism)<br>
+· "Imagine this project fails six months from now — <strong>what's the most likely reason?</strong>" (pre-mortem)</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Silence is a tool — the 8-second rule</div>
+<div class="scene">
+<div class="setup">After a real question, <strong>count to eight</strong>. Most people will start to add something at the 4-second mark — but the real insight surfaces at second 5–8. If you rush to fill the silence, you only get the surface answer.</div>
+<div class="dialog good">
+<div class="speaker">✓ The physical move</div>
+<p>Use your coffee. Ask the question, pick up the cup, take a slow sip, set it down. Eight seconds have passed, and you still haven't spoken. They'll start to say the real thing.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Prep checklist: the "real question" for this 1:1</div>
+<ul class="checklist">
+<li>How many of my prepared questions are yes/no? Cut them.</li>
+<li>Is there at least one question with a time anchor ("last week," "this sprint")?</li>
+<li>Is there at least one question that invites criticism of me?</li>
+<li>How will I respond to the criticism? ("Thank you, I'll sit with that." Not immediate defense.)</li>
+<li>How many seconds of silence can I actually tolerate before I break?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common pitfalls</div>
+<div class="pitfall">
+<ul>
+<li><strong>Asking a question and answering it yourself.</strong> "How was last week? Sprint felt rough, right? I felt it too…" — you just stole their answer.</li>
+<li><strong>Treating "I'm fine" as a closing.</strong> It isn't. It's an invitation to push once more.</li>
+<li><strong>Asking for criticism, then defending.</strong> Once is all it takes — next time, they won't tell the truth.</li>
+<li><strong>Using the same question set for everyone.</strong> Senior people need strategy and career; new hires need onboarding signal.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Women's perspective</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+When a woman manager invites criticism ("What would you push back on?"), some male reports read it as weakness or as an invitation to challenge authority — the classic competence/likability double bind. One counter (a variant Sheryl Sandberg uses in <em>Lean In</em>): frame the question around the <em>team</em>, not yourself. "What's the one thing I should change to make <strong>the team</strong> run more smoothly?" The focus shifts from your vulnerability to the team's output, while you still get the signal.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Kim Scott, <em>Radical Candor</em></strong> (Ch. 6 "Get/Give/Encourage Guidance") — origin of "What could I do or stop doing that would make it easier to work with me?"<br><strong>Michael Bungay Stanier, <em>The Coaching Habit</em></strong> — seven questions that change your 1:1s.</div>
+</div>
+
+<div class="section">
+<div class="section-label">Language to steal</div>
+<div class="english">
+<span class="label">Phrases worth keeping verbatim</span>
+<p>"What could I do or <em>stop doing</em> that would make it easier to work with me?" — "Stop doing" pulls more feedback than "do better."</p>
+<p>"<em>Tell me more.</em>" — When they give you a surface answer, two words is enough.</p>
+<p>"<em>What else?</em>" — Michael Bungay Stanier's "most powerful question." Ask. Get an answer. Ask again. The gold is on the third pass.</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>Diagnose When a 1:1 Has Decayed Into a Status Meeting — and Repair It
+<span class="en">Diagnose &amp; Repair The Status-Update Trap</span></h2>
+<span class="tag">Diagnosis</span><span class="tag">Repair</span><span class="tag">Agenda reset</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-line principle</div>
+<div class="principle">If your entire 1:1 is project status, you've wasted 90% of the leverage. Status belongs in Slack, standup, and Jira. The 1:1 is for the things that don't fit in a document: emotion, relationships, growth, trust.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In the author's own words</div>
+<div class="quote">
+<span class="en">"If your 1:1s feel like status updates, you're doing them wrong. Status belongs in writing. The 1:1 is for what you can't put in a doc."</span>
+<span class="source">— Camille Fournier, <em>The Manager's Path</em></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Diagnosis: has your 1:1 turned into a status meeting?</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="200" rx="6" fill="#f5e0d0" stroke="#b85c3a" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="200" rx="6" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<text x="180" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#a04020">⚠ Symptoms of a status meeting</text>
+<text x="35" y="78" font-family="Georgia" font-size="12" fill="#5a3818">· You're writing down Jira numbers</text>
+<text x="35" y="100" font-family="Georgia" font-size="12" fill="#5a3818">· 95% of time on project progress</text>
+<text x="35" y="122" font-family="Georgia" font-size="12" fill="#5a3818">· No one mentions "stuck" or "feel"</text>
+<text x="35" y="144" font-family="Georgia" font-size="12" fill="#5a3818">· You wrote the entire agenda</text>
+<text x="35" y="166" font-family="Georgia" font-size="12" fill="#5a3818">· Never runs long, never any silence</text>
+<text x="35" y="188" font-family="Georgia" font-size="12" fill="#5a3818">· You can predict what they'll say</text>
+<text x="35" y="210" font-family="Georgia" font-size="12" fill="#5a3818">· Cancellation = relief on both sides</text>
+
+<text x="520" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#4a6a28">✓ Signs of a good 1:1</text>
+<text x="375" y="78" font-family="Georgia" font-size="12" fill="#2a3a18">· Emotion words appear (drained, excited)</text>
+<text x="375" y="100" font-family="Georgia" font-size="12" fill="#2a3a18">· You talk about people, not projects</text>
+<text x="375" y="122" font-family="Georgia" font-size="12" fill="#2a3a18">· "I'm not sure" gets said out loud</text>
+<text x="375" y="144" font-family="Georgia" font-size="12" fill="#2a3a18">· They wrote the agenda</text>
+<text x="375" y="166" font-family="Georgia" font-size="12" fill="#2a3a18">· At least one silence &gt; 5 seconds</text>
+<text x="375" y="188" font-family="Georgia" font-size="12" fill="#2a3a18">· "I want to bring something up" happens</text>
+<text x="375" y="210" font-family="Georgia" font-size="12" fill="#2a3a18">· You learn something new about them</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The repair script: how to restart a decayed 1:1</div>
+<div class="scene">
+<div class="setup">Setup: For six weeks straight, your 1:1 with this report has been pure status. You need to reset.</div>
+<div class="dialog good">
+<div class="speaker">✓ Reset script (say this at the top of the next meeting)</div>
+<p>"I want to change how we run these. For the last few weeks we've basically been doing project status — and honestly, that's all already in standup and Jira. We've been wasting the value of this meeting."</p>
+<p>"Starting next week, three changes: <strong>One</strong> — I'll read Jira on my own; I won't ask for status here. <strong>Two</strong> — drop three bullets in the doc 24 hours before we meet. Anything goes; the less it sounds like a status update, the better. <strong>Three</strong> — once a month, we'll use a whole 1:1 just for career conversation, no current-project talk allowed."</p>
+<p>"This change is to give you more room. If your doc is empty for the week, that's fine — it means there's nothing pressing, and I'll cancel rather than force the meeting."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Three flavors of 1:1, on a rotation (adapted from Camille Fournier)</div>
+<ul class="checklist">
+<li><strong>Tactical (weekly):</strong> Unblock, align on this week's decisions, work through interpersonal friction. 30 minutes.</li>
+<li><strong>Strategic (monthly):</strong> Team direction, cross-functional dynamics, long-arc project structure. 60 minutes.</li>
+<li><strong>Career (quarterly):</strong> Promotion path, skill growth, long-term motivation. 60 minutes — bonus if you change locations (coffee shop, walking 1:1).</li>
+<li>Color-code them on the calendar. When your report sees "Career 1:1 next week," they'll prepare.</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common pitfalls</div>
+<div class="pitfall">
+<ul>
+<li><strong>Refusing to reset; powering through.</strong> If even you don't see the value, your report has stopped respecting all 1:1s by now.</li>
+<li><strong>Blaming the report when you reset.</strong> "You never write an agenda" — that's on you, not them. Own it during the reset.</li>
+<li><strong>Doing career 1:1s only right before perf review.</strong> That's not a career conversation — that's review prep.</li>
+<li><strong>Fearing "no agenda = cancel."</strong> Canceling is a healthy signal, not a failure signal.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Women's perspective</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Women managers are often expected to absorb extra emotional labor — reports treat the 1:1 as a venting session. That isn't bad on its own, but it has a cost: if a particular report uses every 1:1 to vent without moving toward action, within a few weeks you'll be drained. One way to set the boundary: "I hear you — this has been a hard stretch. Let's spend ten minutes on it, and then I want us to decide <strong>one thing you can put down this week</strong>. Otherwise we'll be having the same conversation next week." Empathy plus a push toward action — not endless containment.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Camille Fournier, <em>The Manager's Path</em></strong> (Ch. 3 "Managing People") — origin of the three-tier 1:1 cadence.<br><strong>Will Larson, <em>An Elegant Puzzle</em></strong> — "Sizing engineering teams" and "Career planning" discuss the cadence and output of career 1:1s.</div>
+</div>
+
+<div class="section">
+<div class="section-label">Language to steal</div>
+<div class="english">
+<span class="label">Phrases worth keeping verbatim</span>
+<p>"Let's <em>reset</em> how we do these." — "Reset" is more neutral than "change"; it doesn't assign blame.</p>
+<p>"Status belongs in <em>writing</em>; this time is for what's <em>not in the doc</em>." — One sentence, clean boundary.</p>
+<p>"Skip-level 1:1" — Once a quarter, meet 1:1 with your report's reports. Camille Fournier's recommended blind-spot scanner.</p>
+</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Week's Practice · Your Week 1 Action</h3>
+<p>One concrete action this week — not reflection, not reading:</p>
+<div class="action">
+<strong>Pick one report</strong> (the one whose 1:1 you're least sure is producing value), and <strong>run the 8-second silence experiment from Card 3</strong>. Prep one real question ("What moment last week was most frustrating?"), ask it, pick up your cup, take a sip, count to eight, then speak.<br><br>Afterward, write two lines in the 1:1 doc: <strong>(1) at what second they started talking; (2) was the content what you expected?</strong><br><br>If they said "I'm fine" within three seconds, push once more: "Give me a concrete example."
+</div>
+</div>
+
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+
+<footer>BigCat · Leadership Weekly · Week 01 · 2026.05.22</footer>
+</div>
+
+</body>
+</html>
