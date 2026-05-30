@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>领导力 Week 10：孙子兵法在组织博弈中的应用</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deep{margin-top:42px;padding:28px 26px;background:#fffaf0;border-radius:8px;border-top:3px solid #5c3a18}
+.deep h3{font-size:1.15rem;color:#5c3a18;margin-bottom:14px;letter-spacing:1.5px}
+.deep details{margin:10px 0;padding:12px 16px;background:#f8f0dd;border-radius:4px;border-left:3px solid #a8702d}
+.deep summary{cursor:pointer;font-weight:600;color:#5c3a18;font-size:0.98rem}
+.deep details[open] summary{margin-bottom:10px}
+.deep details div{font-size:0.94rem;color:#3a2f1c;line-height:1.7}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Week 10 · 2026.06.06</div>
+<h1>孙子兵法在组织博弈：四个被误读的核心拆解</h1>
+<div class="meta"><span>主题：The Art of War in Org Politics</span><span>·</span><span>4 个原则</span></div>
+<div class="subtitle">「兵者，国之大事，死生之地，存亡之道，不可不察也。」— 孙子《始计篇》</div>
+</header>
+
+<div class="intro">
+<strong>本周的命题：</strong>孙子兵法在职场常被庸俗化成「厚黑学」「办公室阴谋手册」。它的真正硬核不在阴谋，而在<strong>对资源、时机、信息、心智的冷静核算</strong>——这恰是大公司技术 leader 推动 reorg、跨部门博弈、争资源时最缺的能力。本周拆四个被误读的核心：(1) 五事七计——开战前的庙算；(2) 避实击虚 + 因势利导——找空白、借大势；(3) 知彼知己——难的不是知彼，是承认你对自己的浪漫想象；(4) 不战而屈人之兵——会议室外才是真正的战场。
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>五事七计：开战前的庙算
+<span class="en">Five Factors, Seven Calculations — Weigh Before You March</span></h2>
+<span class="tag">庙算</span><span class="tag">决策前置</span><span class="tag">cost-of-fight</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="principle">在你 push 一场跨部门博弈之前，先用「五事七计」做一次冷静庙算——七项里有四项以上劣势，这场仗就不该现在打，要么改路径，要么换时点。</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"夫未战而庙算胜者，得算多也；未战而庙算不胜者，得算少也。多算胜，少算不胜，而况于无算乎？"</span>
+<span class="zh">未开战就在庙堂上推演而知胜的，是得分多；推演而知不胜的，是得分少。算得多胜，算得少不胜，何况完全不算的？</span>
+<span class="source">— 孙子《始计篇》</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">五事七计在组织里的对应</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="200" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="200" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<text x="180" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">五事 · 五项基本面</text>
+<text x="35" y="78" font-family="Georgia" font-size="12" fill="#3a2f1c">道 — 团队 / 盟友是否真的共识</text>
+<text x="35" y="103" font-family="Georgia" font-size="12" fill="#3a2f1c">天 — 时机 (perf / 预算 / reorg 窗口)</text>
+<text x="35" y="128" font-family="Georgia" font-size="12" fill="#3a2f1c">地 — 地形 (要翻越的 VP / org 边界)</text>
+<text x="35" y="153" font-family="Georgia" font-size="12" fill="#3a2f1c">将 — 你的 capital 与威望</text>
+<text x="35" y="178" font-family="Georgia" font-size="12" fill="#3a2f1c">法 — 流程 (RFC / 委员会 / HRBP)</text>
+<text x="35" y="206" font-family="Georgia" font-size="11" fill="#8a6d3b">五项任一为否 → 改 design 再上</text>
+
+<text x="520" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">七计 · 双方对比打分</text>
+<text x="375" y="78" font-family="Georgia" font-size="12" fill="#3a2f1c">主孰有道 — 谁的故事更顺人心</text>
+<text x="375" y="103" font-family="Georgia" font-size="12" fill="#3a2f1c">将孰有能 — 谁的执行能力强</text>
+<text x="375" y="128" font-family="Georgia" font-size="12" fill="#3a2f1c">天地孰得 — 时机地利在谁手上</text>
+<text x="375" y="153" font-family="Georgia" font-size="12" fill="#3a2f1c">法令孰行 — 谁有流程优势</text>
+<text x="375" y="178" font-family="Georgia" font-size="12" fill="#3a2f1c">兵众孰强 / 士卒孰练 — 团队对比</text>
+<text x="375" y="203" font-family="Georgia" font-size="12" fill="#3a2f1c">赏罚孰明 — 谁能兑现承诺</text>
+<text x="375" y="225" font-family="Georgia" font-size="11" fill="#8a6d3b">≥ 4 项劣势 → 这场不该现在打</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：你准备 push 一个 reorg——把数据团队从 platform org 切到 product org。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 不算就上</div>
+<p>写 50 页技术 RFC 约 VP 会议。VP 听完说"看上去合理，但 platform org 不同意，先 align"。三个月无下文，capital 烧了一截，反对者还提防你下次再来。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 庙算后调整范围</div>
+<p>doc 上逐项打分：<strong>道</strong>——下属支持率 80%（✓）；<strong>天</strong>——perf 季已过、预算未定（中性）；<strong>地</strong>——必须翻越 platform SVP（中性）；<strong>将</strong>——你刚晋升不满一年，capital 池浅（✗）；<strong>法</strong>——无正式 reorg 流程，要 CEO 拍（✗）。<br>
+劣势 ≥ 4 → 改方案：<strong>不动 reporting line，只设跨 org dotted-line + 季度评审</strong>。拿到 80% 收益，capital 消耗减半，为半年后正式切组织铺垫。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">庙算检查表</div>
+<ul class="checklist">
+<li>五事每一项我有具体证据（数字、人名、引文），不是猜测？</li>
+<li>七计里"必劣"那项有办法补吗？补不了，要主动降低战役范围。</li>
+<li>对手方的五事我也算了吗？（他们的"道"如果裂了，反而是机会窗口）</li>
+<li>失败成本量化了吗？（信誉损耗、回不去的桥、下属对你的信心）</li>
+<li>有 plan B 吗？一年内能再打一次的最小化版本是什么？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把"算"当悲观。</strong>庙算不是劝你别打，是告诉你赢的版本长什么样。</li>
+<li><strong>算完不改 design，硬上。</strong>算的目的是修正方案，不是产生焦虑。</li>
+<li><strong>只算我方，不算对手方。</strong>对方的"道"裂痕、"将"换人，往往是真正的窗口。</li>
+<li><strong>用 RFC 替代庙算。</strong>RFC 讲技术对错，庙算讲政治、时机、capital——两件事。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+女性在大公司的 capital 池子通常更浅（more scrutiny, less benefit of the doubt），意味着每场战役消耗的相对成本更高。庙算对女性尤其关键——不是更怕输，而是<strong>同样一场失败你能再来的次数更少</strong>。"这一仗值不值"算清楚是省 capital，不是怯战。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>列出你接下来想推的一件 Q3 大事，用五事七计逐项打分。如果总分劣势 ≥ 4，重写一个范围更小的版本。<br><strong>反思：</strong>你过去一年有多少场仗是"凭一腔热血就上"，多少是庙算后再上？两者的成功率差多少？</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>避实击虚 + 因势利导：找薄壁，借大势
+<span class="en">Strike the Void, Ride the Momentum</span></h2>
+<span class="tag">虚实</span><span class="tag">借势</span><span class="tag">framing</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="principle">组织里没有真空，但有薄壁。聪明的 leader 不撞强势话语权，去找<strong>无人 ownership 的空白</strong>插旗；并且不靠个人推力，靠借大组织已经在动的势。</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"夫兵形象水，水之形避高而趋下；兵之形，避实而击虚。" "故善战者，求之于势，不责于人。"</span>
+<span class="zh">兵的形态像水，水避高而趋下；兵避实而击虚。善战者求势，不苛责个人。</span>
+<span class="source">— 孙子《虚实篇》《势篇》</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：作为 tech lead manager，你想把 AI inference 标准化提升到公司层面。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 撞实</div>
+<p>直接挑战 platform org（公司里 AI infra 名义上由他们 own），写一份"你们做得不好，我来"的 RFC。你瞬间变成入侵者，platform org head 在评审会上联合两个盟友把你的提议挡回去——技术上他们都同意，政治上不能让你赢。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 击虚 + 借势</div>
+<p><strong>扫描"虚"：</strong>platform org 名义上 own，但没人真在做"跨 BU inference 标准化"——这是空白。<br>
+<strong>扫描"势"：</strong>CFO 最近在 push AI cost optimization；CEO 在 all-hands 提到 inference 成本占 cloud bill 的 40%。这是势。<br>
+<strong>重 framing：</strong>"响应 CFO 的 cost 议题，我提议建一个跨 BU inference standardization working group——<strong>由 platform org chair</strong>，我和另外两个 BU 提供工程力。预期降本 15-20%。"<br>
+<strong>结果：</strong>platform org 不仅不挡，还感谢你抬了他们；CFO 给你 air cover；你成为该话题事实上的技术 lead，没人觉得你抢权。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">借势检查表</div>
+<ul class="checklist">
+<li>我能列出本月 CEO / CFO / SVP 在 push 的 3 个议题吗？（这是势）</li>
+<li>我的提议能挂上至少 1 个吗？挂上 = 借势；挂不上 = 你在造势，成本极高。</li>
+<li>这件事名义上的 owner 是谁？我的 framing 让他变成"受益方"还是"被入侵方"？</li>
+<li>我能不能让对方挂名 chair，自己做 driver？（让胜利归对方）</li>
+<li>30 秒 pitch 是从我的需要出发，还是从公司当下议题出发？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>看到"虚"就以为是机会，没问为什么是空。</strong>可能有人尝试过失败——是雷区不是空地。先查历史。</li>
+<li><strong>借势变蹭势。</strong>你的 pitch 跟当下议题只有形式关联，被识破后比直接攻击还伤信誉。</li>
+<li><strong>击虚成功后立刻扩张抢实地。</strong>提前暴露野心，失去刚到手的盟友。</li>
+<li><strong>自己想做势的源头。</strong>你不是 CFO 不是 CEO，你不<strong>造</strong>势，你<strong>借</strong>势——把方向搞反了，再硬的努力都是逆水。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>用财报、最近一次 all-hands、CEO/CFO 的内部 memo，列出公司本月 3 个顶层议题。把你想做的事挂上其中一个，把 pitch 重写一次（≤ 100 字）。<br><strong>反思：</strong>你过去半年最累的那场推进，是不是撞了实、且没有任何势可借？</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>知彼知己：难的不是知彼，是看清自己的镜像投射
+<span class="en">Know the Other, Then Strip Your Self-Illusion</span></h2>
+<span class="tag">stakeholder pre-read</span><span class="tag">反投射</span><span class="tag">self-awareness</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="principle">「知彼知己」最难的不是知彼——是<strong>"知己"时你照镜子，照出来的常常是镜像投射，不是真实的你</strong>。stakeholder pre-read 的真正功夫，在于剥掉对自己的浪漫想象。</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"知彼知己者，百战不殆；不知彼而知己，一胜一负；不知彼，不知己，每战必殆。"</span>
+<span class="zh">知道对方又知道自己，百战不危；不知对方只知自己，胜负各半；都不知道，每战必败。</span>
+<span class="source">— 孙子《谋攻篇》</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：你要找跨部门 peer（产品 VP Sara）谈一项需要她团队配合的架构改造。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 镜像投射</div>
+<p>你假设 Sara 跟你一样关心"长期技术债"。开场是"这个架构三年后会成为瓶颈，我们应该现在改"。Sara 礼貌点头，会议结束什么都没推动——她真正在乎的是 Q3 GMV，你的 framing 完全没碰到她的算盘。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 三轮 pre-read</div>
+<p><strong>知彼 R1（公开）：</strong>读 Sara 上 quarter OKR、团队 hiring plan、all-hands 上她提的问题——她真正在乎的是 cart abandonment 和结算速度。<br>
+<strong>知彼 R2（背靠背）：</strong>找跟 Sara 合作过的 peer 问"她怎么做决定？什么让她说 no？她信谁？"<br>
+<strong>知己：</strong>问自己——pitch 是<strong>对她有用</strong>还是<strong>我想说</strong>？删掉技术词，我的提议在她的话语系统里是什么？<br>
+<strong>重写开场：</strong>"Sara，看了 Q3 你团队的目标。我们的改造能让结算延迟从 200ms 降到 50ms——按你的漏斗数据，对 cart abandonment 有 1-2% 直接影响。想用 20 分钟对齐时间线。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">真·知己的反投射检查表</div>
+<ul class="checklist">
+<li>我能用对方的 KPI / OKR 语言重述这个提议吗？</li>
+<li>我的"知彼"是基于一手数据（doc、OKR、决策记录），还是道听途说？</li>
+<li>我能列出自己至少 3 个盲点——尤其是"我以为对方在乎但其实不在乎"的事？</li>
+<li>"如果对方拒绝我，从他角度看他的逻辑是什么"——能讲清楚 = 真知彼。</li>
+<li>我以为是 strength 的东西，对方可能看作 risk 吗？（资历、技术深度有时反成威胁信号）</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把"知彼"当一次性 research。</strong>对方在动，OKR 每季度刷新，去年的画像今年可能完全失真。</li>
+<li><strong>"知己"做成 SWOT 自我表扬。</strong>真的知己是承认"我在哪个房间没有信誉、我的 framing 在他们听来像什么"。</li>
+<li><strong>用 mutual friend 拿到 dirt 但不验证。</strong>听来的画像最容易刻板化，且容易让你低估对方。</li>
+<li><strong>重要 stakeholder 没有任何"信任 broker"。</strong>靠正式邮件去推大事 = 裸奔。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+"知己"对女性更难，因为外部反馈系统对女性有系统性 underestimation——你照的镜子本身有 bias。对策：每年一次主动找 2-3 个不同 background 的同行，问"在你看来，我在公司里的 reputation 是什么？我的盲点是什么？" 写下来比对。这不是寻求 validation，是<strong>校准你照的那面镜子</strong>。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>选一位接下来 30 天必须搭话的 stakeholder，做完三轮 pre-read（公开 / 背靠背 / 自我反投射），把 pitch 重写一次。<br><strong>反思：</strong>你过去一次失败的推动，到底是"不知彼"还是"不知己"？后者通常占更大权重——但更不容易承认。</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>不战而屈人之兵：会议室外才是真正的战场
+<span class="en">Win Before the Meeting — Pre-Wire, Don't Persuade</span></h2>
+<span class="tag">伐谋伐交</span><span class="tag">pre-wiring</span><span class="tag">议事前置</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="principle">开会才开始辩论 = 你已经输了一半。最高境界不是赢辩论，是<strong>让辩论不发生</strong>——会议是 ratify 已经预先达成的共识，不是产生它的地方。</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"百战百胜，非善之善者也；不战而屈人之兵，善之善者也。故上兵伐谋，其次伐交，其次伐兵，其下攻城。"</span>
+<span class="zh">百战百胜不是最高境界；不战而让对方屈服才是。上策攻心智（伐谋），其次破联盟（伐交），其次正面交战，最次攻坚城。</span>
+<span class="source">— 孙子《谋攻篇》</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Pre-Wiring 时间线</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="100" x2="660" y2="100" stroke="#a8702d" stroke-width="2"/>
+<circle cx="80" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="220" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="360" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="500" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="640" cy="100" r="11" fill="#a8702d" stroke="#5c3a18" stroke-width="2"/>
+<text x="80" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-7</text>
+<text x="80" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">最强反对者</text>
+<text x="80" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">先吐槽</text>
+<text x="220" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-5</text>
+<text x="220" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">改方案</text>
+<text x="220" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">记 "per X"</text>
+<text x="360" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-3</text>
+<text x="360" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">委员会主席</text>
+<text x="360" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">预演 push-back</text>
+<text x="500" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-2</text>
+<text x="500" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">沉默 stakeholder</text>
+<text x="500" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">堵意外炸药</text>
+<text x="640" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#a8702d">Day 0</text>
+<text x="640" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#5c3a18">会议 = ratify</text>
+<text x="640" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#5c3a18">30 分钟拍板</text>
+<text x="350" y="180" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b" font-style="italic">伐谋（攻心智）→ 伐交（重新对齐联盟）→ 而非伐兵（会上正面冲撞）</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：你下周要在架构评审会上提一个争议大的提议——把团队的 monolith 拆为 4 个 service。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 攻城（最下策）</div>
+<p>直接进会议室、PPT 一打、对着 7 个 stakeholder 演讲、寄望辩赢。结果：你预判错的最强反对者（隔壁 SRE lead）抛出三个你没准备的 concern，会议无结论，下一次议程被无限延后两个月——你的 capital 损耗一截，方案被打上"不成熟"标签。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 伐谋 + 伐交（pre-wiring）</div>
+<p><strong>T-7：</strong>找 SRE lead 1:1。"我下周想提 split 提议，拍板前想先听你的 concern——方案没改对的话会上我不硬推。" 让他先吐槽。<br>
+<strong>T-5：</strong>按 concern 改 2 处方案，doc 写"per SRE lead's feedback"——贡献可见。<br>
+<strong>T-3：</strong>找委员会主席问"按现在版本你会有什么 push-back？" 提前消化。<br>
+<strong>T-2：</strong>找预判会沉默的 product VP 1:1。"对你 Q4 发布只有 2 周影响，第三周我派一人帮过渡。" 堵会上的意外炸药。<br>
+<strong>Day 0：</strong>你不是 push 自己的 idea，而是 ratify 一个已被 6 个人参与过的提议。30 分钟拍板。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Pre-Wiring 检查表</div>
+<ul class="checklist">
+<li>会议前我跟所有"会上发声 > 30 秒"的人单独谈过吗？</li>
+<li>有没有一个反对者最后变成 co-author？（最强反对吸收 = 最大保护）</li>
+<li>doc 里有没有体现"per X's feedback"——让贡献可见，对方在会上不必为荣誉发言？</li>
+<li>房间里至少有 1 个会替我说话的盟友吗？</li>
+<li>如果会议被推迟，我的进度会怎样？（pre-wiring 让"推迟"对你伤害也变小）</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>pre-wire 做成"洗脑游说"。</strong>你不是来说服，是来听 concern 并改方案。游说留下伤痕，听 concern 留下盟友——一字之差。</li>
+<li><strong>跳过你认为"不会反对"的人。</strong>沉默者会议上突然反对的杀伤力最大——他们一旦被惊到，会用 process 杀你。</li>
+<li><strong>把"伐交"误用为离间。</strong>在职场离间被识破极其昂贵——伐交是<strong>让对方的 stakeholder 重新评估利益，不是策反</strong>。</li>
+<li><strong>把 pre-wiring 当政治脏活。</strong>它的本质是<strong>尊重</strong>——别人在会议室外有机会消化、给反馈、改变方向，比在会议上当众被推翻有尊严得多。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>选下周一个重要会议，列出会发声的 5 个人，每个人都安排会前 1:1 或异步消息。会上观察："意外"的 concern 出现了几个？<br><strong>反思：</strong>你过去一年里，多少次"会议时被突然冒出的反对意见 derail"——其中多少本来可以靠会前一个 15 分钟的 1:1 避免？</div>
+</div>
+</div>
+
+<!-- ============ Deep Reflection ============ -->
+<div class="deep">
+<h3>深入思考 · Going Deeper</h3>
+
+<details>
+<summary>孙子兵法写给零和战争，公司是合作组织，套用有边界吗？</summary>
+<div>有边界。公司里"敌人"很少是个人，往往是 misaligned incentives、信息差、流程惯性。孙子的内核是<strong>对资源与时机的冷静核算</strong>，这部分跟零和无关。要警惕的是<strong>"敌我框架"会在脑里悄悄长出来</strong>，把暂时立场不同的 peer 物化成对手。每季度问一次："过去三个月我把谁脑补成了敌人？真的吗？"</div>
+</details>
+
+<details>
+<summary>"不战而屈人之兵" vs Radical Candor，怎么不矛盾？</summary>
+<div>分层使用。<strong>战略层面用孙子</strong>——重大议题、跨部门博弈、reorg：会前充分 pre-wire，会议是 ratify。<strong>战术层面用 Radical Candor</strong>——1:1、反馈、coaching：必须直接、当面、不绕弯。共同点是<strong>都拒绝"会议室里临时凑话术"</strong>。错位的代价：用孙子做反馈 = 阴谋家；用 Radical Candor 做战略 = 莽夫。</div>
+</details>
+
+<details>
+<summary>庙算变成"过度算计"——拖延决策、错失窗口怎么办？</summary>
+<div>设硬截止：任何提议，庙算时间不超过 5 个工作日，5 天后不管多不完美都要进入下一步（缩小范围、约 1:1、写 RFC）。拖延通常不是算太多，是<strong>怕算清后必须面对那个不舒服的结论</strong>（现在打不了 / capital 不够）。承认这个内心动机比加算法更重要。</div>
+</details>
+
+<details>
+<summary>大公司 vs 初创公司，应用差异在哪？</summary>
+<div>大公司地形复杂、流程是变量，<strong>庙算和 pre-wiring 的杠杆最大</strong>——会前两周功夫顶得上会上两小时辩论。初创公司"道"和"将"权重更高，"法"几乎不存在，<strong>速度本身就是势</strong>，pre-wiring 反而可能让你错过窗口。BigCat 在大厂，default 应是孙子模式。</div>
+</details>
+
+<details>
+<summary>算清后发现必输，但下属和你的 ownership 都赌在上面——退还是上？</summary>
+<div>不是二选一，是<strong>有尊严地变形</strong>。三步：(1) 立刻告诉团队你的新判断，re-scope 而非失败宣告；(2) 找出原提议里能<strong>独立成立的 30%</strong>，单独做完——保住下属成果不归零；(3) 剩下 70% 拆成"信号收集阶段"，看下季度哪些条件变化能让庙算重新成立。在大厂硬撑必败的仗，<strong>消耗的不是你一个人的 capital，是团队对你判断力的信任</strong>。</div>
+</details>
+</div>
+
+<nav class="footer-nav">
+<a href="index.html">← 返回目录</a>
+</nav>
+
+<footer>BigCat · Leadership Weekly · Week 10 · 2026.06.06</footer>
+</div>
+</body>
+</html>

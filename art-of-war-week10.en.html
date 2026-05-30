@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Week 10: Sun Tzu's Art of War in Org Politics</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deep{margin-top:42px;padding:28px 26px;background:#fffaf0;border-radius:8px;border-top:3px solid #5c3a18}
+.deep h3{font-size:1.15rem;color:#5c3a18;margin-bottom:14px;letter-spacing:1.5px}
+.deep details{margin:10px 0;padding:12px 16px;background:#f8f0dd;border-radius:4px;border-left:3px solid #a8702d}
+.deep summary{cursor:pointer;font-weight:600;color:#5c3a18;font-size:0.98rem}
+.deep details[open] summary{margin-bottom:10px}
+.deep details div{font-size:0.94rem;color:#3a2f1c;line-height:1.7}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Week 10 · 2026.06.06</div>
+<h1>Sun Tzu's Art of War: Four Core Ideas, Misread</h1>
+<div class="meta"><span>Topic: Art of War in Org Politics</span><span>·</span><span>4 Principles</span></div>
+<div class="subtitle">"War is a matter of vital importance to the state — the province of life or death; it must be thoroughly studied." — Sun Tzu, Ch. I</div>
+</header>
+
+<div class="intro">
+<strong>This week's thesis:</strong> In the workplace, <em>The Art of War</em> is often vulgarized into "office Machiavellianism." Its real core is not conspiracy but <strong>cold accounting of resources, timing, information, and minds</strong>—exactly what tech leaders in large companies most lack when pushing reorgs, cross-team battles, or fighting for resources. This week unpacks four misread cores: (1) Five Factors / Seven Calculations—weigh before you march; (2) Strike the void, ride the momentum—find the gap, borrow the wave; (3) Know the other, know yourself—the hard part isn't knowing them, it's stripping your self-illusion; (4) Win without fighting—the real battlefield is outside the meeting room.
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>Five Factors, Seven Calculations: Weigh Before You March
+<span class="en">五事七计 · The Court Calculus</span></h2>
+<span class="tag">court calculus</span><span class="tag">pre-decision</span><span class="tag">cost-of-fight</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-Line Principle + Quote</div>
+<div class="principle">Before pushing a cross-team battle, run a cold "court calculation" through the Five Factors and Seven Comparisons. If you're losing on four or more—don't fight now. Shrink the scope or change the timing.</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"He who, calculating in the temple before battle, finds the most counters in his favor, wins. He who finds few, loses. Many counters bring victory, few bring defeat—how much more so does none?"</span>
+<span class="zh">未战而庙算胜者，得算多也；未战而庙算不胜者，得算少也。多算胜，少算不胜，而况于无算乎？</span>
+<span class="source">— Sun Tzu, Ch. I "Laying Plans"</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The Five Factors / Seven Comparisons in Org Terms</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="200" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="200" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<text x="180" y="48" text-anchor="middle" font-family="Georgia" font-size="14" font-weight="700" fill="#5c3a18">五事 · Five Factors</text>
+<text x="35" y="78" font-family="Georgia" font-size="11" fill="#3a2f1c">Dao 道 — Real consensus on your side?</text>
+<text x="35" y="103" font-family="Georgia" font-size="11" fill="#3a2f1c">Heaven 天 — Timing (perf / budget / reorg)</text>
+<text x="35" y="128" font-family="Georgia" font-size="11" fill="#3a2f1c">Ground 地 — Terrain (VPs to cross, org lines)</text>
+<text x="35" y="153" font-family="Georgia" font-size="11" fill="#3a2f1c">General 将 — Your capital &amp; standing</text>
+<text x="35" y="178" font-family="Georgia" font-size="11" fill="#3a2f1c">Method 法 — Process (RFC / committee / HRBP)</text>
+<text x="35" y="206" font-family="Georgia" font-size="10.5" fill="#8a6d3b">Any "no" → redesign before launching</text>
+
+<text x="520" y="48" text-anchor="middle" font-family="Georgia" font-size="14" font-weight="700" fill="#5c3a18">七计 · Seven Comparisons</text>
+<text x="375" y="78" font-family="Georgia" font-size="11" fill="#3a2f1c">Whose story wins hearts?</text>
+<text x="375" y="103" font-family="Georgia" font-size="11" fill="#3a2f1c">Whose execution is stronger?</text>
+<text x="375" y="128" font-family="Georgia" font-size="11" fill="#3a2f1c">Who holds timing &amp; terrain?</text>
+<text x="375" y="153" font-family="Georgia" font-size="11" fill="#3a2f1c">Who has the process advantage?</text>
+<text x="375" y="178" font-family="Georgia" font-size="11" fill="#3a2f1c">Whose team is stronger / better drilled?</text>
+<text x="375" y="203" font-family="Georgia" font-size="11" fill="#3a2f1c">Who actually delivers on promises?</text>
+<text x="375" y="225" font-family="Georgia" font-size="10.5" fill="#8a6d3b">≥ 4 losses → don't fight now</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Setup: you want to push a reorg—move the data team from platform org to product org.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Charge without counting</div>
+<p>Write a 50-page technical RFC, book the VP. The VP says "sounds reasonable, but platform org disagrees—go align first." Three months later, no news. You've burned some capital, and the opponent is on guard against your next attempt.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Score, then resize</div>
+<p>Score each factor: <strong>Dao</strong>—80% report support (✓); <strong>Heaven</strong>—perf done, budget unset (neutral); <strong>Ground</strong>—must cross platform SVP (neutral); <strong>General</strong>—you were promoted under a year ago, capital pool shallow (✗); <strong>Method</strong>—no formal reorg process, requires CEO sign-off (✗).<br>
+4+ losses → redesign: <strong>don't touch reporting lines, set a cross-org dotted line + quarterly review</strong>. Capture 80% of the value at half the capital cost—and lay groundwork for a real reorg in six months.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Court Calculation Checklist</div>
+<ul class="checklist">
+<li>Each of the Five Factors backed by hard evidence (numbers, names, quotes)—not guesses?</li>
+<li>For each "must-lose" comparison, do I have a fix? If not, shrink the scope.</li>
+<li>Have I calculated the <em>opponent's</em> Five Factors too? A crack in their "Dao" is a window.</li>
+<li>Is the failure cost quantified? (Reputation, burned bridges, your team's confidence in you.)</li>
+<li>Do I have a Plan B—a minimum version I can run again in a year?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes + Female Lens</div>
+<div class="pitfall">
+<ul>
+<li><strong>Treating "calculation" as pessimism.</strong> The point isn't to dissuade you—it's to show what the winning version looks like.</li>
+<li><strong>Calculating, then not redesigning.</strong> The output of calculation is a modified plan, not anxiety.</li>
+<li><strong>Only scoring your side.</strong> Cracks in their Dao or changes in their General are often the real opening.</li>
+<li><strong>Letting RFCs replace calculation.</strong> RFCs argue technical merit; court calculus argues politics, timing, capital.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Women in large companies usually have shallower capital pools (more scrutiny, less benefit of the doubt)—each battle costs more in relative terms. Court calculation matters more for women, not because you fear loss more, but because <strong>after one loss, you get fewer "next times."</strong> Calculating "is this worth it" is capital preservation, not cowardice.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Action + Reflection</div>
+<div class="ref"><strong>Action:</strong> Pick one Q3 push. Score it on Five Factors / Seven Comparisons. If losing ≥ 4, write a smaller version.<br><strong>Reflection:</strong> Of last year's battles, how many were "passion-driven launches" vs. "calculated launches"? Compare success rates.</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>Strike the Void, Ride the Momentum
+<span class="en">避实击虚 + 因势利导 · Find the Thin Wall, Borrow the Wave</span></h2>
+<span class="tag">void &amp; substance</span><span class="tag">borrowed momentum</span><span class="tag">framing</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-Line Principle + Quote</div>
+<div class="principle">Organizations have no true vacuums, but they have thin walls. Smart leaders don't ram strong territorial claims—they find <strong>the gap no one owns</strong> and plant a flag there. And they don't push by personal force; they ride waves the big org is already creating.</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"The form of an army is like water: water avoids heights and runs downward; an army avoids strength and strikes weakness." "The skilled warrior seeks victory from the momentum, not from individual men."</span>
+<span class="zh">夫兵形象水，水之形避高而趋下；兵之形，避实而击虚。故善战者，求之于势，不责于人。</span>
+<span class="source">— Sun Tzu, Ch. VI "Weak Points and Strong" / Ch. V "Energy"</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Setup: as a tech lead manager, you want to elevate AI inference standardization to a company-wide initiative.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Hit the strong wall</div>
+<p>Challenge platform org directly (they nominally own AI infra). Write a "you're doing it wrong, I'll do it" RFC. You instantly become the invader. The platform org head and two allies block you at review—technically they agree, politically they can't let you win.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Strike the void + borrow the wave</div>
+<p><strong>Scan the void:</strong> platform org nominally owns it, but no one's actually doing "cross-BU inference standardization"—a true gap.<br>
+<strong>Scan the wave:</strong> CFO is pushing AI cost optimization; CEO mentioned in all-hands that inference is 40% of cloud spend. That's momentum.<br>
+<strong>Reframe:</strong> "Responding to the CFO's cost initiative, I propose a cross-BU inference standardization working group—<strong>chaired by platform org</strong>, with my team and two BUs contributing engineering. Projected 15–20% cost reduction."<br>
+<strong>Result:</strong> platform org doesn't block—they thank you for elevating their work. CFO provides air cover. You become the de facto technical lead, and no one feels you grabbed power.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Wave-Riding Checklist</div>
+<ul class="checklist">
+<li>Can I list 3 things the CEO / CFO / SVP is currently pushing? (That's the wave.)</li>
+<li>Does my proposal hook into at least one of them? (Hooked in = borrowed momentum.)</li>
+<li>Who nominally owns this space? Does my framing make them a beneficiary or an invader?</li>
+<li>Can I let them chair while I drive? (Make the win theirs.)</li>
+<li>Is my 30-second pitch from my needs—or from the company's current agenda?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Seeing a void and assuming it's an opportunity—without asking why it's empty.</strong> Maybe someone tried and failed. It's a minefield, not free land. Check history first.</li>
+<li><strong>Borrowing momentum becomes parasiting on it.</strong> If your pitch only superficially connects to the current agenda, exposure hurts worse than a direct attack.</li>
+<li><strong>Striking the void successfully, then expanding to grab "real" territory.</strong> You expose ambition early and lose the allies you just won.</li>
+<li><strong>Trying to <em>create</em> the wave yourself.</strong> You're not the CFO or CEO. You don't <strong>create</strong> momentum—you <strong>borrow</strong> it. Get this direction wrong and even hard work runs upstream.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Action + Reflection</div>
+<div class="ref"><strong>Action:</strong> Using earnings, the latest all-hands, and CEO/CFO internal memos, list the company's top 3 themes this month. Hook your proposal to one of them. Rewrite the pitch in ≤ 100 words.<br><strong>Reflection:</strong> Your most exhausting push in the last six months—did you hit strength head-on with no wave to ride?</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>Know the Other, Then Strip Your Self-Illusion
+<span class="en">知彼知己 · The Hard Part Is Knowing Yourself</span></h2>
+<span class="tag">stakeholder pre-read</span><span class="tag">anti-projection</span><span class="tag">self-awareness</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-Line Principle + Quote</div>
+<div class="principle">The hardest part of "know the other, know yourself" isn't knowing the other—it's that <strong>when you look in the mirror to "know yourself," you often see a romantic projection, not the real you</strong>. Real stakeholder pre-read means stripping that illusion.</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory you will also suffer a defeat. If you know neither, you will succumb in every battle."</span>
+<span class="zh">知彼知己者，百战不殆；不知彼而知己，一胜一负；不知彼，不知己，每战必殆。</span>
+<span class="source">— Sun Tzu, Ch. III "Attack by Stratagem"</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Setup: you need cross-team peer Sara (product VP) to back an architecture change.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Mirror projection</div>
+<p>You assume Sara cares about "long-term tech debt" like you do. Your opener: "This architecture will become a bottleneck in three years, we should fix it now." Sara nods politely, meeting ends, nothing moves. She actually cares about Q3 GMV—your framing never touched her ledger.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Three rounds of pre-read</div>
+<p><strong>Know-other R1 (public):</strong> Read Sara's last-quarter OKRs, her team's hiring plan, the questions she asked in all-hands—she actually cares about cart abandonment and checkout speed.<br>
+<strong>Know-other R2 (back-channel):</strong> Find a peer who's worked with Sara. Ask: "How does she decide in meetings? What makes her say no? Whose word does she trust?"<br>
+<strong>Know-self:</strong> Ask yourself—is my pitch <strong>useful to her</strong>, or <strong>what I want to say</strong>? Strip the tech words: what does my proposal look like in her vocabulary?<br>
+<strong>Rewrite opener:</strong> "Sara, I looked at your Q3 goals. Our refactor drops checkout latency from 200ms to 50ms—against your funnel data, 1–2% direct impact on cart abandonment. 20 minutes to align on timing?"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Anti-Projection Checklist for Real Self-Knowledge</div>
+<ul class="checklist">
+<li>Can I restate my proposal in their KPI / OKR language?</li>
+<li>Is my "knowing them" based on first-hand data (docs, OKRs, decision records)—or hearsay?</li>
+<li>Have I listed at least 3 of my own blind spots—especially "things I assume they care about but they don't"?</li>
+<li>"If they reject me, from their angle what's their logic?"—if I can articulate it, I really know them.</li>
+<li>What I see as a strength—could they see it as a risk? (Seniority, technical depth can read as threat.)</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes + Female Lens</div>
+<div class="pitfall">
+<ul>
+<li><strong>Treating "know the other" as one-time research.</strong> They move. OKRs refresh quarterly. Last year's picture may be entirely stale.</li>
+<li><strong>Turning "know yourself" into a SWOT self-praise.</strong> Real self-knowledge means admitting "in which rooms I have no credibility, and what my framing actually sounds like to them."</li>
+<li><strong>Getting dirt from a mutual friend without verifying.</strong> Second-hand portraits are the easiest to stereotype—and most likely to make you underestimate.</li>
+<li><strong>No "trust broker" for a critical stakeholder.</strong> Pushing a big thing through formal email = naked under fire.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+"Know yourself" is harder for women, because the external feedback system has systematic underestimation built in—the mirror you look into is itself biased. Counter: once a year, proactively ask 2–3 trusted peers from different backgrounds, "From where you sit, what is my reputation in this company? What are my blind spots?" Write it down. This isn't seeking validation—it's <strong>calibrating the mirror you use</strong>.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Action + Reflection</div>
+<div class="ref"><strong>Action:</strong> Pick one stakeholder you must engage in the next 30 days. Run all three rounds (public / back-channel / anti-projection). Rewrite the pitch.<br><strong>Reflection:</strong> Your last failed push—was it really "didn't know them," or "didn't know yourself"? The latter usually weighs more—and is harder to admit.</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>Win Before the Meeting: The Real Battlefield Is Outside the Room
+<span class="en">不战而屈人之兵 · Pre-Wire, Don't Persuade</span></h2>
+<span class="tag">attack the plan</span><span class="tag">pre-wiring</span><span class="tag">ratify, not debate</span>
+</div>
+
+<div class="section">
+<div class="section-label">One-Line Principle + Quote</div>
+<div class="principle">If the debate starts in the meeting, you've already half lost. The highest skill isn't winning the argument—it's <strong>making the argument unnecessary</strong>. The meeting ratifies an agreement that already exists; it doesn't produce one.</div>
+<div class="quote" style="margin-top:12px">
+<span class="en">"To win a hundred battles is not the highest excellence; to subdue the enemy without fighting is. Therefore the highest form of war is to attack the enemy's strategy; next, to disrupt his alliances; next, to attack his army; the worst, to besiege walled cities."</span>
+<span class="zh">百战百胜，非善之善者也；不战而屈人之兵，善之善者也。故上兵伐谋，其次伐交，其次伐兵，其下攻城。</span>
+<span class="source">— Sun Tzu, Ch. III "Attack by Stratagem"</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The Pre-Wiring Timeline</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="100" x2="660" y2="100" stroke="#a8702d" stroke-width="2"/>
+<circle cx="80" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="220" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="360" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="500" cy="100" r="9" fill="#5c3a18"/>
+<circle cx="640" cy="100" r="11" fill="#a8702d" stroke="#5c3a18" stroke-width="2"/>
+<text x="80" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-7</text>
+<text x="80" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">Toughest opponent</text>
+<text x="80" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">vents first</text>
+<text x="220" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-5</text>
+<text x="220" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">Revise plan</text>
+<text x="220" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">log "per X"</text>
+<text x="360" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-3</text>
+<text x="360" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">Committee chair</text>
+<text x="360" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">rehearse push-back</text>
+<text x="500" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#5c3a18">T-2</text>
+<text x="500" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">Silent stakeholder</text>
+<text x="500" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#3a2f1c">defuse surprise</text>
+<text x="640" y="80" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#a8702d">Day 0</text>
+<text x="640" y="130" text-anchor="middle" font-family="Georgia" font-size="11" fill="#5c3a18">Meeting = ratify</text>
+<text x="640" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#5c3a18">30 min decision</text>
+<text x="350" y="180" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b" font-style="italic">Attack the plan → realign alliances → not head-on collision in the room</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Setup: next week's architecture review, you're proposing to split a monolith into 4 services—a contentious call.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Siege the walled city (the worst form)</div>
+<p>Walk into the room, deck up, pitch to 7 stakeholders, hope to out-argue them. Result: the strongest opponent you misjudged (the SRE lead next door) throws three concerns you didn't prepare for. No conclusion, agenda pushed two months out. Capital burned, your proposal labeled "not ready."</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Attack the plan + realign alliances</div>
+<p><strong>T-7:</strong> 1:1 with SRE lead. "I want to propose a split next week. Before we decide, I want to hear your concerns—if I haven't addressed them, I won't force it in the room." Let him vent.<br>
+<strong>T-5:</strong> Revise 2 things in the plan. Note in the doc: "per SRE lead's feedback on 2025-Q4 incident"—contribution visible.<br>
+<strong>T-3:</strong> 1:1 with the architecture chair: "Looking at the current draft, what push-back would you expect?" Pre-digest it.<br>
+<strong>T-2:</strong> 1:1 with the product VP you expect to stay silent. "This affects your Q4 launch by 2 weeks; I'll loan you an engineer in week 3 to bridge." Defuse surprise grenades.<br>
+<strong>Day 0:</strong> You aren't pushing your idea anymore—you're ratifying a proposal 6 people already shaped. 30 minutes, done.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Pre-Wiring Checklist</div>
+<ul class="checklist">
+<li>Have I talked 1:1 with everyone who'll speak more than 30 seconds in the room?</li>
+<li>Did one opponent become a co-author? (Absorbing the strongest objection = strongest shield.)</li>
+<li>Does the doc credit "per X's feedback"—so they don't have to fight in-room for credit?</li>
+<li>Is there at least one ally in the room who'll speak up for me?</li>
+<li>If the meeting gets postponed, what happens to my progress? (Pre-wiring makes "postpone" hurt less.)</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Turning pre-wiring into "lobbying."</strong> You're not there to persuade—you're there to hear concerns and modify the plan. Lobbying leaves scars; listening builds allies. One-word difference.</li>
+<li><strong>Skipping people you assume won't object.</strong> Silent people who object in-meeting do the most damage—they'll use process to kill you.</li>
+<li><strong>Misusing "disrupt alliances" as backstabbing.</strong> Backstabbing once detected is enormously expensive. The real move is <strong>letting stakeholders re-evaluate interests, not flipping sides</strong>.</li>
+<li><strong>Treating pre-wiring as dirty politics.</strong> Its essence is <strong>respect</strong>—giving people the chance to digest, push back, and change course outside the room is more dignified than being overruled in public.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Action + Reflection</div>
+<div class="ref"><strong>Action:</strong> Pick one important meeting next week. List the 5 likely voices. Schedule a 1:1 or async note with each before the meeting. In the room, count how many "surprise" concerns appeared.<br><strong>Reflection:</strong> Of the times you were "derailed by a surprise objection in a meeting" last year, how many could have been avoided by a 15-minute 1:1 beforehand?</div>
+</div>
+</div>
+
+<!-- ============ Deep Reflection ============ -->
+<div class="deep">
+<h3>Going Deeper</h3>
+
+<details>
+<summary>Sun Tzu wrote for zero-sum war; companies are cooperative organizations. Are there limits to applying it?</summary>
+<div>Yes. In a company, "enemies" are rarely individuals—they're misaligned incentives, information gaps, process inertia. Sun Tzu's core is <strong>cold accounting of resources and timing</strong>—that part is zero-sum-agnostic. Watch out for the <strong>"us vs them" frame quietly growing in your head</strong>, turning temporarily misaligned peers into objects of war. Each quarter ask: "Whom did I imagine into an enemy these past three months? Really?"</div>
+</details>
+
+<details>
+<summary>"Win without fighting" vs. Radical Candor—aren't they contradictory?</summary>
+<div>Layer them. <strong>Strategic layer—use Sun Tzu</strong>: big issues, cross-team battles, reorgs require pre-wiring; the meeting just ratifies. <strong>Tactical layer—use Radical Candor</strong>: 1:1s, feedback, coaching demand directness, in-person, no detours. Both refuse <strong>"improvising the script in the room."</strong> Both require pre-work. Mismatch costs: Sun Tzu for feedback = schemer; Radical Candor for strategy = brute.</div>
+</details>
+
+<details>
+<summary>What if "court calculus" becomes paralysis—delayed decisions, missed windows?</summary>
+<div>Set a hard deadline: no proposal gets more than 5 working days of calculation. After 5 days, however imperfect, move to the next step (shrink scope, book a 1:1, write the RFC). Stalling usually isn't over-calculating—it's <strong>fearing the uncomfortable conclusion</strong> ("I can't fight this now / my capital isn't enough"). Naming that motive matters more than adding more inputs.</div>
+</details>
+
+<details>
+<summary>Large company vs. startup—where does Sun Tzu apply differently?</summary>
+<div>Large companies have complex terrain and process as a variable—<strong>court calculus and pre-wiring have the highest leverage</strong>. Two weeks of prep beats two hours of meeting debate. Startups weight "Dao" and "General" heavily; "Method" barely exists; <strong>speed itself is the wave</strong>—pre-wiring may make you miss the window. BigCat in a large org: default to Sun Tzu mode.</div>
+</details>
+
+<details>
+<summary>You calculated and the fight is unwinnable—but your team and your ownership are betting on it. Withdraw or push?</summary>
+<div>Not binary. <strong>Reshape with dignity</strong>, three steps: (1) Tell the team your new read immediately—re-scope, not failure declaration; (2) Find the <strong>30% that stands independently</strong>, ship that—your team's work doesn't go to zero; (3) Convert the remaining 70% into a "signal collection phase," watching which conditions next quarter could make the calculus flip. In a big org, forcing a doomed fight <strong>doesn't burn your capital alone—it burns the team's trust in your judgment</strong>, which is the longer wound.</div>
+</details>
+</div>
+
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+
+<footer>BigCat · Leadership Weekly · Week 10 · 2026.06.06</footer>
+</div>
+</body>
+</html>
