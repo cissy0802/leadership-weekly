@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>领导力 Day 15：决策架构</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deepen{margin-top:50px}
+.deepen h3{font-size:1.15rem;color:#5c3a18;letter-spacing:1px;margin-bottom:16px;border-bottom:1px solid #c4a878;padding-bottom:10px}
+.deepen details{background:#fffaf0;border:1px solid #e6d9bf;border-radius:6px;margin-bottom:12px;padding:4px 18px}
+.deepen summary{cursor:pointer;font-weight:600;color:#5c3a18;padding:12px 0;font-size:0.98rem}
+.deepen details>div{color:#4a3a20;font-size:0.93rem;padding:4px 0 14px;line-height:1.7}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 15 · 2026.06.04</div>
+<h1>决策架构：让"谁拍板、怎么拍"不再靠运气</h1>
+<div class="meta"><span>主题：Decision Architecture</span><span>·</span><span>4 个工具</span></div>
+<div class="subtitle">"Disagree and commit." — Jeff Bezos, 2016 致股东信</div>
+</header>
+
+<div class="intro">
+<strong>本周的命题：</strong>技术 leader 上行的瓶颈，很少是"不会做技术决策"，而是<strong>组织里的决策机制坏了</strong>——没人知道谁拍板、可逆的小事走了重流程、重大不可逆的事反而被一句"先上再说"草草定了、决策后还在内耗。本期四个工具回答四个问题：<strong>这个决策值多重的流程</strong>（决策类型与机制）、<strong>谁拍板</strong>（RAPID）、<strong>怎么让日常决策快起来</strong>（DACI）、<strong>定了之后怎么让所有人真正执行</strong>（Disagree and Commit）。
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 01</div>
+<h2>决策类型分层：先问这扇门能不能往回走
+<span class="en">Type 1 vs Type 2 — Match Process to Reversibility</span></h2>
+<span class="tag">可逆性</span><span class="tag">决策机制</span><span class="tag">流程重量</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">决策前先分诊：<strong>双向门</strong>（可逆）就授权、快、容忍试错；<strong>单向门</strong>（不可逆）才值得慢、值得共识、值得你亲自上。流程的重量应当匹配决策的代价，而不是匹配你的焦虑。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Some decisions are consequential and irreversible or nearly irreversible — one-way doors — and these decisions must be made methodically, carefully, slowly. But most decisions aren't like that — they are changeable, reversible — they're two-way doors."</span>
+<span class="zh">"有些决策影响重大且不可逆——单向门——必须有条理地、谨慎地、缓慢地做。但大多数决策不是这样——它们可改、可逆——是双向门。"</span>
+<span class="source">— Jeff Bezos, Amazon 致股东信 2015</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：两个决策同时压过来——(1) 是否把核心订单服务从 MySQL 迁到一套新的分布式数据库；(2) 这个 sprint 用哪个日志库。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法</div>
+<p>你给两件事套了同一套流程：都开评审会、都要全员投票、都写长 RFC。结果日志库吵了两周；数据库迁移反而因为"大家都累了"被一句"先上线再说"草草拍了——把最危险的单向门走了最轻的流程。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 修后做法（先分类，再选流程）</div>
+<p><strong>日志库（双向门）：</strong>"错了一天就能换回来。我授权 X 自己定，今天就定，不开会。"</p>
+<p><strong>数据库迁移（单向门）：</strong>"数据迁过去基本回不来。这个值得两周 RFC、值得拉 DBA 和 SRE、值得我亲自签字。"——把"慢"用在唯一该慢的地方。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">决策前 30 秒分诊清单</div>
+<ul class="checklist">
+<li>这个决策可逆吗？回滚成本是几小时、几周，还是不可能？</li>
+<li>它只影响一个团队，还是跨多团队 / 对外做了承诺？</li>
+<li>最坏情况能承受吗？（双向门即使错了也撑得住）</li>
+<li>我是不是在给可逆决策套了过重的流程？（决策瘫痪的头号来源）</li>
+<li>我是不是在给不可逆决策走了过轻的流程？（这个更危险）</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="frame-diagram">
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="210" rx="6" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="210" rx="6" fill="#f5e0d0" stroke="#b85c3a" stroke-width="2"/>
+<text x="180" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#4a6a28">双向门 · 可逆</text>
+<text x="35" y="80" font-family="Georgia" font-size="12" fill="#2a3a18">· 回滚成本低（小时 / 天）</text>
+<text x="35" y="104" font-family="Georgia" font-size="12" fill="#2a3a18">· 默认授权，快速决策</text>
+<text x="35" y="128" font-family="Georgia" font-size="12" fill="#2a3a18">· 容忍试错，错了就改</text>
+<text x="35" y="152" font-family="Georgia" font-size="12" fill="#2a3a18">· 工具：DACI / 直接授权</text>
+<text x="35" y="176" font-family="Georgia" font-size="12" fill="#2a3a18">· 例：选库、命名、配置参数</text>
+<text x="35" y="208" font-family="Georgia" font-size="12.5" font-weight="700" fill="#4a6a28">→ 求快，别开会</text>
+<text x="520" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#a04020">单向门 · 不可逆</text>
+<text x="375" y="80" font-family="Georgia" font-size="12" fill="#5a3818">· 回滚成本极高或不可能</text>
+<text x="375" y="104" font-family="Georgia" font-size="12" fill="#5a3818">· 值得慢、值得共识</text>
+<text x="375" y="128" font-family="Georgia" font-size="12" fill="#5a3818">· 你亲自上、正式记录</text>
+<text x="375" y="152" font-family="Georgia" font-size="12" fill="#5a3818">· 工具：RAPID / RFC</text>
+<text x="375" y="176" font-family="Georgia" font-size="12" fill="#5a3818">· 例：数据迁移、对外 API、选型锁定</text>
+<text x="375" y="208" font-family="Georgia" font-size="12.5" font-weight="700" fill="#a04020">→ 求稳，慢慢来</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>一刀切流程。</strong>所有决策都要共识 = 把每扇双向门当单向门，团队慢死。</li>
+<li><strong>用重流程规避担责。</strong>给小决策也加重审批，看似"严谨"，实则把"我拍板"摊薄成"大家一起拍"。</li>
+<li><strong>把"难做"误当"不可逆"。</strong>工程量大不等于回不了头；很多大项目其实是可灰度、可回滚的双向门。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref"><strong>Jeff Bezos,</strong> Amazon 致股东信（2015 / 2016）— "one-way / two-way door" 的原始出处，已成行业通用语。</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 02</div>
+<h2>RAPID：给"谁拍板"一个明确答案
+<span class="en">RAPID — Who Has the D?</span></h2>
+<span class="tag">决策权</span><span class="tag">跨团队</span><span class="tag">角色分配</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">当一个跨团队决策卡住，问题几乎从不是"信息不够"，而是<strong>没人知道谁拍板</strong>。RAPID 把决策拆成五个角色——Recommend（推荐）、Agree（同意，有否决权）、Perform（执行）、Input（输入）、Decide（拍板）。最关键的一条：<strong>D 必须是单独一个人</strong>。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Decisions are the coin of the realm in business. Every success, every mishap, every opportunity seized or missed is the result of a decision someone made or failed to make."</span>
+<span class="zh">"决策是商业世界的通货。每一次成功、每一次失误、每一个被抓住或错过的机会，都是某个人做了或没做某个决策的结果。"</span>
+<span class="source">— Rogers &amp; Blenko,《Who Has the D?》HBR, 2006</span>
+</div>
+</div>
+
+<div class="section">
+<div class="frame-diagram">
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+<g font-family="Georgia">
+<circle cx="48" cy="40" r="20" fill="#a8702d"/><text x="48" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">R</text>
+<text x="82" y="36" font-size="14" font-weight="700" fill="#5c3a18">Recommend 推荐</text>
+<text x="82" y="56" font-size="12" fill="#8a6d3b">提出方案、搜集信息、驱动分析</text>
+<circle cx="48" cy="92" r="20" fill="#a8702d"/><text x="48" y="98" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">A</text>
+<text x="82" y="88" font-size="14" font-weight="700" fill="#5c3a18">Agree 同意（有否决权）</text>
+<text x="82" y="108" font-size="12" fill="#8a6d3b">少数人才该有——慎发</text>
+<circle cx="48" cy="144" r="20" fill="#a8702d"/><text x="48" y="150" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">P</text>
+<text x="82" y="140" font-size="14" font-weight="700" fill="#5c3a18">Perform 执行</text>
+<text x="82" y="160" font-size="12" fill="#8a6d3b">决策落地的人</text>
+<circle cx="48" cy="196" r="20" fill="#a8702d"/><text x="48" y="202" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">I</text>
+<text x="82" y="192" font-size="14" font-weight="700" fill="#5c3a18">Input 输入</text>
+<text x="82" y="212" font-size="12" fill="#8a6d3b">提供意见——但不投票</text>
+<circle cx="48" cy="240" r="22" fill="#5c3a18"/><text x="48" y="247" text-anchor="middle" font-size="19" font-weight="700" fill="#f5e8c8">D</text>
+<text x="82" y="236" font-size="14" font-weight="700" fill="#5c3a18">Decide 拍板（唯一一人）</text>
+<text x="82" y="256" font-size="12" fill="#a04020">最终负责——绝不能是"两个 D"</text>
+</g>
+</svg>
+<div style="font-size:0.82rem;color:#8a6d3b;margin-top:6px">字母 ≠ 流程顺序，只是助记；实际次序通常是 I→R→A→D→P。</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：三个团队要把一个单体服务拆成微服务，已经开了五次会没结论。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法</div>
+<p>每次会都是"大家觉得呢"，谁声音大听谁的，散会没人 own，下周原地重来。表面民主，实际是无人负责。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 修后做法（会前发一张 RAPID）</div>
+<p>"拆分边界方案由平台组 Lead <strong>Recommend</strong>；SRE 对可用性影响有 <strong>Agree</strong>（可否决）；DBA、各业务组 <strong>Input</strong>；<strong>Decide = 我（BigCat）</strong>；定了之后三个组 <strong>Perform</strong>。"</p>
+<p>开场一句定调："今天这个会只有一个目的——听 Recommend、收 Input，然后<strong>我当场给 D</strong>。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">用 RAPID 前自检</div>
+<ul class="checklist">
+<li>这个决策有没有恰好一个 D？（两个 D = 没有 D）</li>
+<li>每个 Agree（否决权）是不是真有正当否决理由？滥发 A 会让决策瘫痪。</li>
+<li>Recommend 的人有没有被授予真正的话语权，还是只是"提案给领导改"？</li>
+<li>Input 的人清楚自己不是在投票吗？要提前讲明，免得决策后觉得被忽视。</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把 A（否决权）发太多。</strong>每多一个 A 就多一个卡点，决策被"会签"拖死。</li>
+<li><strong>D 落到职位最高的人，而非最该负责的人。</strong>RAPID 的价值正是把"权"从职级解耦。</li>
+<li><strong>让 Input 误以为自己在投票。</strong>决策后那群人会觉得"我的意见被无视了"。</li>
+</ul>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+研究反复显示，女性更常被分配到 Recommend / Perform（做方案、落地执行），而 D 落到男性同事手里；同样，女性在会上的提议更容易被"重述"后归功他人。一个被验证有效的对策是 <strong>amplification</strong>（奥巴马时期白宫女性幕僚的做法）：当一位女同事提出关键建议，另一人立刻复述并点名"这是 X 的方案"。指派 RAPID 时把"谁是 Recommend、谁是 D"白纸黑字写下来，本身就是防止贡献被悄悄转移的机制。
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref"><strong>Paul Rogers &amp; Marcia Blenko (Bain &amp; Company),《Who Has the D? How Clear Decision Roles Enhance Organizational Performance》</strong>HBR, 2006 — RAPID 框架原始论文。</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 03</div>
+<h2>DACI：工程团队的轻量决策权
+<span class="en">DACI — Lightweight Decision Rights</span></h2>
+<span class="tag">轻量级</span><span class="tag">单一 Driver</span><span class="tag">日常决策</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">RAPID 适合重大、跨组、需要正式记录的决策；日常的团队内决策需要更轻的工具——<strong>DACI</strong>：Driver（驱动者，推进但不一定拍板）、Approver（批准者，唯一拍板，通常 1 人）、Contributors（贡献者）、Informed（知会者）。一页纸、一个文档、十分钟。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"The whole decision-making process can be summed up in three phrases: free discussion, a clear decision, and full support."</span>
+<span class="zh">"整个决策过程可以归纳为三句话：自由讨论、清晰决定、全力支持。"</span>
+<span class="source">— Andy Grove,《High Output Management》Ch.5</span>
+</div>
+</div>
+
+<div class="section">
+<div class="frame-diagram">
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="160" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="160" rx="6" fill="#fcf6e8" stroke="#5c3a18" stroke-width="2"/>
+<text x="180" y="46" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">RAPID</text>
+<text x="35" y="74" font-family="Georgia" font-size="12" fill="#3a2f1c">· 重大 / 跨多团队 / 不可逆</text>
+<text x="35" y="98" font-family="Georgia" font-size="12" fill="#3a2f1c">· 5 个角色，正式记录</text>
+<text x="35" y="122" font-family="Georgia" font-size="12" fill="#3a2f1c">· 较重，慎用</text>
+<text x="35" y="156" font-family="Georgia" font-size="12.5" font-weight="700" fill="#a04020">单向门用它</text>
+<text x="520" y="46" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">DACI</text>
+<text x="375" y="74" font-family="Georgia" font-size="12" fill="#3a2f1c">· 日常 / 团队内 / 可逆</text>
+<text x="375" y="98" font-family="Georgia" font-size="12" fill="#3a2f1c">· 4 个角色，一页纸</text>
+<text x="375" y="122" font-family="Georgia" font-size="12" fill="#3a2f1c">· 轻快，可异步</text>
+<text x="375" y="156" font-family="Georgia" font-size="12.5" font-weight="700" fill="#4a6a28">双向门用它</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：团队每个小决策（用 axios 还是 fetch、要不要加 pre-commit hook、API 命名风格）都被拉到全员会上投票，工程师烦躁，决策越来越慢。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法</div>
+<p>你怕"不够民主"，所有事都全员讨论。一个 lint 规则吵了 40 分钟，资深工程师私下抱怨"什么都要开会"。共识文化反而成了效率黑洞。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 修后做法（立 DACI 规范）</div>
+<p>"团队内这类决策，提案人就是 <strong>Driver</strong>，写半页 doc：背景、选项、推荐。<strong>Approver</strong> 默认是我或我指定的 tech lead，一人。<strong>Contributors</strong> 在 doc 里异步评论 48 小时。到点 Approver 拍板、写下理由，给 <strong>Informed</strong> 一条广播。"</p>
+<p>判断哪个工具：<strong>跨 3+ 团队 / 不可逆 / 要正式记录 → RAPID；团队内 / 可逆 / 求快 → DACI。</strong></p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">起一份 DACI 前自检</div>
+<ul class="checklist">
+<li>这个决策真需要开会吗？还是一份 DACI doc + 异步评论就够？</li>
+<li>Approver 是不是恰好一人？（不是"我们几个商量"）</li>
+<li>Contributors 的输入窗口有没有截止时间？没有 deadline 的 input 会无限拖。</li>
+<li>决策记下来了吗？三个月后有人问"当时为什么这么定"，找得到答案吗？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>把 DACI 用在重大不可逆决策上。</strong>轻量工具扛不住高风险——那种该升级到 RAPID + RFC。</li>
+<li><strong>Driver 和 Approver 是同一人却不自知。</strong>失去了"推进"与"把关"的分离，回到一言堂。</li>
+<li><strong>决策不留记录。</strong>团队会在同一个问题上反复重新决策，每次都从零吵起。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref"><strong>DACI</strong> 源自 Intuit，由 <strong>Atlassian Team Playbook</strong>（"DACI: a decision-making framework"）推广普及。<br><strong>Andy Grove,《High Output Management》</strong>Ch.5 — "自由讨论 → 清晰决定 → 全力支持" 的决策三段论。</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 04</div>
+<h2>Disagree and Commit：决策之后的纪律
+<span class="en">Disagree and Commit — The Discipline After the Decision</span></h2>
+<span class="tag">异议</span><span class="tag">执行</span><span class="tag">团队承诺</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle"><strong>异议属于决策之前，执行属于决策之后。</strong>一旦 D 拍了板，即使你不同意，也全力执行——而不是阳奉阴违、背后唱衰、或留一手等着说"我早说过"。这是高效团队与内耗团队的分水岭。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"If you have conviction on a particular direction even though there's no consensus, it's helpful to say, 'Look, I know we disagree on this but will you gamble with me on it? Disagree and commit?'"</span>
+<span class="zh">"如果你对某个方向有信念、即使没有共识，不妨说：'我知道我们意见不同，但你愿意陪我赌一把吗？求同存异、全力执行？'"</span>
+<span class="source">— Jeff Bezos, Amazon 致股东信 2016</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：架构评审，你主张消息队列用 SQS（简单、够用），团队多数和老板倾向 Kafka。最终 D（老板）拍了 Kafka。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法</div>
+<p>你嘴上"行吧"，会后在团队群阴阳"反正不是我的决定"；Kafka 一出问题第一句"我早说了 SQS 更好"。团队学到的是：异议者会记仇、会等着看笑话——于是下次没人敢拍板。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 修后做法（决策前清楚反对，决策后明确 commit）</div>
+<p><strong>决策前：</strong>"我记录一下我的反对：SQS 运维成本低，我们的吞吐量两年内到不了 Kafka 的甜区。"</p>
+<p><strong>决策后：</strong>"好，定了 Kafka。我不同意，但这是可逆的技术选型、不是单向门。我全力支持——迁移方案我来写，也会真心帮它成功，不会暗中盼它失败。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">承诺前自检</div>
+<ul class="checklist">
+<li>我的异议在<strong>决策前</strong>充分、清楚地表达了吗？（决策后才说不算数）</li>
+<li>定了之后，我的言行是否一致地支持它？</li>
+<li>我有没有在背后用"我早说过"来收割？（团队毒药）</li>
+<li>如果这是不可逆且我判断有真实危害的决策——我是去 escalate 了，还是用"commit"来回避冲突？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">边界（诚实承认）</div>
+<div class="pitfall">
+Disagree and commit <strong>不适用于</strong>"不可逆 + 高风险 + 你判断会造成真实伤害"的决策——那种要正式 escalate，不是默默 commit。把"求同存异"当成万能挡箭牌，等于放弃了你作为专业人士的责任。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把沉默当成同意。</strong>没说反对 ≠ 真的认同，憋到决策后才爆发，最伤团队。</li>
+<li><strong>用"disagree and commit"压制还没充分表达的异议。</strong>这是滥用，变成"闭嘴执行"。</li>
+<li><strong>决策者把 commit 当"不许再讨论"。</strong>连新证据出现也不许翻案，就成了固执。</li>
+</ul>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+女性表达异议时更容易被贴"不合群 / 难搞（not a team player）"的标签，同样的反对放在男性身上却是"有主见"。对策之一：把异议明确锚定在数据与共同目标上（"为了 SLA，我担心的是 X"），并在决策后<strong>第一时间、可见地</strong>表态支持。这套"清楚反对、然后明确 commit"的组合，反而能积累"靠谱、对事不对人"的声誉资本。
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">关键参考</div>
+<div class="ref"><strong>Jeff Bezos,</strong> Amazon 致股东信 2016 — "disagree and commit" 出处。<br><strong>Patrick Lencioni,《The Five Dysfunctions of a Team》</strong>— "Commitment is a function of clarity and buy-in"：承诺不等于共识，只需清晰 + 被听见。</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>本周习作 · Your Day 15 Action</h3>
+<p>本周你要做一件具体的事，不是反思也不是阅读：</p>
+<div class="action">
+选一个本周卡在你面前的决策。<strong>第一步</strong>，做 Card 1 的 30 秒分诊：单向门还是双向门？<strong>第二步</strong>，按规模选工具——跨团队就画一张 RAPID（白纸黑字写下<strong>唯一的 D 是谁</strong>）；团队内就起一份半页 DACI doc（一个 Driver、一个 Approver、48 小时异步 input 窗口）。本周内让这个决策真正"落地有人 own"。<br><br>会后记一行：<strong>这个决策从启动到拍板花了多久？比上次同类决策快了还是慢了？</strong>
+</div>
+</div>
+
+<!-- ============ Deepen ============ -->
+<div class="deepen">
+<h3>深入思考</h3>
+<details><summary>何时"单一 Decider"反而有害？</summary><div>RAPID/DACI 都强调单一拍板者，但在高度专业、信息高度分散的决策里（比如安全架构、合规边界），单人拍板可能系统性漏掉关键信息。这类决策真正需要的不是"更多投票权"，而是结构化地把分散的知识汇集到 D 面前（如 pre-mortem、红队评审）。问自己：我是在追求决策速度，还是在用"单一 D"逃避把不同专业意见摊开来碰撞的麻烦？</div></details>
+<details><summary>RAPID/DACI 在强层级文化与扁平文化里落地有何不同？</summary><div>在等级森严的组织（某些亚洲大厂、传统国企），把"D = 某个非最高职位者"写进文档，能否真正生效，取决于最高领导是否公开背书这套机制——否则纸面 D 会被"领导的一句话"覆盖。扁平文化的风险相反：人人都觉得自己有 input 权，反而无人愿当那个唯一的 D。框架是中性的，能不能落地取决于谁来撑腰。</div></details>
+<details><summary>"Disagree and commit" 与"明哲保身、随大流"的界线在哪？</summary><div>两者外在行为相似（都支持了自己未必赞同的决策），区别在决策<strong>之前</strong>：真正的 commit 者会先清楚、有记录地表达异议，再全力执行；随大流者从头到尾不发声，是为了不担责。区分的检验：这个人在决策前有没有把反对意见摊在桌面上？如果一个人总是"事后才说早知道"，那不是 commit，是逃避。</div></details>
+<details><summary>决策速度 vs 决策质量，你的团队该往哪个方向调？</summary><div>过去一年，是"决策太慢"伤害大，还是"决策太草率"伤害大？这个答案决定你该加流程还是减流程。常见误判：明明问题是"太慢"（双向门也走重流程），却因为一次草率决策翻车，反而给所有决策加审批——结果把整个团队拖进决策瘫痪。先诊断主要病因，再开药。</div></details>
+<details><summary>是否该强制每个决策都留"为什么"的两行记录？</summary><div>决策日志（decision log / ADR）的长期价值常被低估：它让团队不必在同一问题上反复从零争论，也让新人快速理解"为什么我们当初这么选"。成本是每个 Approver 多写两行理由。问题是：在你的团队，不留记录导致的"重复决策"损耗，是否已经大到值得引入这点摩擦？多数成长中的工程团队，答案是值得。</div></details>
+</div>
+
+<nav class="footer-nav">
+<a href="index.html">← 返回目录</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 15 · 2026.06.04</footer>
+</div>
+</body>
+</html>

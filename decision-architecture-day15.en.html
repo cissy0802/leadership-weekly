@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Day 15: Decision Architecture</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deepen{margin-top:50px}
+.deepen h3{font-size:1.15rem;color:#5c3a18;letter-spacing:1px;margin-bottom:16px;border-bottom:1px solid #c4a878;padding-bottom:10px}
+.deepen details{background:#fffaf0;border:1px solid #e6d9bf;border-radius:6px;margin-bottom:12px;padding:4px 18px}
+.deepen summary{cursor:pointer;font-weight:600;color:#5c3a18;padding:12px 0;font-size:0.98rem}
+.deepen details>div{color:#4a3a20;font-size:0.93rem;padding:4px 0 14px;line-height:1.7}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 15 · 2026.06.04</div>
+<h1>Decision Architecture: Stop Leaving "Who Decides, and How" to Luck</h1>
+<div class="meta"><span>Topic: Decision Architecture</span><span>·</span><span>4 tools</span></div>
+<div class="subtitle">"Disagree and commit." — Jeff Bezos, 2016 shareholder letter</div>
+</header>
+
+<div class="intro">
+<strong>This week's premise:</strong> the bottleneck for a rising tech leader is rarely "can't make a technical call." It's that <strong>the organization's decision machinery is broken</strong> — nobody knows who decides, reversible trivia gets a heavyweight process, while big irreversible bets get rubber-stamped with "let's just ship and see," and after the call people keep grinding against it. This issue gives you four tools answering four questions: <strong>how heavy a process does this decision deserve</strong> (decision types), <strong>who decides</strong> (RAPID), <strong>how to make everyday decisions fast</strong> (DACI), and <strong>how to get everyone to truly execute once it's decided</strong> (Disagree and Commit).
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 01</div>
+<h2>Sort by Decision Type: First Ask Whether the Door Swings Back
+<span class="en">Type 1 vs Type 2 — Match Process to Reversibility</span></h2>
+<span class="tag">Reversibility</span><span class="tag">Mechanism</span><span class="tag">Process weight</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">Triage before you decide: a <strong>two-way door</strong> (reversible) gets delegation, speed, tolerance for trial and error; a <strong>one-way door</strong> (irreversible) is what deserves slowness, consensus, and your personal attention. Process weight should match the cost of the decision — not the size of your anxiety.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"Some decisions are consequential and irreversible or nearly irreversible — one-way doors — and these decisions must be made methodically, carefully, slowly. But most decisions aren't like that — they are changeable, reversible — they're two-way doors."</span>
+<span class="source">— Jeff Bezos, Amazon shareholder letter 2015</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: two decisions land at once — (1) whether to migrate the core order service from MySQL to a new distributed database; (2) which logging library to use this sprint.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The common move</div>
+<p>You give both the same process: review meeting, full-team vote, long RFC. The logging library debate drags on for two weeks; the database migration, by contrast, gets rubber-stamped with "let's ship and see" because everyone's tired — you ran your most dangerous one-way door through the lightest process.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The fix (classify first, then pick the process)</div>
+<p><strong>Logging library (two-way door):</strong> "We can swap it back in a day. I'm delegating this to X — decide it today, no meeting."</p>
+<p><strong>Database migration (one-way door):</strong> "Once the data is moved, there's basically no going back. This earns a two-week RFC, the DBA and SRE in the room, and my personal sign-off." Spend "slow" only on the one place that deserves it.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The 30-Second Triage Checklist</div>
+<ul class="checklist">
+<li>Is this reversible? Is the rollback cost hours, weeks, or impossible?</li>
+<li>Does it touch one team, or span many teams / commit us externally?</li>
+<li>Can we survive the worst case? (A two-way door survives even if it's wrong.)</li>
+<li>Am I forcing a heavyweight process onto a reversible call? (The #1 source of decision paralysis.)</li>
+<li>Am I running an irreversible call through too light a process? (This one is more dangerous.)</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="frame-diagram">
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="210" rx="6" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="210" rx="6" fill="#f5e0d0" stroke="#b85c3a" stroke-width="2"/>
+<text x="180" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#4a6a28">Two-way door · reversible</text>
+<text x="35" y="80" font-family="Georgia" font-size="12" fill="#2a3a18">· Rollback is cheap (hours / days)</text>
+<text x="35" y="104" font-family="Georgia" font-size="12" fill="#2a3a18">· Delegate by default, decide fast</text>
+<text x="35" y="128" font-family="Georgia" font-size="12" fill="#2a3a18">· Tolerate trial &amp; error; fix if wrong</text>
+<text x="35" y="152" font-family="Georgia" font-size="12" fill="#2a3a18">· Tool: DACI / direct delegation</text>
+<text x="35" y="176" font-family="Georgia" font-size="12" fill="#2a3a18">· E.g. libraries, naming, config</text>
+<text x="35" y="208" font-family="Georgia" font-size="12.5" font-weight="700" fill="#4a6a28">→ Optimize for speed</text>
+<text x="520" y="48" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#a04020">One-way door · irreversible</text>
+<text x="375" y="80" font-family="Georgia" font-size="12" fill="#5a3818">· Rollback is very costly or impossible</text>
+<text x="375" y="104" font-family="Georgia" font-size="12" fill="#5a3818">· Worth slowness and consensus</text>
+<text x="375" y="128" font-family="Georgia" font-size="12" fill="#5a3818">· You show up; record it formally</text>
+<text x="375" y="152" font-family="Georgia" font-size="12" fill="#5a3818">· Tool: RAPID / RFC</text>
+<text x="375" y="176" font-family="Georgia" font-size="12" fill="#5a3818">· E.g. data migration, public API</text>
+<text x="375" y="208" font-family="Georgia" font-size="12.5" font-weight="700" fill="#a04020">→ Optimize for safety</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>One-size-fits-all process.</strong> Demanding consensus for everything treats every two-way door as a one-way door — the team grinds to a halt.</li>
+<li><strong>Using heavy process to dodge accountability.</strong> Adding approvals to small calls looks "rigorous" but really dilutes "I decided" into "we all decided together."</li>
+<li><strong>Mistaking "hard to build" for "irreversible."</strong> A big engineering lift isn't necessarily a point of no return; many big projects are gradually rollable, reversible two-way doors.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key References</div>
+<div class="ref"><strong>Jeff Bezos,</strong> Amazon shareholder letters (2015 / 2016) — the origin of "one-way / two-way door," now industry vernacular.</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 02</div>
+<h2>RAPID: Give "Who Decides" a Definite Answer
+<span class="en">RAPID — Who Has the D?</span></h2>
+<span class="tag">Decision rights</span><span class="tag">Cross-team</span><span class="tag">Role assignment</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">When a cross-team decision is stuck, the problem is almost never "not enough information" — it's that <strong>nobody knows who decides</strong>. RAPID splits a decision into five roles: Recommend, Agree (holds a veto), Perform, Input, Decide. The one rule that matters most: <strong>the D must be a single person.</strong></div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"Decisions are the coin of the realm in business. Every success, every mishap, every opportunity seized or missed is the result of a decision someone made or failed to make."</span>
+<span class="source">— Rogers &amp; Blenko, "Who Has the D?" HBR, 2006</span>
+</div>
+</div>
+
+<div class="section">
+<div class="frame-diagram">
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+<g font-family="Georgia">
+<circle cx="48" cy="40" r="20" fill="#a8702d"/><text x="48" y="46" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">R</text>
+<text x="82" y="36" font-size="14" font-weight="700" fill="#5c3a18">Recommend</text>
+<text x="82" y="56" font-size="12" fill="#8a6d3b">Proposes options, gathers info, drives analysis</text>
+<circle cx="48" cy="92" r="20" fill="#a8702d"/><text x="48" y="98" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">A</text>
+<text x="82" y="88" font-size="14" font-weight="700" fill="#5c3a18">Agree (holds a veto)</text>
+<text x="82" y="108" font-size="12" fill="#8a6d3b">Only a few should — assign sparingly</text>
+<circle cx="48" cy="144" r="20" fill="#a8702d"/><text x="48" y="150" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">P</text>
+<text x="82" y="140" font-size="14" font-weight="700" fill="#5c3a18">Perform</text>
+<text x="82" y="160" font-size="12" fill="#8a6d3b">The people who execute the decision</text>
+<circle cx="48" cy="196" r="20" fill="#a8702d"/><text x="48" y="202" text-anchor="middle" font-size="18" font-weight="700" fill="#fffaf0">I</text>
+<text x="82" y="192" font-size="14" font-weight="700" fill="#5c3a18">Input</text>
+<text x="82" y="212" font-size="12" fill="#8a6d3b">Offers views — but does not vote</text>
+<circle cx="48" cy="240" r="22" fill="#5c3a18"/><text x="48" y="247" text-anchor="middle" font-size="19" font-weight="700" fill="#f5e8c8">D</text>
+<text x="82" y="236" font-size="14" font-weight="700" fill="#5c3a18">Decide (a single person)</text>
+<text x="82" y="256" font-size="12" fill="#a04020">Ultimately accountable — never "two Ds"</text>
+</g>
+</svg>
+<div style="font-size:0.82rem;color:#8a6d3b;margin-top:6px">The letters are a mnemonic, not a sequence; the real order is usually I→R→A→D→P.</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: three teams need to split a monolith into microservices. Five meetings in, still no conclusion.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The common move</div>
+<p>Every meeting is "so, what does everyone think?" The loudest voice wins the room, nobody owns the outcome, and next week starts from zero. Democratic in appearance, accountable to no one in practice.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The fix (send a RAPID before the meeting)</div>
+<p>"The split-boundary proposal is <strong>Recommended</strong> by the Platform Lead; SRE has <strong>Agree</strong> (veto) on availability impact; DBA and each product team give <strong>Input</strong>; <strong>Decide = me (BigCat)</strong>; once set, the three teams <strong>Perform</strong>."</p>
+<p>Open the meeting with the frame: "This meeting has one purpose — hear the Recommend, collect Input, then <strong>I give the D in the room</strong>."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Self-Check Before Using RAPID</div>
+<ul class="checklist">
+<li>Does this decision have exactly one D? (Two Ds = no D.)</li>
+<li>Does each Agree (veto) have a legitimate reason to veto? Over-issuing A's causes paralysis.</li>
+<li>Does the Recommender have real voice, or are they just "drafting for the boss to rewrite"?</li>
+<li>Do the Input people know they aren't voting? Say so up front, or they'll feel ignored afterward.</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes + A Note for Women</div>
+<div class="pitfall">
+<ul>
+<li><strong>Handing out too many A's (vetoes).</strong> Each extra A is another chokepoint; the decision dies in sign-offs.</li>
+<li><strong>The D landing on the highest-ranking person rather than the most accountable one.</strong> RAPID's whole value is decoupling the decision from the org chart.</li>
+<li><strong>Letting Input think they're voting.</strong> Afterward that group feels "my view was ignored."</li>
+</ul>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Research repeatedly shows women are more often assigned Recommend / Perform (drafting, executing) while the D lands on a male colleague — and that a woman's proposal in a meeting is more likely to be "restated" and credited to someone else. A proven counter is <strong>amplification</strong> (used by women on Obama's White House staff): when a woman makes a key point, another person immediately repeats it and names her — "that's X's proposal." Writing down "who is Recommend, who is D" in a RAPID is itself a mechanism that stops contribution from quietly migrating.
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key References</div>
+<div class="ref"><strong>Paul Rogers &amp; Marcia Blenko (Bain &amp; Company), "Who Has the D? How Clear Decision Roles Enhance Organizational Performance,"</strong> HBR, 2006 — the original RAPID paper.</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 03</div>
+<h2>DACI: Lightweight Decision Rights for Engineering Teams
+<span class="en">DACI — Lightweight Decision Rights</span></h2>
+<span class="tag">Lightweight</span><span class="tag">Single Driver</span><span class="tag">Everyday calls</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">RAPID fits big, cross-org decisions that need a formal record; everyday in-team decisions need something lighter — <strong>DACI</strong>: Driver (drives it forward, doesn't necessarily decide), Approver (the single decider, usually 1 person), Contributors, Informed. One page, one doc, ten minutes.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"The whole decision-making process can be summed up in three phrases: free discussion, a clear decision, and full support."</span>
+<span class="source">— Andy Grove, High Output Management, Ch.5</span>
+</div>
+</div>
+
+<div class="section">
+<div class="frame-diagram">
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="160" rx="6" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="160" rx="6" fill="#fcf6e8" stroke="#5c3a18" stroke-width="2"/>
+<text x="180" y="46" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">RAPID</text>
+<text x="35" y="74" font-family="Georgia" font-size="12" fill="#3a2f1c">· Big / cross-team / irreversible</text>
+<text x="35" y="98" font-family="Georgia" font-size="12" fill="#3a2f1c">· 5 roles, formal record</text>
+<text x="35" y="122" font-family="Georgia" font-size="12" fill="#3a2f1c">· Heavier, use sparingly</text>
+<text x="35" y="156" font-family="Georgia" font-size="12.5" font-weight="700" fill="#a04020">Use for one-way doors</text>
+<text x="520" y="46" text-anchor="middle" font-family="Georgia" font-size="15" font-weight="700" fill="#5c3a18">DACI</text>
+<text x="375" y="74" font-family="Georgia" font-size="12" fill="#3a2f1c">· Everyday / in-team / reversible</text>
+<text x="375" y="98" font-family="Georgia" font-size="12" fill="#3a2f1c">· 4 roles, one page</text>
+<text x="375" y="122" font-family="Georgia" font-size="12" fill="#3a2f1c">· Light, async-friendly</text>
+<text x="375" y="156" font-family="Georgia" font-size="12.5" font-weight="700" fill="#4a6a28">Use for two-way doors</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: every small call (axios vs fetch, whether to add a pre-commit hook, API naming style) gets dragged into a full-team vote. Engineers are irritated, and decisions keep getting slower.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The common move</div>
+<p>Afraid of being "undemocratic," you discuss everything with the whole team. A lint rule eats 40 minutes; a senior engineer privately complains "everything needs a meeting." Consensus culture has become an efficiency black hole.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The fix (establish a DACI norm)</div>
+<p>"For in-team calls like these, the proposer is the <strong>Driver</strong> and writes a half-page doc: context, options, recommendation. The <strong>Approver</strong> defaults to me or a tech lead I name — one person. <strong>Contributors</strong> comment in the doc async for 48 hours. At the deadline the Approver decides, writes down the reasoning, and broadcasts one line to the <strong>Informed</strong>."</p>
+<p>How to choose the tool: <strong>3+ teams / irreversible / needs a formal record → RAPID; in-team / reversible / needs speed → DACI.</strong></p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Self-Check Before Starting a DACI</div>
+<ul class="checklist">
+<li>Does this really need a meeting, or is a DACI doc + async comments enough?</li>
+<li>Is the Approver exactly one person? (Not "a few of us will figure it out.")</li>
+<li>Do Contributors have a deadline for input? Input without a deadline drags forever.</li>
+<li>Is the decision recorded? In three months, when someone asks "why did we choose this," can they find the answer?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Using DACI on a big irreversible decision.</strong> A lightweight tool can't carry high risk — that should escalate to RAPID + RFC.</li>
+<li><strong>Driver and Approver being the same person without noticing.</strong> You lose the separation between "drive" and "gatekeep," and slide back to one-person rule.</li>
+<li><strong>Not recording the decision.</strong> The team re-decides the same question over and over, arguing from scratch each time.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key References</div>
+<div class="ref"><strong>DACI</strong> originated at Intuit and was popularized by the <strong>Atlassian Team Playbook</strong> ("DACI: a decision-making framework").<br><strong>Andy Grove, High Output Management,</strong> Ch.5 — the "free discussion → clear decision → full support" model.</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">TOOL 04</div>
+<h2>Disagree and Commit: The Discipline After the Decision
+<span class="en">Disagree and Commit — The Discipline After the Decision</span></h2>
+<span class="tag">Dissent</span><span class="tag">Execution</span><span class="tag">Team commitment</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle"><strong>Dissent belongs before the decision; execution belongs after it.</strong> Once the D is made, even if you disagree, you execute fully — not pay lip service, undermine it behind the scenes, or hold back waiting to say "I told you so." This is the dividing line between high-output teams and self-grinding ones.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"If you have conviction on a particular direction even though there's no consensus, it's helpful to say, 'Look, I know we disagree on this but will you gamble with me on it? Disagree and commit?'"</span>
+<span class="source">— Jeff Bezos, Amazon shareholder letter 2016</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: in an architecture review you argue for SQS for the message queue (simple, sufficient); most of the team and your boss lean toward Kafka. The D (your boss) lands on Kafka.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The common move</div>
+<p>You say "fine" out loud, then snipe in the team channel — "not my call anyway." The moment Kafka has trouble, your first line is "I said SQS was better." The team learns that dissenters hold grudges and wait for things to fail — so next time nobody dares to decide.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The fix (dissent clearly before, commit clearly after)</div>
+<p><strong>Before the decision:</strong> "Let me put my objection on record: SQS has lower ops cost, and our throughput won't reach Kafka's sweet spot within two years."</p>
+<p><strong>After the decision:</strong> "Okay, it's Kafka. I disagree, but this is a reversible technology choice, not a one-way door. I'm fully behind it — I'll write the migration plan and genuinely help it succeed; I won't be secretly rooting for it to fail."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Self-Check Before You Commit</div>
+<ul class="checklist">
+<li>Did I voice my dissent fully and clearly <strong>before</strong> the decision? (Speaking up only afterward doesn't count.)</li>
+<li>Once it's set, are my words and actions consistently behind it?</li>
+<li>Am I harvesting "I told you so" behind the scenes? (Team poison.)</li>
+<li>If this is irreversible and I judge it genuinely harmful — did I escalate, or am I using "commit" to avoid conflict?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">The Boundary (Stated Honestly)</div>
+<div class="pitfall">
+Disagree and commit <strong>does not apply</strong> to "irreversible + high-risk + you judge it will cause real harm" decisions — those require a formal escalation, not silent commitment. Using "agree to disagree" as a universal shield is abdicating your responsibility as a professional.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes + A Note for Women</div>
+<div class="pitfall">
+<ul>
+<li><strong>Treating silence as agreement.</strong> No objection ≠ genuine buy-in; bottling it up until after the decision does the most damage.</li>
+<li><strong>Using "disagree and commit" to suppress dissent that hasn't been fully voiced.</strong> That's an abuse — it becomes "shut up and execute."</li>
+<li><strong>The decider treating commit as "no more discussion."</strong> Forbidding a revisit even when new evidence appears is just stubbornness.</li>
+</ul>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Women voicing dissent are more readily labeled "not a team player" or "difficult," while the same objection from a man reads as "having conviction." One counter: anchor the dissent explicitly in data and shared goals ("for the SLA, what worries me is X"), and then, <strong>immediately and visibly</strong>, signal support once it's decided. This combination — object clearly, then commit clearly — actually builds reputational capital as "reliable, plays the issue not the person."
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key References</div>
+<div class="ref"><strong>Jeff Bezos,</strong> Amazon shareholder letter 2016 — the origin of "disagree and commit."<br><strong>Patrick Lencioni, The Five Dysfunctions of a Team</strong> — "Commitment is a function of clarity and buy-in": commitment isn't consensus, it just needs clarity + being heard.</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Week's Exercise · Your Day 15 Action</h3>
+<p>This week, do one concrete thing — not reflection, not reading:</p>
+<div class="action">
+Pick one decision that's stuck in front of you this week. <strong>Step 1:</strong> run Card 1's 30-second triage — one-way door or two-way? <strong>Step 2:</strong> pick the tool by scale — cross-team, draw a RAPID (write down in black and white <strong>who the single D is</strong>); in-team, start a half-page DACI doc (one Driver, one Approver, a 48-hour async input window). Get this decision to "actually owned and landed" this week.<br><br>Afterward, log one line: <strong>how long did it take from kickoff to the call? Faster or slower than the last decision of this kind?</strong>
+</div>
+</div>
+
+<!-- ============ Deepen ============ -->
+<div class="deepen">
+<h3>Go Deeper</h3>
+<details><summary>When does a "single Decider" actually do harm?</summary><div>Both RAPID and DACI stress a single decider, but for highly specialized decisions where information is widely dispersed (security architecture, compliance boundaries), one person deciding can systematically miss critical input. What such decisions really need isn't "more voting rights" but a structured way to funnel scattered knowledge to the D (pre-mortems, red-team reviews). Ask yourself: am I chasing decision speed, or using "single D" to avoid the hassle of letting different expert views collide on the table?</div></details>
+<details><summary>How does RAPID/DACI land differently in steep-hierarchy vs flat cultures?</summary><div>In rigidly hierarchical organizations, whether "D = a non-most-senior person" written in a doc actually holds depends on whether the top leader publicly backs the mechanism — otherwise the paper D gets overridden by "one word from the boss." Flat cultures have the opposite risk: everyone feels they have input rights, so no one is willing to be the single D. The framework is neutral; whether it lands depends on who's backing it.</div></details>
+<details><summary>Where's the line between "disagree and commit" and "playing it safe, following the crowd"?</summary><div>The outward behavior looks similar (both end up supporting a call they don't fully endorse); the difference is <strong>before</strong> the decision: a true committer voices clear, on-the-record dissent first, then executes fully; the crowd-follower never speaks up, to avoid accountability. The test: did this person put their objection on the table before the call? If someone always "knew it all along" only afterward, that's not commitment — it's evasion.</div></details>
+<details><summary>Speed vs quality — which way should your team tune?</summary><div>Over the past year, did "deciding too slow" or "deciding too carelessly" cause more harm? The answer tells you whether to add process or strip it. A common misjudgment: the problem is clearly "too slow" (heavyweight process even on two-way doors), but after one careless decision blows up, you add approvals to everything — dragging the whole team into paralysis. Diagnose the dominant cause first, then prescribe.</div></details>
+<details><summary>Should every decision carry a two-line "why" record?</summary><div>The long-term value of a decision log (ADR) is routinely underrated: it spares the team from re-litigating the same question from scratch, and lets newcomers quickly grasp "why we chose this back then." The cost is each Approver writing two extra lines of reasoning. The question: in your team, has the waste from "re-deciding" without records grown big enough to justify that friction? For most growing engineering teams, the answer is yes.</div></details>
+</div>
+
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 15 · 2026.06.04</footer>
+</div>
+</body>
+</html>
