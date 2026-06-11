@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>领导力 Day 22：不被头衔定义</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deepen{margin-top:46px}
+.deepen h3{font-size:1.1rem;color:#5c3a18;letter-spacing:1px;margin-bottom:14px;border-bottom:1px solid #c4a878;padding-bottom:8px}
+.deepen details{background:#fffaf0;border-radius:4px;margin-bottom:10px;padding:4px 0;border-left:3px solid #a8702d}
+.deepen summary{cursor:pointer;padding:12px 18px;font-weight:600;color:#5c3a18;font-size:0.98rem}
+.deepen details[open] summary{border-bottom:1px dashed #e6d9bf}
+.deepen .think{padding:12px 18px;font-size:0.93rem;color:#4a3a20}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 22 · 2026.06.12</div>
+<h1>不被头衔定义：你租了这个角色，你不是这个头衔</h1>
+<div class="meta"><span>主题：Identity Beyond Title</span><span>·</span><span>4 个场景</span></div>
+<div class="subtitle">"Remember that you are an actor in a play... your business is to act the part well." — Epictetus</div>
+</header>
+
+<div class="intro">
+<strong>本周的命题：</strong>大公司给你的头衔——Senior、Staff、Tech Lead Manager——是一个<strong>角色</strong>，不是一个人。角色是公司租给你的，reorg 一来可以一夜收回；而它一旦收回，把全部自我都押在上面的人会经历真正的身份地震："如果我不是那个 manager，我到底是谁？"这不是矫情，是一种<strong>单点故障</strong>的人生架构。本周不谈鸡汤式的"做自己"，谈四件可操作的事：把角色和身份在认知上拆开、看清单一身份为什么脆弱、主动搭建<strong>身份组合</strong>（builder / craftsperson / mentor / 生活里的角色）、以及用"如果明天没了头衔"的预演，把身份地震提前到无痛的演习场里跑一遍。这是为超级个体准备的底层抗摔架构。
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 01</div>
+<h2>角色 ≠ 身份：头衔是公司租给你的戏服
+<span class="en">The Title Is a Costume You Rent</span></h2>
+<span class="tag">概念拆分</span><span class="tag">斯多葛</span><span class="tag">演员视角</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">头衔是<strong>角色</strong>，是公司租给你的一件戏服；它能被收回，但收回的是角色，不是你。把"丢了 manager 身份"和"我这个人不行了"在心里<strong>切开</strong>，是一切抗摔能力的起点。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Remember that you are an actor in a play, which is as the playwright wants it to be... Your task is to play well the part you are given; to choose it belongs to another."</span>
+<span class="zh">"记住你是一出戏里的演员，戏怎么演由剧作者决定……你的任务是演好分配给你的角色；至于挑哪个角色，那是别人的事。"</span>
+<span class="source">— Epictetus,《Enchiridion》§17</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：一次 reorg，你的 Tech Lead Manager 头衔被合并，团队并到隔壁组，你被改回高级 IC，向原来的平级汇报。公告发出那一刻，你坐在工位上一阵眩晕。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 角色损失 = 自我崩塌</div>
+<p>内心独白："我被降级了，我是个失败者，三年白干。"——你把"公司收回了一个角色"自动翻译成"我作为一个人贬值了"。接下来几周你要么愤怒地证明自己、要么消沉地否定自己，两条路都被情绪绑架。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 把角色和自我切开</div>
+<p>先做事实陈述："公司因业务调整收回了 manager 这个<strong>角色</strong>，是组织决策，不是对我这个人的判决。"<br>再分清损失："我失去的是 title、汇报线、一点薪酬带宽；<strong>没失去</strong>的是工程判断、带过的人对我的信任、解决问题的能力。"<br>对外话术也变："我现在更聚焦技术深度"——不自我矮化，也不假装没发生。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">把"角色"和"身份"切开的检查表</div>
+<ul class="checklist">
+<li>这件事收回的是一个<strong>角色/职权</strong>，还是真的改变了<strong>我是谁</strong>？（几乎总是前者）</li>
+<li>把损失列清单：哪些是头衔附带的（title、汇报线、预算），哪些是我自己的（技能、关系、声誉）？</li>
+<li>我现在的痛，是失去了能力，还是失去了"被如此看待"的位置？两者疗法完全不同。</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把组织决策读成人格判决。</strong>reorg 九成是棋盘调整，不是道德审判。</li>
+<li><strong>用新头衔当唯一解药。</strong>"等我升回去就好了"——只是把脆弱性推迟，没拆除。</li>
+<li><strong>过度表演"我不在乎"。</strong>切开不等于压抑；承认失落，但不让它定义你。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>习作：</strong>写下你现在的头衔，在旁边列出"若这个词消失，我对公司、对行业还剩的三项具体价值"。写不满三项，就是本周真正的预警。<br><strong>思考：</strong>你上一次职业剧痛，痛的是失去能力，还是失去"被看见的位置"？</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 02</div>
+<h2>单一身份 = 单点故障：别把全部自我押在一个头衔上
+<span class="en">One Identity Is a Single Point of Failure</span></h2>
+<span class="tag">自我复杂度</span><span class="tag">抗脆弱</span><span class="tag">分散下注</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">如果"BigCo 的 Staff 工程师"占据了你 100% 的自我，那么任何对它的威胁都是<strong>存亡级</strong>的。身份和系统一样：<strong>单点 = 易崩</strong>。自我的来源越多元，一次打击越打不垮你——这不是心灵安慰，是有研究支撑的缓冲机制。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Don't put all of your eggs in one cognitive basket. People higher in self-complexity—who define themselves through more, and more distinct, aspects—show smaller swings in mood and self-appraisal after a setback in any single domain."</span>
+<span class="zh">"别把所有鸡蛋放进同一个认知篮子。自我复杂度更高的人——用更多、更彼此独立的侧面来定义自己——在任一单一领域受挫后，情绪和自我评价的波动都更小。"</span>
+<span class="source">— Patricia Linville, 自我复杂度研究（Social Cognition, 1985；JPSP, 1987）</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">单一身份 vs 身份组合</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="230" rx="6" fill="#f5e0d0" stroke="#b85c3a" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="230" rx="6" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<text x="180" y="46" text-anchor="middle" font-family="Georgia" font-size="14" font-weight="700" fill="#a04020">⚠ 单点故障</text>
+<circle cx="180" cy="150" r="46" fill="#fff" stroke="#b85c3a" stroke-width="2"/>
+<text x="180" y="146" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#a04020">Manager</text>
+<text x="180" y="163" text-anchor="middle" font-family="Georgia" font-size="11" fill="#a04020">@ BigCo</text>
+<text x="180" y="100" text-anchor="middle" font-family="Georgia" font-size="22" fill="#b85c3a">⚡</text>
+<text x="180" y="228" text-anchor="middle" font-family="Georgia" font-size="11" fill="#5a3818">一处被收回 → 整个自我崩塌</text>
+<text x="520" y="46" text-anchor="middle" font-family="Georgia" font-size="14" font-weight="700" fill="#4a6a28">✓ 身份组合</text>
+<circle cx="520" cy="140" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="520" y="144" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Builder</text>
+<circle cx="440" cy="100" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="440" y="104" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Mentor</text>
+<circle cx="600" cy="105" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="600" y="109" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Writer</text>
+<circle cx="450" cy="185" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="450" y="189" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Parent</text>
+<circle cx="595" cy="190" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="595" y="194" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Craft</text>
+<text x="520" y="240" text-anchor="middle" font-family="Georgia" font-size="11" fill="#2a3a18">一处受挫 → 其余仍稳住你</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：一位你很佩服的 peer，把全部自我押在"晋升 Principal"上。这轮他被刷下来，整个人像断了电——请假、对工作失去意义感、甚至否定过去所有成绩。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 全部下注在一个头衔</div>
+<p>他的内在等式是：Principal = 我的价值。等式右边一旦取不到，左边的"我"就归零。这不是他脆弱，是他的<strong>身份架构</strong>只有一根承重柱。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 你能对他（和对自己）说的</div>
+<p>"这次没过，是<strong>committee 的一个决定</strong>，不是对你这个人的总评。"<br>"你这一年带出了两个人、把那套系统重写得更稳、社区分享有人专门来谢你——这些<strong>没有一项</strong>因为 title 没动而消失。"<br>"一起看：你的价值感是不是全挂在这一个 title 上？如果是，那不是这次的问题，是<strong>架构</strong>的问题，值得认真分散。"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">自我复杂度自查（越多"是"越抗摔）</div>
+<ul class="checklist">
+<li>除了"我的职位"，我能用三个<strong>彼此独立</strong>的身份介绍自己吗？</li>
+<li>这些身份的成败是<strong>解耦</strong>的吗？（若全都依赖同一家公司同一个老板，等于没分散）</li>
+<li>过去一年，我的自我价值感有没有<strong>单一来源</strong>地随一件事大起大落？</li>
+<li>如果工作明天清零，我还有没有一个领域能立刻获得胜任感和归属感？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把"专注"当借口拒绝分散。</strong>专注做事 ≠ 把全部自我押在一个头衔；前者是策略，后者是风险敞口。</li>
+<li><strong>用同质身份冒充多元。</strong>"工程师 + 架构师 + 技术博主"全绑在同一职业轴上，一场行业寒冬一起塌。</li>
+<li><strong>等地震来了才想分散。</strong>抗摔架构要在天晴时搭，不是塌方时现搭。</li>
+</ul>
+</div>
+<div class="female" style="margin-top:12px">
+<span class="female-label">Female Leader's Note</span>
+女性常被推向另一种单点故障：自我过度绑定在"那个靠谱的、照顾全场的人"上（团队胶水、情绪劳动的承担者）。一旦这个角色不再被看见，崩塌一样剧烈，而它往往<strong>不计入</strong>晋升评估。分散下注对女性更要紧——确保你的自我里，有<strong>不靠"被需要"也成立</strong>的那部分。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>习作：</strong>画一张"身份饼图"，把 100% 自我价值感按当前实际比例分给各来源。某块超过 60%，它就是你的单点故障。<br><strong>思考：</strong>你最近一次情绪剧烈起落，是不是来自同一个唯一的来源？</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 03</div>
+<h2>主动搭建身份组合：让"手艺"活得比"头衔"长
+<span class="en">Build an Identity Portfolio — Craft Outlives Title</span></h2>
+<span class="tag">身份组合</span><span class="tag">working identity</span><span class="tag">手艺人</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">身份组合不是业余爱好，是<strong>韧性架构</strong>。关键区分：<strong>头衔会过期，手艺不会</strong>。"BigCo 的 manager"是租来的角色，"能把复杂系统讲清楚、能带人成长的工程师"是你带得走的资产。而且身份不是想出来的，是<strong>做出来的</strong>——靠行动试，不靠内省找。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"We learn who we are in practice, not in theory... We are many selves. Identity changes in only one way: through doing, by trying things out and discovering what fits."</span>
+<span class="zh">"我们是在实践中、而非理论中认识自己……我们拥有许多个自我。身份只以一种方式改变：通过去做、去尝试、去发现什么真正适合。"</span>
+<span class="source">— Herminia Ibarra,《Working Identity》（2003）</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：你做 Tech Lead Manager 两年，写代码越来越少，某天发现自己已讲不清最近"造"过什么——管理身份正在悄悄吃掉你唯一带得走的手艺身份。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 让单一角色吞掉其余自我</div>
+<p>"我现在是管理者，写代码是浪费时间。"——几年后若管理岗没了，你既没了 title，手艺也荒废了，<strong>两手空空</strong>。你把全部鸡蛋默默搬进了一个会过期的篮子。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 刻意保留并喂养第二身份</div>
+<p>不是辞职去写代码，而是<strong>留一条窄而真的 builder 通道</strong>：每季度亲手交付一个小而实的东西——一个内部工具、一篇把团队踩坑写清楚的技术文、一次开源贡献。<br>给它一个固定时间盒（如每周五下午两小时），像保护重要会议一样保护它。<br>对外也维护这条线："我带团队，但我还在<strong>造东西</strong>。"——这句话在任何 reorg 里都不贬值。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">搭建身份组合的检查表</div>
+<ul class="checklist">
+<li>我有没有一个<strong>不依赖现公司</strong>就成立的职业身份？（手艺、作品、社区声誉）</li>
+<li>有没有一个<strong>完全在工作之外</strong>的身份在持续投入？（父母、运动、写作、某个社群）</li>
+<li>每个身份都有<strong>真实的最近产出</strong>吗，还是只停留在"我本来也会"的想象里？</li>
+<li>这些身份是我<strong>真做了</strong>才长出来的，还是只在脑子里设想、用"等不忙了再说"无限推迟的？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把组合理解成"什么都浅尝"。</strong>组合要少而真：2–3 个有真实产出的身份，胜过十张办了的健身卡。</li>
+<li><strong>只在脑中规划，从不动手。</strong>Ibarra 的核心：身份靠行动长出来，想是想不出来的。</li>
+<li><strong>第二身份一忙就第一个被砍。</strong>没有时间盒保护的身份，等于不存在。</li>
+</ul>
+</div>
+<div class="female" style="margin-top:12px">
+<span class="female-label">Female Leader's Note</span>
+"父母"是身份组合里很有韧性的一块，但职场对它有残酷的不对称：研究显示<strong>母职惩罚 vs 父职奖励</strong>——同样为人父母，母亲常被默认投入度下降而扣分，父亲反被加分为"顾家又靠谱"（Correll 等的实验）。所以女性更需刻意经营<strong>工作之内</strong>的多元身份（手艺、作品、专业声誉），别让"母亲"成为唯一被看见、又恰被职场低估的那块。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>习作：</strong>给一个"第二身份"在日历上固定每周两小时、有名字的时间盒（如"Builder Block"），本周真正用掉一次，产出一件小而实的东西。<br><strong>思考：</strong>三年后离开现公司，你希望别人记住你"做过什么"，还是"挂过什么 title"？现在的时间分配支持哪个？</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 04</div>
+<h2>「如果明天没了头衔」：把身份地震提前到演习场
+<span class="en">The Fire Drill — Rehearse Losing the Title</span></h2>
+<span class="tag">premeditatio</span><span class="tag">预演</span><span class="tag">无头衔自述</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">最坏的时刻才去想最坏的事，代价最高。斯多葛的 <strong>premeditatio malorum（预演不幸）</strong>反过来用：趁天晴，把"明天头衔没了"在脑中安全地跑一遍。火灾前先做消防演习，真到那天，你不会是第一次面对这种感觉。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Rehearse them in your mind: exile, torture, war, shipwreck... What I advise you to do is, not to be unhappy before the crisis comes; since it may be that the dangers will never assail you."</span>
+<span class="zh">"在心里预演它们：流放、酷刑、战争、海难……我劝你做的是，别在危机到来之前就先陷入痛苦；因为那些危险也许根本不会降临到你身上。"</span>
+<span class="source">— Seneca,《Moral Letters to Lucilius》Letter 24</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：跑一遍演习</div>
+<div class="scene">
+<div class="setup">情境：周末半小时，不带恐慌地预演一次"如果明天没了头衔"。目的是把陌生的剧痛，变成已彩排过的、可控的画面。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 平时回避，真到那天裸奔</div>
+<p>"别乌鸦嘴，想这些干嘛。"——于是你从未演练，地震真来时是第一次面对，恐慌叠加突袭，决策全在情绪里做。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 三段式预演（写下来，不是空想）</div>
+<p><strong>① 无头衔自述：</strong>写一段 60 秒自我介绍，不准出现现公司名和现头衔。剩下的，就是真正属于你的那部分。<br><strong>② 情绪预演：</strong>具体想象公告那一刻的感受——羞耻？解脱？愤怒？提前认领它，到时它就不会突袭你。<br><strong>③ 行动预案：</strong>"如果真发生，头 30 天做的三件具体事"——不是焦虑，是清单：联系谁、盘点什么、保留哪些关系。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">「无头衔自述」检查表</div>
+<ul class="checklist">
+<li>删掉公司名和头衔后，我的自述里还<strong>剩几句</strong>能说？（剩得越多越稳）</li>
+<li>剩下的是<strong>具体能力和作品</strong>，还是又一串抽象形容词（"努力""有责任心"）？</li>
+<li>我的"头 30 天预案"里，有几个联系人是<strong>不靠现职位</strong>就会接我电话的？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误 + 女性视角</div>
+<div class="pitfall">
+<ul>
+<li><strong>把预演做成灾难化空想。</strong>premeditatio 是结构化的"想象 + 预案"，不是失眠时的无限循环——要落到纸上。</li>
+<li><strong>只演情绪，不做预案。</strong>没有"头 30 天清单"的预演只剩恐惧；有清单，恐惧才转成掌控。</li>
+<li><strong>演完就锁抽屉。</strong>每年（或每次大 reorg 前）更新一次，它也是你真实价值的体检表。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>习作：</strong>写下你的"60 秒无头衔自述"——不准出现现公司和现 title。读给一个信任的人听，问："这听起来还是我吗？"<br><strong>思考：</strong>如果这段自述让你发慌，慌的是"我没有价值"，还是"我从没把价值沉淀在头衔之外"？后者是好消息——本周就能开始改。</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>本周习作 · Your Day 22 Action</h3>
+<p>本周做一件具体的事，不是反思也不是阅读：</p>
+<div class="action">
+<strong>做一次「无头衔自述」演习</strong>，两步：<br><br><strong>(1)</strong> 写一段 60 秒自我介绍，<strong>不准出现现公司名和头衔</strong>。剩下的，就是真正属于你、带得走的那部分。<br><strong>(2)</strong> 给一个"第二身份"在日历上锁每周两小时的时间盒（Builder / Writer / Mentor 任选），本周真正用掉一次，产出一件小而实的东西。<br><br>记一行：<strong>去掉头衔后，我的自述还剩几句实在话？</strong>——这个数字就是你当前的抗摔系数。
+</div>
+</div>
+
+<div class="deepen">
+<h3>深入思考</h3>
+<details>
+<summary>"不被头衔定义"会不会变成不思进取的借口——反正我不靠头衔，那还争取晋升干嘛？</summary>
+<div class="think">不会，前提是分清"<strong>不被定义</strong>"和"不在乎"。健康姿态是：全力争取角色（头衔带来资源、影响力、薪酬，值得认真争），但<strong>不把自我价值全部按揭在结果上</strong>。这反而让你争得更从容——下注但不押命，敢冒险、敢说真话、敢在该走时优雅退场。把自我和头衔绑死的人，常因输不起而做出更怯懦、更政治化的选择。</div>
+</details>
+<details>
+<summary>东亚文化里"事业即身份""头衔即面子"根深蒂固，这套"角色 ≠ 身份"是不是水土不服？</summary>
+<div class="think">挑战确实更大：高语境、重面子的环境里，头衔不只是自我认知，还承载家庭期待和社会比较，失去它的社会代价真实，不能轻描淡写。但正因如此，单点故障的风险更高、地震更烈，提前搭建身份组合、做预演的回报也更大。务实做法不是对抗整个文化，而是在<strong>私人领域</strong>先建立不依赖头衔的自我来源（手艺、关系、家庭里非"提供者"的角色），让面子之外有真实的立足点。</div>
+</details>
+<details>
+<summary>不同人生阶段，身份组合的配比该不一样吗？年轻时是不是就该"All in"一个身份？</summary>
+<div class="think">配比该随阶段变。早期适当聚焦、甚至阶段性 all in 一门手艺，是积累 career capital 的合理策略——区别在于：你押的是<strong>可迁移的能力</strong>，还是一家公司的一个 title。前者越深越值钱，后者越深越脆弱。到中后期、上有老下有小、行业波动加大时，分散就从奢侈变刚需。关键不是任何阶段都均摊，而是<strong>始终至少保留一条不依赖现雇主的身份线</strong>，哪怕早期只占 10%。</div>
+</details>
+</div>
+
+<nav class="footer-nav">
+<a href="index.html">← 返回目录</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 22 · 2026.06.12</footer>
+</div>
+</body>
+</html>

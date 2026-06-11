@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Day 22: Identity Beyond Title</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deepen{margin-top:46px}
+.deepen h3{font-size:1.1rem;color:#5c3a18;letter-spacing:1px;margin-bottom:14px;border-bottom:1px solid #c4a878;padding-bottom:8px}
+.deepen details{background:#fffaf0;border-radius:4px;margin-bottom:10px;padding:4px 0;border-left:3px solid #a8702d}
+.deepen summary{cursor:pointer;padding:12px 18px;font-weight:600;color:#5c3a18;font-size:0.98rem}
+.deepen details[open] summary{border-bottom:1px dashed #e6d9bf}
+.deepen .think{padding:12px 18px;font-size:0.93rem;color:#4a3a20}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 22 · 2026.06.12</div>
+<h1>Identity Beyond Title: You Rent the Role — You Are Not the Title</h1>
+<div class="meta"><span>Topic: Identity Beyond Title</span><span>·</span><span>4 Scenes</span></div>
+<div class="subtitle">"Remember that you are an actor in a play... your business is to act the part well." — Epictetus</div>
+</header>
+
+<div class="intro">
+<strong>This week's thesis:</strong> The title a big company hands you—Senior, Staff, Tech Lead Manager—is a <strong>role</strong>, not a person. The company rents the role to you, and a reorg can revoke it overnight. When it does, anyone who staked their whole self on it goes through a genuine identity earthquake: "If I'm not that manager, who am I?" That's not melodrama—it's a <strong>single-point-of-failure</strong> life architecture. This week skips the "just be yourself" pep talk and gives you four actionable moves: cognitively separate role from identity; see why a single identity is fragile; deliberately build an <strong>identity portfolio</strong> (builder / craftsperson / mentor / roles in your life); and use an "if the title vanished tomorrow" fire drill to run the earthquake in a painless rehearsal first. This is the bedrock shock-resistance architecture for a super-individual.
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 01</div>
+<h2>Role ≠ Identity: The Title Is a Costume You Rent
+<span class="en">The Title Is a Costume You Rent</span></h2>
+<span class="tag">Conceptual split</span><span class="tag">Stoic</span><span class="tag">Actor's view</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">A title is a <strong>role</strong>—a costume the company rents you. It can be reclaimed, but what's reclaimed is the role, not you. <strong>Severing</strong> "I lost the manager identity" from "I'm worthless as a person" is the starting point of all shock resistance.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Own Words</div>
+<div class="quote">
+<span class="en">"Remember that you are an actor in a play, which is as the playwright wants it to be... Your task is to play well the part you are given; to choose it belongs to another."</span>
+<span class="zh">A role is assigned to you; how you play it is yours, but the casting is not.</span>
+<span class="source">— Epictetus, <em>Enchiridion</em> §17</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: A reorg folds your Tech Lead Manager title, your team is merged into the next group, you're moved back to senior IC reporting to a former peer. The moment the announcement lands, you feel dizzy at your desk.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Loss of role = collapse of self</div>
+<p>Inner monologue: "I've been demoted, I'm a failure, three years wasted." You auto-translate "the company reclaimed a role" into "I as a person have lost value." For weeks you either angrily over-prove yourself or sink into self-negation—both hijacked by emotion.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Sever role from self</div>
+<p>State the fact: "Due to a business change, the company reclaimed the <strong>role</strong> of manager. That's an org decision, not a verdict on me as a person."<br>Then itemize the loss: "What I lost is a title, a reporting line, a bit of comp band. What I <strong>didn't</strong> lose is my engineering judgment, the trust of people I've grown, my ability to solve hard problems."<br>The external line shifts too: "I'm focusing more on technical depth now"—no self-diminishment, no pretending it didn't happen.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist: Severing "Role" From "Identity"</div>
+<ul class="checklist">
+<li>Did this reclaim a <strong>role / authority</strong>, or did it actually change <strong>who I am</strong>? (Almost always the former.)</li>
+<li>List the loss: which parts came with the title (title, reporting line, budget), and which are mine (skills, relationships, reputation)?</li>
+<li>Is my current pain losing the ability, or losing the position of "being seen that way"? The remedies differ completely.</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Reading an org decision as a verdict on your character.</strong> A reorg is 90% chessboard reshuffling, not a moral trial.</li>
+<li><strong>Using a new title as the only cure.</strong> "I'll be fine once I get promoted back"—you've only deferred the fragility, not dismantled it.</li>
+<li><strong>Overacting "I don't care."</strong> Severing isn't suppression; acknowledge the loss without letting it define you.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Exercise:</strong> Write your current title, and beside it list "if this word vanished, the three concrete things of value I still offer my company and industry." Can't fill three? That's this week's real warning.<br><strong>Reflect:</strong> Your last acute career pain—was it losing the ability, or losing the position of "being seen"?</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 02</div>
+<h2>One Identity = Single Point of Failure: Don't Stake Your Whole Self on One Title
+<span class="en">One Identity Is a Single Point of Failure</span></h2>
+<span class="tag">Self-complexity</span><span class="tag">Antifragility</span><span class="tag">Diversify bets</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">If "Staff Engineer at BigCo" occupies 100% of your self, then any threat to it is <strong>existential</strong>. Identity is like a system: <strong>single point = fragile</strong>. The more varied your sources of self, the less any one blow can break you—this isn't comfort; it's a research-backed buffering mechanism.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Own Words</div>
+<div class="quote">
+<span class="en">"Don't put all of your eggs in one cognitive basket. People higher in self-complexity—who define themselves through more, and more distinct, aspects—show smaller swings in mood and self-appraisal after a setback in any single domain."</span>
+<span class="zh">Greater self-complexity buffers mood and self-worth against a hit in any one area.</span>
+<span class="source">— Patricia Linville, self-complexity research (Social Cognition, 1985; JPSP, 1987)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Single Identity vs Identity Portfolio</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="320" height="230" rx="6" fill="#f5e0d0" stroke="#b85c3a" stroke-width="2"/>
+<rect x="360" y="20" width="320" height="230" rx="6" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<text x="180" y="46" text-anchor="middle" font-family="Georgia" font-size="14" font-weight="700" fill="#a04020">⚠ Single point of failure</text>
+<circle cx="180" cy="150" r="46" fill="#fff" stroke="#b85c3a" stroke-width="2"/>
+<text x="180" y="146" text-anchor="middle" font-family="Georgia" font-size="12" font-weight="700" fill="#a04020">Manager</text>
+<text x="180" y="163" text-anchor="middle" font-family="Georgia" font-size="11" fill="#a04020">@ BigCo</text>
+<text x="180" y="100" text-anchor="middle" font-family="Georgia" font-size="22" fill="#b85c3a">⚡</text>
+<text x="180" y="228" text-anchor="middle" font-family="Georgia" font-size="11" fill="#5a3818">One reclaim → whole self collapses</text>
+<text x="520" y="46" text-anchor="middle" font-family="Georgia" font-size="14" font-weight="700" fill="#4a6a28">✓ Identity portfolio</text>
+<circle cx="520" cy="140" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="520" y="144" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Builder</text>
+<circle cx="440" cy="100" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="440" y="104" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Mentor</text>
+<circle cx="600" cy="105" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="600" y="109" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Writer</text>
+<circle cx="450" cy="185" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="450" y="189" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Parent</text>
+<circle cx="595" cy="190" r="22" fill="#fff" stroke="#5c8a3a" stroke-width="2"/>
+<text x="595" y="194" text-anchor="middle" font-family="Georgia" font-size="9.5" fill="#4a6a28">Craft</text>
+<text x="520" y="240" text-anchor="middle" font-family="Georgia" font-size="11" fill="#2a3a18">One setback → the rest still hold you</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: A peer you admire staked his entire self on "making Principal." This cycle he's passed over, and he's like a blown fuse—takes leave, loses all sense of meaning at work, even negates every past achievement.</div>
+<div class="dialog bad">
+<div class="speaker">✗ All-in on one title</div>
+<p>His inner equation: Principal = my worth. The moment the right side is unavailable, the "me" on the left goes to zero. He isn't fragile—his <strong>identity architecture</strong> just has a single load-bearing pillar.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ What you can say (to him and to yourself)</div>
+<p>"Not making it this cycle is <strong>a committee's decision</strong>, not a total verdict on you as a person."<br>"This year you grew two people, rewrote that system to be far more stable, gave a talk people came up to thank you for—<strong>none of it</strong> vanished because the title didn't move."<br>"Let's look together: is your sense of worth hanging entirely on this one title? If so, that's not this cycle's problem—it's an <strong>architecture</strong> problem, and worth diversifying seriously."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Self-Complexity Audit (More "Yes" = More Shock-Resistant)</div>
+<ul class="checklist">
+<li>Besides "my job," can I introduce myself with three <strong>mutually independent</strong> identities?</li>
+<li>Are these identities' fortunes <strong>decoupled</strong>? (If all depend on the same company and same boss, that's no diversification at all.)</li>
+<li>Over the past year, has my self-worth risen and fallen wildly off a <strong>single source</strong>?</li>
+<li>If work went to zero tomorrow, is there a domain where I'd instantly regain competence and belonging?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes + A Note on Women Leaders</div>
+<div class="pitfall">
+<ul>
+<li><strong>Using "focus" as an excuse to refuse any diversification.</strong> Focusing on the work ≠ staking your whole self on one title. The former is strategy; the latter is risk exposure.</li>
+<li><strong>Faking diversity with homogeneous identities.</strong> "Engineer + architect + tech blogger" all tied to the same career axis collapse together in one industry winter.</li>
+<li><strong>Waiting for the earthquake to start diversifying.</strong> Shock-resistant architecture is built in fair weather, not improvised mid-collapse.</li>
+</ul>
+</div>
+<div class="female" style="margin-top:12px">
+<span class="female-label">Female Leader's Note</span>
+Women are often pushed toward a different single point of failure: over-bonding the self to "the reliable one who holds the room together" (the team's glue, the bearer of emotional labor). The moment that role stops being seen, the collapse is just as violent—and that identity often <strong>doesn't count</strong> in promotion. Diversifying bets matters more for women—make sure there's a part of your self that <strong>stands without being needed</strong>.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Exercise:</strong> Draw your "identity pie chart," allocating 100% of your sense of self-worth by its actual current proportions across sources. Any slice over 60% is your single point of failure.<br><strong>Reflect:</strong> Your latest wild emotional swing—did it come from the same single source?</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 03</div>
+<h2>Build an Identity Portfolio: Let "Craft" Outlive "Title"
+<span class="en">Build an Identity Portfolio — Craft Outlives Title</span></h2>
+<span class="tag">Identity portfolio</span><span class="tag">Working identity</span><span class="tag">Craftsperson</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">An identity portfolio isn't a hobby—it's <strong>resilience architecture</strong>. The key distinction: <strong>titles expire, craft doesn't</strong>. "Manager at BigCo" is a rented role; "an engineer who can make complex systems clear and grow people" is an asset you carry out the door. And identity isn't found by thinking—it's <strong>built by doing</strong>, tested through action, not introspection.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Own Words</div>
+<div class="quote">
+<span class="en">"We learn who we are in practice, not in theory... We are many selves. Identity changes in only one way: through doing, by trying things out and discovering what fits."</span>
+<span class="zh">We are plural; identity shifts only through action, not inner search.</span>
+<span class="source">— Herminia Ibarra, <em>Working Identity</em> (2003)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: You've been Tech Lead Manager for two years, writing less and less code. One day you realize you can't articulate what you've recently "built"—the manager identity is quietly eating the one craft identity you can carry out the door.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Letting one role devour the rest</div>
+<p>"I'm a manager now; writing code is a waste of time." Years later, if the management seat disappears, you've lost both the title and the craft—<strong>empty-handed</strong>. You quietly moved all your eggs into one basket that expires.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Deliberately keep and feed a second identity</div>
+<p>Not quitting to write code, but <strong>keeping a narrow, real builder lane</strong>: each quarter, ship something small and concrete by hand—an internal tool, a tech write-up that captures the pit the team fell into, an open-source contribution.<br>Give it a fixed time box (e.g., Friday afternoons, two hours) and guard it like an important meeting.<br>Maintain the line externally too: "I lead a team, but I still <strong>build things</strong>." That sentence never depreciates in any reorg.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist: Building the Portfolio</div>
+<ul class="checklist">
+<li>Do I have a professional identity that stands <strong>independent of my current company</strong>? (Craft, body of work, community reputation.)</li>
+<li>Is there an identity I keep investing in <strong>entirely outside work</strong>? (Parent, sport, writing, a community.)</li>
+<li>Does each identity have <strong>real, recent output</strong>—or does it live only in the "I could do that too" imagination?</li>
+<li>Did these grow because I <strong>actually did</strong> them, or are they only mental plans deferred forever with "once I'm less busy"?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes + A Note on Women Leaders</div>
+<div class="pitfall">
+<ul>
+<li><strong>Reading "portfolio" as "dabble in everything."</strong> A portfolio is few and real: 2–3 identities with genuine output beat ten gym memberships you signed up for.</li>
+<li><strong>Planning only in your head, never acting.</strong> Ibarra's core: identity grows through action; you can't think your way to it.</li>
+<li><strong>The second identity gets cut first whenever you're busy.</strong> An identity with no time box protecting it effectively doesn't exist.</li>
+</ul>
+</div>
+<div class="female" style="margin-top:12px">
+<span class="female-label">Female Leader's Note</span>
+"Parent" is a resilient slice of the portfolio, but the workplace treats it with a cruel asymmetry: research shows a <strong>motherhood penalty vs a fatherhood bonus</strong>—for the same parenthood, mothers are presumed less committed and docked, while fathers get bonus points as "devoted and dependable" (Correll et al.'s experiments). So women need to deliberately cultivate diverse identities <strong>within work</strong> (craft, output, professional reputation), and not let "mother" become the only identity others see—and the one the workplace happens to undervalue.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Exercise:</strong> On your calendar, fix a named two-hour weekly time box for one "second identity" (e.g., "Builder Block"), and actually use it once this week to ship something small and concrete.<br><strong>Reflect:</strong> Three years after you leave this company, do you want to be remembered for what you "did" or for what "title" you held? Does your current time allocation support that?</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">SCENE 04</div>
+<h2>"If the Title Vanished Tomorrow": Move the Earthquake to the Drill Ground
+<span class="en">The Fire Drill — Rehearse Losing the Title</span></h2>
+<span class="tag">Premeditatio</span><span class="tag">Rehearsal</span><span class="tag">Title-free intro</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">Facing the worst only in the worst moment costs the most. Run the Stoic <strong>premeditatio malorum (rehearsing misfortune)</strong> in reverse: in fair weather, safely run "tomorrow the title is gone" through your mind. Do the fire drill before the fire—when the day comes, it won't be the first time you've faced the feeling.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Own Words</div>
+<div class="quote">
+<span class="en">"Rehearse them in your mind: exile, torture, war, shipwreck... What I advise you to do is, not to be unhappy before the crisis comes; since it may be that the dangers will never assail you."</span>
+<span class="zh">Rehearse the blow in advance so it lands as a known, not a shock.</span>
+<span class="source">— Seneca, <em>Moral Letters to Lucilius</em>, Letter 24</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene: Run the Drill</div>
+<div class="scene">
+<div class="setup">Situation: A weekend half-hour to rehearse, without panic, "what if the title is gone tomorrow." The goal is to turn an unfamiliar acute pain into a rehearsed, controllable image.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Avoid it, then face it raw on the day</div>
+<p>"Don't jinx it, why dwell on this?" So you never rehearse, and when the earthquake hits it's your first time—panic stacks on ambush, and every decision is made inside emotion.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Three-part drill (write it down, don't just muse)</div>
+<p><strong>① Title-free intro:</strong> Write a 60-second self-introduction with no current company name and no current title. What's left is the part that truly belongs to you.<br><strong>② Emotional rehearsal:</strong> Vividly imagine the feeling at the moment of the announcement—shame? relief? anger? Claim it in advance so it can't ambush you later.<br><strong>③ Action plan:</strong> "If it really happens, the three concrete things I'd do in the first 30 days"—not anxiety, a list: who to call, what to take stock of, which relationships to keep.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">"Title-Free Intro" Checklist</div>
+<ul class="checklist">
+<li>With the company name and title removed, <strong>how many sentences</strong> of my intro survive? (The more, the steadier.)</li>
+<li>Is what's left <strong>concrete ability and work</strong>, or another string of abstract adjectives ("hardworking," "responsible")?</li>
+<li>In my "first 30 days plan," how many contacts would take my call <strong>without relying on my current title</strong>?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Turning the drill into catastrophizing.</strong> Premeditatio is structured "imagine + plan," not an infinite loop at 3 a.m.—it has to land on paper.</li>
+<li><strong>Rehearsing only emotion, no plan.</strong> A drill with no "first 30 days list" leaves only fear; with a list, fear converts to control.</li>
+<li><strong>Doing it once, then locking the drawer.</strong> Update it yearly (or before every major reorg)—it's also a checkup on your real value.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Exercise:</strong> Write your "60-second title-free intro"—no current company, no current title. Read it to someone you trust and ask: "Does this still sound like me?"<br><strong>Reflect:</strong> If that intro makes you anxious, is the anxiety "I have no value," or "I never deposited my value beyond the title"? The latter is good news—you can start fixing it this week.</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Week's Assignment · Your Day 22 Action</h3>
+<p>Do one concrete thing this week—not reflection, not reading:</p>
+<div class="action">
+<strong>Run a "title-free intro" drill</strong>, two steps:<br><br><strong>(1)</strong> Write a 60-second self-introduction with <strong>no current company name and no title</strong>. What's left is the part that truly belongs to you and travels with you.<br><strong>(2)</strong> Lock a two-hour weekly time box on your calendar for one "second identity" (Builder / Writer / Mentor—pick one), and actually use it once this week to ship something small and concrete.<br><br>Note one line: <strong>with the title removed, how many real sentences does my intro have left?</strong> That number is your current shock-resistance coefficient.
+</div>
+</div>
+
+<div class="deepen">
+<h3>Go Deeper</h3>
+<details>
+<summary>Won't "not being defined by your title" become an excuse to coast—if I don't rely on the title, why fight for promotion at all?</summary>
+<div class="think">No, as long as you separate "<strong>not defined by</strong>" from "not caring." The healthy stance: fight hard for the role (titles bring resources, influence, pay—worth pursuing seriously), but <strong>don't mortgage your entire self-worth to the outcome</strong>. That actually lets you compete more freely—you bet without betting your life, so you dare to take risks, speak the truth, and exit gracefully when it's time. People who fuse self and title often make more cowardly, more political choices precisely because they can't afford to lose.</div>
+</details>
+<details>
+<summary>East Asian cultures deeply equate "career = identity" and "title = face." Is this "role ≠ identity" idea a poor cultural fit?</summary>
+<div class="think">The challenge is bigger: in high-context, face-conscious environments, the title isn't just self-perception—it carries family expectation and social comparison, and the social cost of losing it is real and shouldn't be waved away. But precisely for that reason, the single-point-of-failure risk is higher and the earthquake fiercer, so building an identity portfolio and rehearsing pays off more. The pragmatic move isn't to fight the whole culture, but to first build title-independent sources of self in the <strong>private domain</strong> (craft, relationships, a non-"provider" role at home), so there's real footing beyond face.</div>
+</details>
+<details>
+<summary>Should the portfolio mix differ by life stage? Should you "go all in" on one identity when young?</summary>
+<div class="think">The mix should shift by stage. Early on, reasonable focus—even a phase of going all-in on a craft—is a sound way to build career capital. The difference is whether you're betting on a <strong>transferable ability</strong> or on one company's one title. The former grows more valuable the deeper you go; the latter grows more fragile. By mid-to-late career—aging parents, young kids, rising industry volatility—diversification shifts from luxury to necessity. The point isn't equal weighting at every stage, but <strong>always keeping at least one identity line that doesn't depend on your current employer</strong>, even if it's only 10% early on.</div>
+</details>
+</div>
+
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 22 · 2026.06.12</footer>
+</div>
+</body>
+</html>
