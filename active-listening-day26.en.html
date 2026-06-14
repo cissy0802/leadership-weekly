@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Day 26: Active Listening &amp; Premise Alignment</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deepen{margin-top:46px}
+.deepen h3{font-size:1.1rem;color:#5c3a18;letter-spacing:1px;margin-bottom:14px;border-bottom:1px solid #c4a878;padding-bottom:8px}
+.deepen details{background:#fffaf0;border-radius:4px;margin-bottom:10px;padding:4px 0;border-left:3px solid #a8702d}
+.deepen summary{cursor:pointer;padding:12px 18px;font-weight:600;color:#5c3a18;font-size:0.98rem}
+.deepen details[open] summary{border-bottom:1px dashed #e6d9bf}
+.deepen .think{padding:12px 18px;font-size:0.93rem;color:#4a3a20}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888;margin-top:40px;border-top:1px solid #c4a878}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 26 · 2026.06.16</div>
+<h1>Active Listening &amp; Premise Alignment: Hear the Unsaid Before You Conclude</h1>
+<div class="meta"><span>Topic: Active Listening &amp; Premise Alignment</span><span>·</span><span>4 Principles</span></div>
+<div class="subtitle">"Most people do not listen with the intent to understand; they listen with the intent to reply." — Stephen Covey</div>
+</header>
+
+<div class="intro">
+<strong>This week's thesis:</strong> Most misjudgments a tech leader makes aren't from too little information — they're from <strong>reasoning all the way down on the wrong premise</strong>. When two people argue red in the face, it's rarely a fight over facts; each is pressing a different unspoken assumption. This week we turn "listening" into operable engineering: first recognize the four depths of listening; then surface hidden premises before any high-stakes call; then use "load-bearing wall" thinking to test only the single most fatal assumption instead of running down all of them; and finally split a disagreement into "verifiable facts" and "values that must be owned." Get the split right, and the conversation stops spinning.
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>The Four Levels of Listening: From "Waiting to Rebut" to "Hearing the Unspoken Premise"
+<span class="en">The Four Levels of Listening</span></h2>
+<span class="tag">Listening depth</span><span class="tag">Fact/Emotion/Premise</span><span class="tag">Downloading bias</span>
+</div>
+
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">Most people stop at level one — listening while preparing a rebuttal, taking in only what confirms their existing judgment. Real listening goes deeper: the <strong>fact level</strong> (new data), the <strong>emotion level</strong> (the other person's current state), and the deepest <strong>premise level</strong> (the assumption they never said aloud but that holds up the whole sentence). What decides the quality of a conversation is usually level four.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"Most people do not listen with the intent to understand; they listen with the intent to reply."</span>
+<span class="source">— Stephen Covey, <em>The 7 Habits of Highly Effective People</em>, Habit 5</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The Four Levels (adapted from Otto Scharmer, <em>Theory U</em>)</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+<rect x="40" y="20" width="620" height="42" rx="5" fill="#f5e0d0" stroke="#b85c3a" stroke-width="1.5"/>
+<rect x="80" y="74" width="580" height="42" rx="5" fill="#f3e9d2" stroke="#a8702d" stroke-width="1.5"/>
+<rect x="120" y="128" width="540" height="42" rx="5" fill="#eef0e2" stroke="#8a8a3a" stroke-width="1.5"/>
+<rect x="160" y="182" width="500" height="46" rx="5" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<text x="55" y="46" font-family="Georgia" font-size="12" font-weight="700" fill="#a04020">1. Downloading — you hear only what you already know</text>
+<text x="95" y="100" font-family="Georgia" font-size="12" font-weight="700" fill="#7a5418">2. Factual — you hear data that disconfirms expectation</text>
+<text x="135" y="154" font-family="Georgia" font-size="12" font-weight="700" fill="#6a6a28">3. Empathic — you hear their state and perspective</text>
+<text x="175" y="210" font-family="Georgia" font-size="12" font-weight="700" fill="#4a6a28">4. Premise — you hear the unspoken assumption holding it up</text>
+<text x="350" y="245" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b">The deeper you go, the denser — and harder. But the leverage lives at the bottom.</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Context: One of BigCat's engineers says, "This requirement can't be estimated; I can't commit to a date."</div>
+<div class="dialog bad">
+<div class="speaker">✗ Stuck at downloading</div>
+<p>"Everyone else manages to estimate; just think harder." — You heard only "he's dodging," because that confirms your prior that "he's low on grit." You're listening to the old conclusion in your head, not to his sentence.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Listen down three levels</div>
+<p><strong>Fact level:</strong> "Which part exactly can't be pinned down — an undecided dependency, or scope that keeps drifting?"<br>
+<strong>Emotion level:</strong> Notice he isn't lazy; he's anxious about being blamed.<br>
+<strong>Premise level:</strong> His unspoken assumption is — "<strong>a commitment means that if it slips, it's solely my fault.</strong>" He's defending against a punitive culture, not against the work. Hear this, and the real conversation begins: what you must fix isn't his attitude, it's that premise.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist: sinking to the premise level</div>
+<ul class="checklist">
+<li>Can I <strong>paraphrase</strong> their view until they nod and say "yes, exactly"? If not, I'm still downloading.</li>
+<li>Is there an assumption in this sentence taken as "obvious" that is actually questionable?</li>
+<li>What is he truly <strong>defending against</strong>? (Blame? Rework? Losing face?)</li>
+<li>In the last 30 seconds, was I listening to him — or composing my rebuttal?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Mistaking "paraphrase" for listening.</strong> Parroting the words without catching the premise underneath — they can tell you didn't get it.</li>
+<li><strong>Rushing into solution mode.</strong> Prescribe before reaching level four and you're treating the problem you imagined.</li>
+<li><strong>Faking it with silence.</strong> Mouth still, brain queued up to speak — the other side feels it.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Female Leader's Note</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Multiple meeting-recording studies (e.g., Deborah Tannen's work) show women are interrupted markedly more often than men. The cost of interruption isn't just rudeness — it <strong>cuts listening off at the first two levels</strong>, so the premise never gets a chance to surface. Two countermoves: as the speaker, when cut off, reclaim the floor with a steady "Let me finish this point, 30 seconds"; as the facilitator, explicitly protect whoever holds the floor — "Let her finish, then we'll respond."
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Otto Scharmer, <em>Theory U</em></strong> — the original four-levels framework (downloading / factual / empathic / generative).<br><strong>Stephen Covey, <em>The 7 Habits</em></strong> (Habit 5, "Seek First to Understand") — empathic listening vs. autobiographical responding.</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>Surface the Hidden Premise Before You Commit
+<span class="en">Surface the Hidden Premise Before You Commit</span></h2>
+<span class="tag">Premise probing</span><span class="tag">Reverse assumptions</span><span class="tag">Anti-fragile judgment</span>
+</div>
+
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">Every strong judgment sits on a stack of unspoken premises. Before concluding, giving feedback, or making a call, ask two questions of yourself and the other: "<strong>If this judgment is true, what am I actually optimizing for?</strong>" — to surface the value premise; "<strong>Which premise, if false, would flip the whole conclusion?</strong>" — to surface the most fragile one. Put premises on the table first, then debate right and wrong.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"Rather than asking 'What do I believe?', the more powerful question is 'What would have to be true for this option to be a wonderful choice?'"</span>
+<span class="source">— Roger Martin &amp; A.G. Lafley, <em>Playing to Win</em> (reverse-engineering assumptions)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Context: In an architecture review, a senior engineer insists, "We must build this in-house, not use an off-the-shelf solution."</div>
+<div class="dialog bad">
+<div class="speaker">✗ Head-on collision of positions</div>
+<p>"Off-the-shelf is clearly easier; this is over-engineering." — Two conclusions slam together, and it becomes whoever is louder or more senior wins. The premises stay underwater, untested.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Surface the premise (reverse the assumption)</div>
+<p>"Let's run it backwards: if 'must build in-house' is right, which conditions would all have to be <strong>simultaneously</strong> true? I'll list three — (1) some limit of the off-the-shelf option genuinely blocks us; (2) we have headcount to maintain it long-term; (3) it's core differentiation worth the investment. Let's see which one is weakest."</p>
+<p>"If the 'limit' in (1) actually has a workaround, the whole 'must' loosens." — This turns a clash of positions into a test of premises. No one is negated; the assumption is what gets examined.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist before a high-stakes call</div>
+<ul class="checklist">
+<li>"If this judgment is true, what am I optimizing for?" — Say it, and you learn what you're actually fighting for.</li>
+<li>"Which premise, if false, flips the conclusion?" — Find it; that's the one worth spending effort to test.</li>
+<li>Did I <strong>build the other side's position into its strongest version</strong> (steelman) before testing it?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Probing becomes interrogation.</strong> "What makes you say that?" is an attack; "What would all have to be true for this to hold?" is collaboration. Same move — wording decides life or death.</li>
+<li><strong>Probing only their premises, not your own.</strong> Your "use off-the-shelf" rests on assumptions too; put them on the table as well.</li>
+<li><strong>Surfacing ten premises without ranking them.</strong> Listing all ten without weighting is no better than not probing — the next card fixes this.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Roger Martin &amp; A.G. Lafley, <em>Playing to Win</em></strong> — the "What would have to be true?" (reverse-engineering assumptions) chapter.<br><strong>Charlie Munger</strong> — "Invert, always invert"; plus the steelman principle: build the other's argument to its strongest form before attacking it.</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>Test the Load-Bearing Premise First; Don't Run Down All of Them
+<span class="en">Test the Load-Bearing Premise First</span></h2>
+<span class="tag">Load-bearing assumption</span><span class="tag">Riskiest first</span><span class="tag">Cheapest disproof</span>
+</div>
+
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">A conclusion is held up by ten premises, but they aren't equal. One is the <strong>load-bearing wall</strong> — if it falls, the whole conclusion falls; the other nine are decorative, right or wrong they don't change the outcome. Novices verify them in order (running down all of them); pros find the load-bearing wall first and disprove it at <strong>minimum cost</strong>. Always test the one that collapses the most.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"Every business plan begins with a set of assumptions. The most important assumptions are the 'leap-of-faith' ones — on which everything else depends. Test them first."</span>
+<span class="source">— Eric Ries, <em>The Lean Startup</em> (leap-of-faith assumptions)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Load-bearing vs. decorative: rank by "collapse area"</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 230" xmlns="http://www.w3.org/2000/svg">
+<line x1="70" y1="30" x2="70" y2="195" stroke="#8a6d3b" stroke-width="1.5"/>
+<line x1="70" y1="195" x2="660" y2="195" stroke="#8a6d3b" stroke-width="1.5"/>
+<text x="40" y="110" font-family="Georgia" font-size="10.5" fill="#8a6d3b" transform="rotate(-90 40 110)">if false → collapse area</text>
+<text x="360" y="220" text-anchor="middle" font-family="Georgia" font-size="11" fill="#8a6d3b">uncertainty (less tested →)</text>
+<text x="48" y="44" font-family="Georgia" font-size="10.5" fill="#8a6d3b">high</text>
+<text x="50" y="190" font-family="Georgia" font-size="10.5" fill="#8a6d3b">low</text>
+<rect x="470" y="50" width="170" height="60" rx="6" fill="#f5e0d0" stroke="#b85c3a" stroke-width="2.5"/>
+<text x="555" y="76" text-anchor="middle" font-family="Georgia" font-size="12.5" font-weight="700" fill="#a04020">Load-bearing</text>
+<text x="555" y="96" text-anchor="middle" font-family="Georgia" font-size="10.5" fill="#a04020">→ test first, cheapest disproof</text>
+<circle cx="180" cy="150" r="6" fill="#a8a06a"/><text x="195" y="154" font-family="Georgia" font-size="10.5" fill="#6a6a28">already-verified fact</text>
+<circle cx="300" cy="120" r="6" fill="#a8a06a"/><text x="315" y="124" font-family="Georgia" font-size="10.5" fill="#6a6a28">decorative: not fatal if wrong</text>
+<circle cx="250" cy="70" r="6" fill="#c47040"/><text x="265" y="74" font-family="Georgia" font-size="10.5" fill="#7a5418">big but fairly certain — can wait</text>
+<text x="100" y="175" font-family="Georgia" font-size="10" fill="#8a6d3b" font-style="italic">top-right = the only one to test this week</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Context: A team proposes "Ship a new internal platform; projected 30% productivity gain across all business lines."</div>
+<div class="dialog bad">
+<div class="speaker">✗ Running down all of them</div>
+<p>Three hours of review going item by item — UI, tech stack, schedule, naming conventions… everyone leaves exhausted, and <strong>the most dangerous assumption was never touched once</strong>.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Hit the load-bearing wall first</div>
+<p>"The load-bearing wall of this proposal is one thing: '<strong>target teams will actually migrate to it.</strong>' If no one migrates, the 30% gain, the stack, the schedule are all castles in the air."</p>
+<p>"So this week we do the cheapest possible thing to test it: pitch it to three target-team leads and ask 'would you migrate, and where's the friction?' — <strong>instead of writing six months of code only to find no one wants it</strong>. Pass that, and we'll discuss the other nine."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist: finding the load-bearing wall</div>
+<ul class="checklist">
+<li>List every premise that holds up the conclusion — usually 5 to 10.</li>
+<li>Score each: <strong>collapse area if false</strong> × <strong>current uncertainty</strong>.</li>
+<li>The highest product = the load-bearing wall. Does it deserve to be tested before anything else?</li>
+<li>What's the <strong>cheapest</strong> way to test it? (One interview, one prototype, one email beats six months of engineering.)</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common mistakes (with an honest trade-off)</div>
+<div class="pitfall">
+<ul>
+<li><strong>Picking the soft targets.</strong> Testing the easy premises first because it feels like "making progress" — while the load-bearing wall stays untouched.</li>
+<li><strong>Mistaking "rigor" for "verify everything."</strong> With limited resources, running down all of them spends the least force where it matters most.</li>
+<li><strong>An honest note:</strong> the load-bearing wall isn't always obvious; sometimes you only learn the real one is a different premise after testing. So <strong>test in small fast steps and re-rank</strong> — don't lock it in once.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Eric Ries, <em>The Lean Startup</em></strong> — "leap-of-faith assumptions" and minimum viable validation.<br><strong>Marty Cagan, <em>Inspired</em></strong> — testing "riskiest assumptions" first in product discovery.</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>Align on Premises First; Separate Fact-Claims from Value-Claims
+<span class="en">Align on Premises First; Separate Fact-Claims from Value-Claims</span></h2>
+<span class="tag">Ladder of inference</span><span class="tag">Fact vs value</span><span class="tag">Sort the disagreement</span>
+</div>
+
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">Many arguments produce nothing because two kinds of disagreement are mashed together. A <strong>fact-claim</strong> ("the migration takes two weeks") can be disproven by data — go check it, it converges. A <strong>value-claim</strong> ("stability matters more than speed") can't be proven right or wrong — it can only be <strong>owned and decided</strong> by some role. Before concluding, lay out the implicit assumptions, then tag each disagreement "fact / value." Tag it right and the conversation stops spinning.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"We live in a world of self-generating beliefs that remain largely untested. We adopt those beliefs because they are based on conclusions, which are inferred from what we observe, plus our past experience."</span>
+<span class="source">— Chris Argyris, "Ladder of Inference," quoted in Peter Senge, <em>The Fifth Discipline</em></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Context: BigCat and a peer argue over "should we stop and do a big refactor this quarter."</div>
+<div class="dialog bad">
+<div class="speaker">✗ Two kinds of disagreement mashed together</div>
+<p>"Of course we should refactor — the debt will blow up!" / "Stopping to refactor now is irresponsible!" — A <strong>factual judgment</strong> (how fast the debt rots, how long the refactor takes) and a <strong>value judgment</strong> (this quarter, delivery first or health first) are argued at once, escalating, because the two are talking past each other on two different planes.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Lay out assumptions, then tag by layer</div>
+<p>"Let's split this in two. <strong>Fact layer:</strong> how many weeks the refactor really takes, how fast the debt rots if we don't, the defect-rate trend — there's data here, we can verify and align, not argue by feel."</p>
+<p>"<strong>Value layer:</strong> this quarter, do we protect the delivery commitment or long-term health — this has <strong>no right answer</strong>, it's a priority trade-off, and an owner has to decide. First name which layer we're stuck on; don't pass off 'I think we should' as 'the data proves we should.'"</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist: sorting the disagreement</div>
+<ul class="checklist">
+<li>For this disagreement, <strong>can I imagine a dataset that would make one side concede</strong>? Yes → fact-claim, go verify; no → value-claim, go decide.</li>
+<li>Does the value-claim have a clear <strong>owner</strong>? (Who decides — not "let's discuss it more.")</li>
+<li>Am I walking <strong>down the ladder of inference</strong> — tracing the conclusion back to the specific observations it rests on?</li>
+<li>Did I make my reasoning <strong>explicit</strong> ("I saw X, so I inferred Y") so it can be examined, rather than just dropping a conclusion?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Disguising a value fight as a fact fight.</strong> Gilding a pure priority preference with "the data shows" — they can't find the flaw but something feels off.</li>
+<li><strong>Escalating a fact fight into a value fight.</strong> "How many weeks" was verifiable, yet it gets argued into "you don't care about quality" — the alignable becomes the oppositional.</li>
+<li><strong>A value-claim no one owns.</strong> With no one to decide, it's discussed forever, and whoever outlasts or outshouts wins.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Female Leader's Note</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Research shows the same statement is more likely to be coded as "personal opinion / emotion" when a woman says it, and "analysis / fact" when a man does — the gendered version of mislabeling fact vs. value. Countermoves: when you speak, <strong>tag your own statement</strong> — "this is a verifiable data point, not a preference; we can check it"; and when someone else's factual judgment is dismissed as "her feeling," vouch for it — "that's data, not emotion; let's go by the data."
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Chris Argyris, "Ladder of Inference" / Peter Senge, <em>The Fifth Discipline</em></strong> — the cognitive ladder from observation to conclusion, and "make reasoning explicit; balance advocacy and inquiry."<br><strong>David Hume</strong> — the "is–ought" gap: a statement of fact (is) can't directly yield a value-claim (ought); they differ in kind and must be handled separately.</div>
+</div>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Week's Practice · Reflection</h3>
+<p>Do one concrete thing this week, not just reflect:</p>
+<div class="action">
+<strong>Pick a high-stakes discussion you're about to be in</strong> (an architecture review, a priority fight, delivering a tough piece of feedback) and, before it starts, do two steps on paper:<br><br>
+<strong>(1) Premise-level listening:</strong> write down the other side's view, then a line — "the unspoken assumption holding up this sentence is probably ____."<br>
+<strong>(2) Load-bearing wall + sorting:</strong> list the premises behind your own conclusion, circle the one that "collapses if false"; then tag each core disagreement "fact / value."<br><br>In the discussion, use the reverse-assumption phrasing at least once: "For this to hold, which conditions would all have to be <strong>simultaneously</strong> true?" Afterward, write one line: which premise got flipped on testing?
+</div>
+<p style="margin-top:16px"><strong>Reflection:</strong> Recall the last argument you "won" — did you win on the other person's facts, or did you just shout your own value preference louder? If the latter, were they actually persuaded, or did they merely go quiet?</p>
+</div>
+
+<!-- ============ Deepen ============ -->
+<div class="deepen">
+<h3>Go Deeper</h3>
+<details>
+<summary>1. Is "surfacing hidden premises" riskier when managing up? Could deconstructing your boss's conclusion read as challenging authority?</summary>
+<div class="think">Yes, especially in high-power-distance teams. With a peer, "which conditions would have to be true for this to hold" is collaboration; with a boss, the same line can be heard as a challenge. The fix is wording and ownership: hang the premise on "I haven't thought this through" — "I want to check I understood: does this judgment depend on X holding? I'm worried we don't have data on X yet." A consulting posture, not an interrogating one, tests the premise while giving the boss an exit. Premise deconstruction is a technical move; the political shell wrapping it must shift with the audience.</div>
+</details>
+<details>
+<summary>2. Does load-bearing thinking blind you to "long-tail risk" — small premises that aren't fatal alone but lethal stacked?</summary>
+<div class="think">Yes, that's its real blind spot. The model assumes risks can be ranked independently, but in reality several "decorative" premises may be highly correlated and fall together. Remedy: beyond ranking each by single collapse-area, also ask "which premises <strong>share a root cause</strong> and would fail together?" and bundle the related small ones into an "invisible load-bearing wall." For reversible, low-cost decisions, load-bearing-first is enough; for irreversible major ones, add a layer of premise-correlation checking.</div>
+</details>
+<details>
+<summary>3. Does the "fact-claim vs. value-claim" split fail when the facts themselves are contested (e.g., how to define a metric)?</summary>
+<div class="think">It partly fails, because many "facts" are pre-shaped by values — which metric to pick, how to define "success," is itself a value choice. Make another cut here: separate "metric definition" (value/convention, needs a decision) from "pulling numbers under a given definition" (fact, verifiable). First reach value consensus on "which ruler," then measure facts with that ruler — which avoids using pseudo-objective data to steamroll the other side.</div>
+</details>
+<details>
+<summary>4. Deep listening is cognitively expensive. As a manager of a dozen people, how do you use it well without burning out?</summary>
+<div class="think">You needn't — and can't — sink to level four in every conversation. Use it in tiers: routine status syncs can stop at the fact level; only in "high-stakes + high-disagreement + irreversible" conversations (performance, major decisions, conflict mediation) do you deliberately engage premise-level listening. Treat it as an <strong>explicitly switched mode</strong> — give yourself a signal before the meeting, "this one needs deep listening," and drop back to low-effort afterward. Leverage goes on the fulcrum, not everywhere.</div>
+</details>
+</div>
+
+<footer>BigCat · Leadership Daily · Day 26 · 2026.06.16</footer>
+</div>
+</body>
+</html>
