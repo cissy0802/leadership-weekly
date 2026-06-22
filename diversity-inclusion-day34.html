@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>领导力 Day 34：多样性与包容</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:14px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deep{margin-top:40px}
+.deep details{background:#fffaf0;border:1px solid #e6d9bf;border-radius:6px;padding:4px 18px;margin-bottom:12px}
+.deep summary{cursor:pointer;font-weight:600;color:#5c3a18;padding:12px 0;font-size:0.98rem}
+.deep details div{padding:6px 0 14px;color:#4a3a20;font-size:0.93rem;border-top:1px dashed #e6d9bf}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 34 · 2026.06.24</div>
+<h1>多样性与包容：把善意做成机制</h1>
+<div class="meta"><span>主题：Diversity &amp; Inclusion</span><span>·</span><span>4 个原则</span></div>
+<div class="subtitle">"De-bias organizations, not individuals." — Iris Bohnet,《What Works》</div>
+</header>
+
+<div class="intro">
+<strong>本周的命题：</strong>多样性与包容（D&amp;I）不是培训打卡，不是道德表态，是一套<strong>能查、能改、能问责</strong>的机制。善意从来不缺——缺的是微歧视发生时你嘴里那句话、分配杂活时手上那张表、看晋升数据时那双眼睛。靠"改变每个人的潜意识"必败；靠改流程、改激励、改你自己的具体动作才有效。本周四个原则：微歧视的<strong>当场介入</strong>、把偏见从<strong>系统里挤出去</strong>、用<strong>数据而非道德感</strong>驱动、以及别让包容的劳动反压在被包容者身上。
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>微歧视的当场介入：先分清无心、有念、还是恶意
+<span class="en">Intervening on Microaggressions — Bias vs Prejudice vs Bullying</span></h2>
+<span class="tag">微歧视</span><span class="tag">旁观者</span><span class="tag">当场补位</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">微歧视的伤害不只在那一句，更在<strong>房间里没人吭声</strong>。Leader 的职责不是事后私下安慰（那是把消化成本推给受害者），而是当场补位——但说什么，取决于对方是无心、有念、还是恶意。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Bias is 'not meaning it.' Prejudice is 'meaning it.' Bullying is 'being mean.' The response to each is different."</span>
+<span class="zh">"偏见是'不是有意的'，成见是'就是有意的'，霸凌是'存心使坏'。三者的回应方式各不相同。"</span>
+<span class="source">— Kim Scott,《Just Work》（2021）</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：三类，三种句式</div>
+<div class="scene">
+<div class="setup">情境：架构评审会上，工程师小薇提了一个分库方案，没人接话；五分钟后另一位同事把同样的点重说一遍，全场点头采纳。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法（事后私下）</div>
+<p>会后你私聊小薇："别往心里去，他不是故意的。" —— 你把"消化不公"外包给了受害者，而房间里所有人都默认了刚才那一幕 OK。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 无心之偏 → I-statement（当场归位）</div>
+<p>"等一下——这个点小薇五分钟前就提了，当时我们没接住。小薇，你能展开讲讲你的方案吗？"<br><strong>把麦克风还给她，把功劳归位</strong>，不上纲上线指控对方"歧视"。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 有念之见 → It-statement（诉诸标准）</div>
+<p>有人说："这种 oncall 苦活让女生扛太辛苦了吧。" → "<strong>在我们组，活儿按能力和意愿分，不按性别。</strong>" —— 诉诸团队标准，不去辩论他脑子里的信念。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 存心恶意 → You-statement（划界，不辩理）</div>
+<p>反复打断、公开羞辱某人时："<strong>你需要停止用这种方式跟同事说话。</strong>" —— 不纠缠"你说得对不对"，直接给行为定界。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">介入前的 3 秒自检</div>
+<ul class="checklist">
+<li>这是无心、有念、还是恶意？（决定你用 I / It / You 哪种句式）</li>
+<li>我能不能把焦点放在<strong>行为和影响</strong>上，而不是给人贴"你是歧视者"的标签？</li>
+<li>当事人此刻需要的是我替他发言，还是我把麦克风递回给他？（默认后者）</li>
+<li>如果当场来不及，我有没有在 24 小时内单独找责任方私下校正？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>事后安慰代替当场补位。</strong>沉默等于全场背书了那一幕。</li>
+<li><strong>替受害者发言，抢了她的麦。</strong>归位 ≠ 代言；先把发言权还给她。</li>
+<li><strong>把无心当恶意，一律上纲上线。</strong>对 bias 用 You-statement 只会让对方防御、旁人觉得你小题大做。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+「她说了没人听，他重说一遍被采纳」是有名的 <strong>amplification（放大）</strong>问题。奥巴马白宫的女性幕僚发明过一招：一位女性提出好观点，另一位立刻重复并<strong>点名署权</strong>——"正如小薇刚才说的……"——逼房间记住出处。作为 leader 你可以把它制度化：明确"谁先提的，归谁"，并在会上带头点名。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>下次会议刻意做一次"归位"——当一个被忽略的观点被别人重说时，出声把它归还原提出者。<br><strong>思考题：</strong>过去一个月，你"会后私下安慰"过几次？其中有几次本可以当场只用一句话改写房间的记忆？</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>公平流程设计：去偏的是系统，不是良心
+<span class="en">Designing Bias Out of the System</span></h2>
+<span class="tag">流程设计</span><span class="tag">结构化</span><span class="tag">杂活分配</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">你纠正不了每个人的潜意识，但你能改流程。偏见在"凭感觉"的环节最猖獗——非结构化面试、随口派活、印象式校准。<strong>把判断装进结构里</strong>，让有偏的大脑也更难出错。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"We can change behavior and design organizations in ways that make it easier for our biased minds to get things right."</span>
+<span class="zh">"我们可以改变行为、设计组织，让我们有偏的大脑更容易把事情做对。"</span>
+<span class="source">— Iris Bohnet,《What Works: Gender Equality by Design》Ch.1</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：那个"谁来记一下纪要"</div>
+<div class="scene">
+<div class="setup">情境：会议开始，需要有人记纪要、有人组织团建、有人带新人。这些事重要但<strong>不带来晋升</strong>（non-promotable tasks）。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法</div>
+<p>"谁来记一下纪要？" —— 一阵沉默后，总是同一位（往往是组里的女性或资历浅的人）举手或被默认。一年下来，她做满了"办公室家务"，履历上却全是别人不愿干的杂活。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 修后做法：把分配显性化</div>
+<p>"<strong>记纪要我们按字母轮值，这周轮到我。</strong>"——杂活上轮值表，谁都跑不掉。<br>更进一步：把 glue work（带新人、救火、跨组协调）<strong>写进绩效作为 leadership 证据并计酬</strong>，而不是让它隐形。<br>招聘/校准同理：<strong>同一组问题、同一套评分卡</strong>，禁止"culture fit 感觉不对"这种无证据否决。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">流程去偏检查表</div>
+<ul class="checklist">
+<li>面试是结构化的吗？同岗候选人问的是同一组问题、用同一张评分卡？</li>
+<li>校准会上，每个评价都能落到<strong>具体行为证据</strong>，而不是"感觉/气场/fit"？</li>
+<li>非晋升性杂活（纪要、团建、带新人）是轮值或随机，而非默认某人？</li>
+<li>简历初筛能否做到<strong>盲评</strong>（隐去姓名/学校/性别）？</li>
+<li>晋升提名是制度化触发（到点就评），还是靠"谁会自我推销/谁被想起"？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>只做无意识偏见培训，不改流程。</strong>研究反复显示，单次培训几乎不改变行为；改默认设置才有效。</li>
+<li><strong>把"culture fit"当万能否决键。</strong>它常是"像不像我"的委婉说法。改问"culture add"。</li>
+<li><strong>把希望寄托在个人觉悟上。</strong>觉悟会疲劳会遗忘，结构不会。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Joan C. Williams 的研究：女性被分派"办公室家务"的概率更高，且<strong>拒绝的代价更大</strong>——男性说"不"被视作有边界，女性说"不"易被贴"不合群"。靠"她自己学会拒绝"是把系统问题甩给个人。正解是改分配机制（轮值/计酬），让根本不需要谁去"勇敢拒绝"。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>挑一项你组里反复落在同一个人头上的杂活，本周把它改成轮值表或随机分配。<br><strong>思考题：</strong>你上一次说某候选人"感觉不太 fit"，如果被追问"具体哪个行为证据"，你答得上来吗？</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>用数据驱动，而非道德感：让争论有锚
+<span class="en">Measure, Don't Moralize</span></h2>
+<span class="tag">数据驱动</span><span class="tag">漏斗指标</span><span class="tag">薪酬审计</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">D&amp;I 一旦变成道德表态，就会两极化、招反弹。把它降维成一个<strong>可量化的运营问题</strong>：四个漏斗指标 + 一次薪酬审计。让数据当锚，争论才不会沦为站队。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"Make people decisions based on data and analysis, not just intuition, hierarchy, or seniority."</span>
+<span class="zh">"关于人的决策要基于数据和分析，而不只是直觉、层级或资历。"</span>
+<span class="source">— Laszlo Bock,《Work Rules!》（Google 前人力主管）</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">代表性漏斗：别只看进口</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+<rect x="120" y="20" width="460" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="160" y="72" width="380" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="205" y="124" width="290" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="250" y="176" width="200" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<text x="350" y="46" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">① 代表性 Representation：各层级各群体占比</text>
+<text x="350" y="98" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">② 录用率 Hiring：进面→offer 各群体通过率</text>
+<text x="350" y="150" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">③ 晋升速度 Promotion velocity</text>
+<text x="350" y="202" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">④ 流失率 Attrition</text>
+<text x="350" y="240" text-anchor="middle" font-family="Georgia" font-size="11.5" fill="#a04020" font-style="italic">真正的歧视信号往往藏在 ③④，不是 ①</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：发现晋升慢了 30%</div>
+<div class="scene">
+<div class="setup">情境：你拉了三年晋升数据，发现某群体的晋升速度比团队均值慢约 30%。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 常见做法</div>
+<p>"今年硬性指标：必须晋升 X 个该群体。" —— 制造 tokenism（"她是凑数的"），既伤当事人、又招同侪反弹，根因没动。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 修后做法：拆漏斗，找漏点</div>
+<p>"先定位漏在<strong>哪一环</strong>：是被提名少？还是提名了在校准被砍？" 针对真正漏的那环改机制（提名制度化、校准要行为证据）。<br>再做<strong>薪酬审计</strong>：同岗同级回归，控制年限/绩效后，看是否仍有显著残差——<strong>残差才是歧视信号</strong>。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">数据自检表</div>
+<ul class="checklist">
+<li>我有没有同时看四个指标，而不只是"招了多少人"的进口数？</li>
+<li>晋升与流失数据有没有<strong>按群体拆分</strong>，而非只看总体？</li>
+<li>薪酬差距是<strong>控制变量后</strong>的残差，还是没控年限/层级的原始差？</li>
+<li>我设的是不是会被刷的硬配额？（小心 Goodhart：指标一旦成目标就被博弈）</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>只看进口代表性。</strong>招够了人，却在晋升和环境上持续流失——漏桶。</li>
+<li><strong>设硬配额制造 tokenism。</strong>数字达标，环境照旧有毒，当事人替你背"凑数"骂名。</li>
+<li><strong>指标变目标（Goodhart）。</strong>"提升某群体留存率"可能催生只保不升的假留存。</li>
+
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+谈性别薪酬差距时，常有人用"选择论"模糊问题——"是她们自己选了不谈薪/选了家庭"。数据上的正解是看<strong>控制岗位、层级、年限后的残差 gap</strong>：同岗同级仍有系统性差距，那不是"选择"，是结构。把口水仗拉回到这条回归线上。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>拉一份你团队近两年的晋升名单，按你能拿到的维度（性别/资历/来源）拆一次，只看比例，先不下结论。<br><strong>思考题：</strong>如果数据揭示了一个对你不利的事实，你是会去改机制，还是会先去找一个让自己舒服的解释？</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>赞助胜过象征：别让包容的劳动压在被包容者身上
+<span class="en">Sponsorship over Symbolism</span></h2>
+<span class="tag">ERG</span><span class="tag">Sponsor vs Mentor</span><span class="tag">少数群体税</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">包容最大的隐性税，是 DEI 的活儿——办 ERG、做 mentor、上多元面板——总落在<strong>少数群体自己</strong>头上，还不计入晋升。真正的杠杆不是 mentor（给你建议），是 <strong>sponsor</strong>（在你不在场的房间里替你押注）。</div>
+</div>
+
+<div class="section">
+<div class="section-label">名家原话</div>
+<div class="quote">
+<span class="en">"A mentor talks with you; a sponsor talks about you. Mentors give advice; sponsors deliver."</span>
+<span class="zh">"导师与你交谈，赞助者替你发声。导师给建议，赞助者动用资本兑现机会。"</span>
+<span class="source">— Sylvia Ann Hewlett,《Forget a Mentor, Find a Sponsor》</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范：被忽略 vs 被押注</div>
+<div class="scene">
+<div class="setup">情境：你想"支持多元"，组里有一位优秀的少数群体下属。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 看似支持，实为加税</div>
+<p>"我很支持多元，那让她去牵头我们组的 ERG 吧。" —— 你又给她加了一份<strong>无偿、不计 promo、还占用产出时间</strong>的活，名为重视，实为抽税。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 真赞助：押上你的信用</div>
+<p>(1) 她不在场的校准会上："<strong>这个高可见度项目我提名她，我为结果背书。</strong>"<br>(2) ERG 的组织性杂活<strong>你这个多数群体 leader 来扛</strong>（你记录、你订场地），把舞台留给她做实绩。<br>(3) 把她已有的 DEI 贡献<strong>写进绩效当 leadership 证据，并争取时间/headcount 补偿</strong>。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">赞助者检查表</div>
+<ul class="checklist">
+<li>过去一季，我有没有在某人<strong>不在场</strong>的房间，具体地提名/背书过 ta？</li>
+<li>我给少数群体下属的，是数不清的建议（mentor），还是真实的机会（sponsor）？</li>
+<li>我组里的 DEI/ERG 劳动，是否不成比例地压在少数群体身上且不计酬？</li>
+<li>作为多数群体成员，我有没有承担<strong>可见的</strong>包容劳动，而不是只转发表态？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>表演式盟友（performative allyship）。</strong>转发、改头像、发声明，落到分配资源时却隐身。</li>
+<li><strong>把 DEI 劳动派给少数群体还不计酬。</strong>"少数群体税"——他们替组织做了包容，自己的晋升时钟却被偷走。</li>
+<li><strong>mentor 一大堆，sponsor 一个没有。</strong>建议不缺，缺的是有人在关键房间替他下注。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Herminia Ibarra 的研究：女性常被"<strong>过度指导、不足赞助</strong>"（over-mentored, under-sponsored）——收到的建议比男性多，实质提拔却更少，同时更多承担 ERG 与情绪劳动这类无偿工作。对策很硬核：少给一次建议，多做一次提名，把政治资本押到一个具体的人和机会上。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref"><strong>动作：</strong>本周做一次真正的 sponsor 动作——在一个当事人不在场的会上，具体提名一位少数群体下属去做一件高可见度的事，并为结果背书。<br><strong>思考题：</strong>盘点你"赞助"过的人，他们的画像是否高度像你自己？如果是，你的政治资本是在扩大公平，还是在复制自己？</div>
+</div>
+</div>
+
+<!-- ============ Deep Thinking ============ -->
+<div class="deep">
+<div class="section-label" style="margin-bottom:14px">深入思考</div>
+
+<details>
+<summary>1. "结构化流程"会不会牺牲速度与卓越，把直觉判断一并扼杀了？</summary>
+<div>有这个 trade-off，但常被夸大。结构化不是取消判断，是给判断装护栏：评分卡仍由人打分，只是逼你把"感觉"翻译成可比较的证据。证据显示结构化面试的预测效度高于非结构化，所以它通常同时改善公平与质量；真正的成本是前期设计题库、训练校准的一次性投入。对极少数靠默契的小团队招聘可以放松，但要清醒：你是在用公平换速度，不是在追求卓越。</div>
+</details>
+
+<details>
+<summary>2. 当 D&amp;I 遭遇政治反弹（如反 DEI 浪潮），leader 该高调倡导还是低调做事？</summary>
+<div>多数情况下，把它<strong>去意识形态化、嵌进运营</strong>更耐打。喊口号易成靶子且随风向起落；而"结构化面试""薪酬审计""杂活轮值"本质上是优秀管理实践，无论政治标签如何都站得住。低调不等于放弃——是把成果做进流程，让它在任何风向下存活。该高调的时刻，是不公具体发生、需要你用职位信用为某个真实的人背书时。</div>
+</details>
+
+<details>
+<summary>3. 多数群体的 leader 推动 D&amp;I，会不会变成另一种居高临下的 paternalism，甚至抢了当事人的话语权？</summary>
+<div>风险真实存在。分界线在于你是<strong>替他们做主</strong>还是<strong>替他们腾位</strong>。不问当事人就决定"什么对少数群体好"，是家长式包办；用资本把麦克风递过去、然后闭嘴让他们自己发挥，是赞助。具体做法：分配资源时你出力，定义需求时让当事人主导（问"你想要的支持是什么"而非"我觉得你需要什么"），ERG 方向由成员定、你只当出资和挡箭的后盾。</div>
+</details>
+
+<details>
+<summary>4. 配额（结果平等）与机会平等之间的哲学张力，作为 leader 该站哪边？</summary>
+<div>这是本主题最不鸡汤的地方，没有无成本的答案。硬配额能快速纠正历史积欠，却制造 tokenism 与反弹，伤及被"照顾"者的信誉；纯机会平等若忽视起点不公，又让结构性劣势永久化。一个可操作的中间立场：<strong>在入口与机会环节积极干预</strong>（扩大候选池、盲评、制度化提名），<strong>在最终授予环节坚持同一根标准杆</strong>——不降标准，但确保每个人都被公平地放到杆前。承认它仍是张力，而非已解的难题。</div>
+</details>
+
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>本周习作 · Your Day 34 Action</h3>
+<p>本周做两件事，一件改系统，一件押信用：</p>
+<div class="action">
+<strong>(1) 改一条机制：</strong>挑一项总落在同一个人头上的非晋升性杂活（记纪要/带新人/团建），本周把它改成轮值表或随机分配，并当众宣布规则。<br><br>
+<strong>(2) 做一次真赞助：</strong>在一个当事人不在场的会议上，<strong>具体</strong>提名一位少数群体下属去做一件高可见度的事，并为结果背书。然后记录：你押上了多少自己的信用？这比你过去给出的所有"建议"更管用吗？
+</div>
+</div>
+
+<nav class="footer-nav">
+<a href="index.html">← 返回目录</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 34 · 2026.06.24</footer>
+</div>
+</body>
+</html>

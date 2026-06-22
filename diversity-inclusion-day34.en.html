@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Day 34: Diversity &amp; Inclusion</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:14px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+.deep{margin-top:40px}
+.deep details{background:#fffaf0;border:1px solid #e6d9bf;border-radius:6px;padding:4px 18px;margin-bottom:12px}
+.deep summary{cursor:pointer;font-weight:600;color:#5c3a18;padding:12px 0;font-size:0.98rem}
+.deep details div{padding:6px 0 14px;color:#4a3a20;font-size:0.93rem;border-top:1px dashed #e6d9bf}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 34 · 2026.06.24</div>
+<h1>Diversity &amp; Inclusion: Build Goodwill Into Mechanism</h1>
+<div class="meta"><span>Topic: Diversity &amp; Inclusion</span><span>·</span><span>4 Principles</span></div>
+<div class="subtitle">"De-bias organizations, not individuals." — Iris Bohnet, <em>What Works</em></div>
+</header>
+
+<div class="intro">
+<strong>This week's premise:</strong> Diversity &amp; Inclusion (D&amp;I) is not a training checkbox or a moral statement — it's a system you can <strong>audit, change, and hold accountable</strong>. Goodwill is never the shortage; what's missing is the sentence in your mouth when a microaggression lands, the rotation sheet when you assign grunt work, and the eyes you bring to promotion data. Trying to "fix everyone's unconscious mind" fails; fixing the process, the incentives, and your own concrete actions works. Four principles this week: <strong>intervening on microaggressions in the moment</strong>, <strong>squeezing bias out of the system</strong>, driving by <strong>data, not moral fervor</strong>, and not letting the labor of inclusion fall back onto the very people it's meant to include.
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>Intervening on Microaggressions: First Tell Apart Bias, Prejudice, and Bullying
+<span class="en">Bias vs Prejudice vs Bullying</span></h2>
+<span class="tag">Microaggression</span><span class="tag">Bystander</span><span class="tag">In-the-Moment</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">The harm of a microaggression isn't only in the line itself — it's in <strong>the silence in the room</strong>. A leader's job isn't to console privately afterward (that outsources the cost to the victim), but to step in on the spot — and what you say depends on whether the person meant no harm, holds a belief, or intends malice.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"Bias is 'not meaning it.' Prejudice is 'meaning it.' Bullying is 'being mean.' The response to each is different."</span>
+<span class="source">— Kim Scott, <em>Just Work</em> (2021)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene: Three Types, Three Sentence Forms</div>
+<div class="scene">
+<div class="setup">Situation: In an architecture review, engineer Wei proposes a sharding plan — no one responds. Five minutes later a colleague restates the same point, and the room nods it through.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The Common Move (private, after)</div>
+<p>You DM Wei afterward: "Don't take it personally, he didn't mean it." — You've outsourced "digesting the unfairness" to the victim, while everyone in the room treated that moment as fine.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Unintended bias → I-statement (re-attribute)</div>
+<p>"Hold on — Wei raised this five minutes ago and we didn't pick it up. Wei, can you walk us through your plan?" <strong>Hand the mic back, re-attribute the credit</strong> — without escalating to an accusation of "discrimination."</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Conscious prejudice → It-statement (appeal to a standard)</div>
+<p>Someone says, "Oncall grind like this is too rough for the women, no?" → "<strong>On this team, work is assigned by skill and willingness, not by gender.</strong>" — Appeal to the team standard; don't debate the belief in his head.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Deliberate malice → You-statement (set a boundary, don't argue merits)</div>
+<p>When someone repeatedly interrupts or publicly humiliates a person: "<strong>You need to stop talking to colleagues that way.</strong>" — Don't get tangled in "are you right" — set a boundary on the behavior.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The 3-Second Self-Check Before You Step In</div>
+<ul class="checklist">
+<li>Is this unintended, a belief, or malice? (Decides whether you use I / It / You.)</li>
+<li>Can I keep the focus on <strong>behavior and impact</strong> rather than labeling the person "a bigot"?</li>
+<li>Does this person need me to speak for them, or to hand the mic back? (Default: the latter.)</li>
+<li>If the moment passed, did I correct the responsible party privately within 24 hours?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Private consolation instead of in-the-moment repair.</strong> Silence endorses the whole room's version of events.</li>
+<li><strong>Speaking for the victim and stealing her mic.</strong> Re-attributing ≠ ventriloquizing; hand the floor back first.</li>
+<li><strong>Treating bias as malice and escalating everything.</strong> A You-statement at bias only makes the person defensive and makes onlookers think you overreacted.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+"She said it and was ignored; he repeated it and got the credit" is the well-known <strong>amplification</strong> problem. The women on Obama's White House staff invented a tactic: when one woman makes a good point, another immediately repeats it and <strong>names the author</strong> — "As Wei just said…" — forcing the room to remember the source. As a leader you can institutionalize it: make "whoever raised it owns it" explicit, and name names from the chair yourself.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Action:</strong> In your next meeting, deliberately do one "re-attribution" — when an overlooked point gets restated by someone else, speak up and return it to the original author.<br><strong>Reflection:</strong> Over the past month, how many times did you "console privately afterward"? In how many could one in-the-moment sentence have rewritten the room's memory?</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>Design Fair Processes: De-bias the System, Not the Conscience
+<span class="en">Designing Bias Out of the System</span></h2>
+<span class="tag">Process Design</span><span class="tag">Structured</span><span class="tag">Task Allocation</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">You can't correct everyone's subconscious, but you can change the process. Bias runs wild precisely in the "by feel" steps — unstructured interviews, off-the-cuff task assignment, impressionistic calibration. <strong>Put the judgment inside a structure</strong> so even biased minds get it right more often.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"We can change behavior and design organizations in ways that make it easier for our biased minds to get things right."</span>
+<span class="source">— Iris Bohnet, <em>What Works: Gender Equality by Design</em>, Ch. 1</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene: That "Who'll Take Notes?"</div>
+<div class="scene">
+<div class="setup">Situation: The meeting starts. Someone needs to take notes, someone to organize the offsite, someone to onboard the newcomer. These tasks matter but <strong>don't lead to promotion</strong> (non-promotable tasks).</div>
+<div class="dialog bad">
+<div class="speaker">✗ The Common Move</div>
+<p>"Who'll take notes?" — After a silence, it's always the same person (often the woman or the most junior) who volunteers or gets defaulted to. Over a year she fills up on "office housework," while her record shows only the chores no one else wanted.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The Fix: Make Allocation Explicit</div>
+<p>"<strong>Notes rotate alphabetically; it's my turn this week.</strong>" — Put chores on a rotation so no one gets stuck. Go further: write glue work (onboarding, firefighting, cross-team coordination) <strong>into performance as leadership evidence, and credit it</strong> instead of letting it stay invisible. Same for hiring/calibration: <strong>same questions, same rubric</strong>; ban evidence-free vetoes like "the culture-fit feel is off."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Process De-bias Checklist</div>
+<ul class="checklist">
+<li>Are interviews structured — same questions, same scorecard for candidates in the same role?</li>
+<li>In calibration, does every rating land on <strong>specific behavioral evidence</strong>, not "vibe / presence / fit"?</li>
+<li>Are non-promotable chores (notes, offsites, onboarding) rotated or randomized, not defaulted to one person?</li>
+<li>Can resume screening be done <strong>blind</strong> (names/schools/gender removed)?</li>
+<li>Is promotion nomination triggered by a rule (everyone reviewed on schedule), or by "who self-promotes / who gets remembered"?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Running unconscious-bias training but not changing the process.</strong> Research repeatedly shows one-off training barely changes behavior; changing the defaults does.</li>
+<li><strong>Treating "culture fit" as an all-purpose veto button.</strong> It's often a euphemism for "like me." Ask for "culture add" instead.</li>
+<li><strong>Pinning your hopes on individual enlightenment.</strong> Enlightenment fatigues and forgets; structure doesn't.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Joan C. Williams's research: women are more likely to be assigned "office housework," and <strong>the cost of refusing is higher</strong> — a man saying "no" reads as having boundaries; a woman saying "no" gets tagged "not a team player." So relying on "she should learn to say no" dumps a system problem onto the individual. The real fix is changing the allocation mechanism (rotation / credit) so no one has to be "brave enough to refuse" at all.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Action:</strong> Pick one chore that keeps landing on the same person, and this week convert it to a rotation or random assignment.<br><strong>Reflection:</strong> Last time you called a candidate "not quite a fit," if pressed for "which specific behavioral evidence," could you answer?</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>Drive by Data, Not Moral Fervor: Give the Argument an Anchor
+<span class="en">Measure, Don't Moralize</span></h2>
+<span class="tag">Data-Driven</span><span class="tag">The Funnel</span><span class="tag">Pay Audit</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">The moment D&amp;I becomes a moral statement, it polarizes and invites backlash. Reduce it to a <strong>measurable operations problem</strong>: four funnel metrics plus one pay audit. Let data be the anchor so the argument doesn't collapse into taking sides.</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"Make people decisions based on data and analysis, not just intuition, hierarchy, or seniority."</span>
+<span class="source">— Laszlo Bock, <em>Work Rules!</em> (former Head of People Ops, Google)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">The Representation Funnel: Don't Only Watch the Entrance</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
+<rect x="120" y="20" width="460" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="160" y="72" width="380" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="205" y="124" width="290" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<rect x="250" y="176" width="200" height="40" rx="4" fill="#fcf6e8" stroke="#a8702d" stroke-width="2"/>
+<text x="350" y="46" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">(1) Representation: share by level and group</text>
+<text x="350" y="98" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">(2) Hiring: interview-to-offer pass rate by group</text>
+<text x="350" y="150" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">(3) Promotion velocity</text>
+<text x="350" y="202" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">(4) Attrition</text>
+<text x="350" y="240" text-anchor="middle" font-family="Georgia" font-size="11.5" fill="#a04020" font-style="italic">The real bias signal usually hides in (3)(4), not (1)</text>
+</svg>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene: You Find Promotions Are 30% Slower</div>
+<div class="scene">
+<div class="setup">Situation: You pull three years of promotion data and find one group is promoted about 30% slower than the team average.</div>
+<div class="dialog bad">
+<div class="speaker">✗ The Common Move</div>
+<p>"This year's hard target: we must promote X people from that group." — Manufactures tokenism ("she's just filling a quota"), wounds the person, invites peer backlash, and never moves the root cause.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The Fix: Decompose the Funnel, Find the Leak</div>
+<p>"First locate <strong>which stage</strong> it leaks at: too few nominations? Or nominated and then cut in calibration?" Fix the mechanism at the leaking stage (institutionalize nomination; require behavioral evidence in calibration). Then run a <strong>pay audit</strong>: a regression at same role and level, controlling for tenure and performance, looking for a significant residual — <strong>the residual is the bias signal</strong>.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Data Self-Check</div>
+<ul class="checklist">
+<li>Am I looking at all four metrics, not just the "how many we hired" entrance number?</li>
+<li>Are promotion and attrition data <strong>broken down by group</strong>, not just viewed in aggregate?</li>
+<li>Is the pay gap a <strong>residual after controlling variables</strong>, or a raw gap with no control for tenure/level?</li>
+<li>Am I setting a hard quota that can be gamed? (Beware Goodhart: a metric, once a target, gets gamed.)</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Only watching entrance representation.</strong> You hire enough but keep losing them in promotion and environment — a leaky bucket.</li>
+<li><strong>Setting hard quotas that manufacture tokenism.</strong> Numbers hit, environment still toxic, and the person carries the "quota hire" slur for you.</li>
+<li><strong>Metric becomes target (Goodhart).</strong> "Raise that group's retention" may breed fake retention — kept but never promoted.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+On the gender pay gap, people often blur the issue with "choice theory" — "they chose not to negotiate / chose family." The data answer is to look at the <strong>residual gap after controlling for role, level, and tenure</strong>: if a systematic gap remains at same role and level, that's not "choice," it's structure. Drag the shouting match back onto that regression line.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Action:</strong> Pull your team's promotion list for the last two years and break it down by whatever dimensions you can get (gender / seniority / source); just look at the ratios, draw no conclusions yet.<br><strong>Reflection:</strong> If the data revealed a fact inconvenient to you, would you go change the mechanism — or first go find an explanation that lets you feel comfortable?</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>Sponsorship Over Symbolism: Don't Make the Included Carry the Labor of Inclusion
+<span class="en">Sponsorship over Symbolism</span></h2>
+<span class="tag">ERG</span><span class="tag">Sponsor vs Mentor</span><span class="tag">Minority Tax</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle in One Line</div>
+<div class="principle">Inclusion's biggest hidden tax: the DEI labor — running ERGs, mentoring, sitting on diversity panels — keeps landing on <strong>underrepresented people themselves</strong>, uncredited toward promotion. The real leverage isn't a mentor (who gives you advice), it's a <strong>sponsor</strong> (who bets on you in rooms you're not in).</div>
+</div>
+
+<div class="section">
+<div class="section-label">In Their Words</div>
+<div class="quote">
+<span class="en">"A mentor talks with you; a sponsor talks about you. Mentors give advice; sponsors deliver."</span>
+<span class="source">— Sylvia Ann Hewlett, <em>Forget a Mentor, Find a Sponsor</em></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene: Overlooked vs Bet On</div>
+<div class="scene">
+<div class="setup">Situation: You want to "support diversity," and you have an excellent underrepresented report on your team.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Looks Like Support, Actually a Tax</div>
+<p>"I'm a big supporter of diversity — let's have her lead our team's ERG." — You've just added her an <strong>unpaid, promotion-blind, output-eating</strong> task. Called esteem; really a tax.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Real Sponsorship: Stake Your Credit</div>
+<p>(1) In the calibration room when she's absent: "<strong>I'm nominating her for this high-visibility project, and I'll vouch for the outcome.</strong>"<br>(2) The organizing grunt work of the ERG <strong>you, the majority-group leader, carry</strong> (you take notes, you book the room) — leaving her the stage to do real work.<br>(3) Write her existing DEI contributions <strong>into performance as leadership evidence, and fight for time/headcount to offset it</strong>.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Sponsor's Checklist</div>
+<ul class="checklist">
+<li>In the past quarter, did I concretely nominate/vouch for someone in a room they were <strong>not in</strong>?</li>
+<li>What I give underrepresented reports — is it endless advice (mentor), or real opportunity (sponsor)?</li>
+<li>Is the DEI/ERG labor on my team falling disproportionately on underrepresented people, uncredited?</li>
+<li>As a majority-group member, am I carrying <strong>visible</strong> inclusion labor, not just reposting statements?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Performative allyship.</strong> Reposting, changing avatars, issuing statements — then vanishing when resources get allocated.</li>
+<li><strong>Assigning DEI labor to underrepresented people, uncredited.</strong> The "minority tax" — they do inclusion for the org while their own promotion clock gets stolen.</li>
+<li><strong>A pile of mentors, not a single sponsor.</strong> Advice is plentiful; what's missing is someone betting on them in the key rooms.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Herminia Ibarra's research: women are often "<strong>over-mentored, under-sponsored</strong>" — more advice than men, less real promotion — while also carrying more of the unpaid work like ERGs and emotional labor. The fix is blunt: give one less piece of advice, make one more nomination. Stake your political capital on a specific person and a specific opportunity.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref"><strong>Action:</strong> This week make one true sponsor move — in a meeting where the person is absent, <strong>concretely</strong> nominate an underrepresented report for a high-visibility task and vouch for the outcome.<br><strong>Reflection:</strong> Audit the people you've "sponsored": do they look a lot like you? If so, is your political capital widening fairness, or replicating yourself?</div>
+</div>
+</div>
+
+<!-- ============ Deep Thinking ============ -->
+<div class="deep">
+<div class="section-label" style="margin-bottom:14px">Deeper Questions</div>
+
+<details>
+<summary>1. Could "structured process" sacrifice speed and excellence, killing intuitive judgment along the way?</summary>
+<div>The trade-off exists but is often exaggerated. Structure doesn't abolish judgment; it puts guardrails on it: humans still score the rubric — you're just forced to translate "feel" into comparable evidence. Evidence shows structured interviews have higher predictive validity than unstructured ones, so they usually improve fairness and quality at once; the real cost is a one-off upfront investment in designing the question bank and training calibration. For the rare small team hiring on chemistry you can loosen up, but be clear-eyed: you're trading fairness for speed, not pursuing excellence.</div>
+</details>
+
+<details>
+<summary>2. When D&amp;I meets political backlash (e.g. an anti-DEI wave), should a leader advocate loudly or work quietly?</summary>
+<div>In most cases, <strong>de-ideologizing it and embedding it in operations</strong> is more durable. Slogans easily become targets and swing with the wind; whereas "structured interviews," "pay audits," and "chore rotation" are fundamentally good management practices that stand regardless of political label. Quiet doesn't mean surrender — it's baking results into process so they survive any climate. The moment to be loud is when unfairness concretely happens and you need to spend your positional credit vouching for a real person.</div>
+</details>
+
+<details>
+<summary>3. When a majority-group leader pushes D&amp;I, could it become another paternalism — even taking the voice away from the people it's meant to serve?</summary>
+<div>The risk is real. The dividing line is whether you're <strong>deciding for them</strong> or <strong>making room for them</strong>. Deciding "what's good for underrepresented people" without asking them is paternalistic micromanagement; using your capital to hand the mic and the opportunity over, then shutting up to let them perform, is sponsorship. Concretely: you do the work when allocating resources, but let them lead when defining needs (ask "what support do you want" not "what I think you need"); the ERG sets its own direction while you serve as funder and shield.</div>
+</details>
+
+<details>
+<summary>4. The philosophical tension between quotas (equality of outcome) and equality of opportunity — which side should a leader take?</summary>
+<div>This is the least preachy part of the topic, with no cost-free answer. Hard quotas can quickly correct historical debt, but manufacture tokenism and backlash, wounding the credibility of the "helped." Pure equality of opportunity, if it ignores unequal starting points, lets structural disadvantage perpetuate. One workable middle stance: <strong>intervene actively at entry and opportunity</strong> (widen the pool, blind screening, institutionalized nomination), while <strong>holding the same bar at the final award</strong> — don't lower the standard, but make sure everyone is fairly brought to the bar. Acknowledge it's still a tension, not a solved problem.</div>
+</details>
+
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Week's Exercise · Your Day 34 Action</h3>
+<p>Do two things this week — one that changes the system, one that stakes your credit:</p>
+<div class="action">
+<strong>(1) Change one mechanism:</strong> Pick a non-promotable chore that always lands on the same person (notes / onboarding / offsite), convert it this week to a rotation or random assignment, and announce the rule openly.<br><br>
+<strong>(2) Make one real sponsor move:</strong> In a meeting where the person is absent, <strong>concretely</strong> nominate an underrepresented report for a high-visibility task and vouch for the outcome. Then record: how much of your own credit did you stake? Was it more effective than all the "advice" you've ever handed out?
+</div>
+</div>
+
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 34 · 2026.06.24</footer>
+</div>
+</body>
+</html>
