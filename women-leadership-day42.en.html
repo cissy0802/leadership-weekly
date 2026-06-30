@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Day 42: Women in Leadership</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.deepthink{margin-top:50px;padding:28px 26px;background:#fffaf0;border-radius:8px;border-top:3px solid #5c3a18;box-shadow:0 2px 14px rgba(92,58,24,0.09)}
+.deepthink h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:16px;color:#5c3a18}
+.deepthink details{border-bottom:1px dashed #d8c8a8;padding:12px 0}
+.deepthink summary{cursor:pointer;font-weight:600;color:#6b4a1f;font-size:0.98rem}
+.deepthink details div{margin-top:10px;font-size:0.93rem;color:#4a3a20}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 42 · 2026.06.30</div>
+<h1>Women in Leadership: Don't Coach Her to Be More Confident — Fix the Table</h1>
+<div class="meta"><span>Topic: Women in Leadership</span><span>·</span><span>4 Principles</span></div>
+<div class="subtitle">"Success and likeability are positively correlated for men and negatively correlated for women." — Sheryl Sandberg</div>
+</header>
+
+<div class="intro">
+<strong>This issue's thesis:</strong> this is not pep talk for women — it's an operating manual for the <strong>male manager running a mixed team</strong>. Gender bias is usually not "bad actors being deliberate"; it's cognitive noise baked into the evaluation system — hiding in the wording of calibration, in the default of who takes notes, in the "well-meaning" project assignment after parental leave. You can't change the whole industry, but <strong>you can change the rules of your own room</strong>. Four steps: see the double bind clearly, understand where Lean In helps and where it's blind, collect back the "invisible tax" (office housework, interruptions, stolen credit), and use sponsorship to offset the motherhood penalty. What you get are checkable actions, not attitudes.
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>The Double Bind: Competent Reads as Unlikable, Likable Reads as Not Leader Material
+<span class="en">The Double Bind — Competence vs Likability</span></h2>
+<span class="tag">Double Bind</span><span class="tag">Debiased Wording</span><span class="tag">Calibration</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle</div>
+<div class="principle">A woman leader faces a dilemma a man almost never does: <strong>act decisive and assertive and she's rated "hard to work with"; act warm and accommodating and she's rated "not leader material."</strong> This is usually not her personality problem — it's the evaluator's cognitive bias. Your job is to keep that bias out of the performance record.</div>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle + Master's Words</div>
+<div class="quote">
+<span class="en">"Success and likeability are positively correlated for men and negatively correlated for women. When a man is successful, he is liked by both men and women. When a woman is successful, people of both genders like her less."</span>
+<span class="zh">The classic evidence: an identical résumé, renamed — competence rated the same, but "Heidi" judged more selfish and less likable than "Howard."</span>
+<span class="source">— Sheryl Sandberg, <em>Lean In</em>, Ch.2 (citing the Flynn & Anderson "Heidi/Howard" experiment)</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">See the Mechanism</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+<line x1="60" y1="240" x2="640" y2="240" stroke="#5c3a18" stroke-width="2"/>
+<line x1="60" y1="240" x2="60" y2="30" stroke="#5c3a18" stroke-width="2"/>
+<text x="350" y="270" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">Success / Assertiveness / Competence →</text>
+<text x="28" y="135" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18" transform="rotate(-90 28 135)">Likability →</text>
+<line x1="80" y1="210" x2="610" y2="70" stroke="#5c8a3a" stroke-width="3"/>
+<text x="615" y="70" font-family="Georgia" font-size="12" font-weight="700" fill="#4a6a28">Men</text>
+<line x1="80" y1="90" x2="610" y2="215" stroke="#b85c3a" stroke-width="3"/>
+<text x="615" y="220" font-family="Georgia" font-size="12" font-weight="700" fill="#a04020">Women</text>
+<text x="190" y="55" font-family="Georgia" font-size="11" fill="#8a6d3b">more success = more liked</text>
+<text x="310" y="170" font-family="Georgia" font-size="11" fill="#8a6d3b">more success = more "disliked"</text>
+</svg>
+<div style="font-size:0.82rem;color:#8a6d3b;margin-top:8px">The same assertive act earns the opposite social verdict depending on gender — that's structural noise, not a personal trait.</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene in Practice</div>
+<div class="scene">
+<div class="setup">Setup: in calibration, someone rates a senior woman engineer on your team — "She's a bit aggressive, the team says she's hard to work with."</div>
+<div class="dialog bad">
+<div class="speaker">✗ Don't write/echo this</div>
+<p>"Agreed, she needs to soften her style, work on her likability." — Writing a vague personality label straight into performance language institutionalizes the bias.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Try this</div>
+<p>"Hold on. Is 'aggressive' a specific behavior or an impression? If it's 'she interrupted people three times in design review,' that's a changeable behavior and I'll raise it with her directly. But if it's a vague 'hard to work with' — <strong>if [a male colleague] did the same thing, would we use the same word?</strong> If not, it doesn't go in the review."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist · Debiased Wording</div>
+<ul class="checklist">
+<li>Is my feedback about a <strong>specific behavior</strong>, or a personality/style label (aggressive / emotional / abrasive / bossy)?</li>
+<li>For the same behavior, would I use the same adjective for a male report? (the double-standard test on "decisive" vs "pushy")</li>
+<li>"The team finds her hard to work with" — is that verifiable behavioral evidence, or an anonymous likability complaint?</li>
+<li>When someone uses a personality word on a woman in calibration, do I ask them to restate it as behavior?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Treating a likability complaint as performance evidence.</strong> "Hard to work with" often measures the evaluator's comfort, not her output.</li>
+<li><strong>Using "culture fit" as a vague veto.</strong> An unexplainable "fit" is often the polite version of "not like me."</li>
+<li><strong>Advising her to "soften."</strong> That offloads the cost of a system bias onto the victim to fix.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">A Male Manager's Blind Spot</span>
+You've almost certainly never been asked to "choose between competent and likable" — so this bind is invisible to you. Don't deny it with "I don't see any discrimination"; you don't feel it precisely because it doesn't tax you. Make the double-standard test muscle memory — every time you reach for a personality adjective, try it on a male colleague first.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref">Pull up a piece of feedback you recently wrote about a woman report (or a calibration comment); circle every personality adjective and rewrite each as a specific behavior — or delete it.<br><strong>Reflection:</strong> the last time you called someone "hard to work with / too aggressive," would you have used that word for the opposite gender?</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>Lean In Helps — But Don't Offload Structural Problems onto Individual Effort
+<span class="en">Lean In — Useful, and Its Blind Spot</span></h2>
+<span class="tag">The Lean In Debate</span><span class="tag">Confidence vs Competence</span><span class="tag">Fix the Process</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle</div>
+<div class="principle">Sandberg's "sit at the table, don't leave before you leave" genuinely helps individuals, but its biggest blind spot is <strong>treating systemic barriers as a confidence deficit to be cured</strong>. As a manager, your leverage isn't coaching women to push harder — it's <strong>fixing the process you control</strong>.</div>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle + Master's Words</div>
+<div class="quote">
+<span class="en">"Don't leave before you leave." / Critique: "It's not always enough to lean in, because that sh*t doesn't work all the time."</span>
+<span class="zh">Sandberg urges women not to pull back from their careers in anticipation of future family demands. The critique (Michelle Obama, 2018): leaning in alone doesn't always work — structure matters.</span>
+<span class="source">— Sheryl Sandberg, <em>Lean In</em>, Ch.7 "Don't Leave Before You Leave"; critique from Michelle Obama (public talk) and bell hooks, who called it "faux feminism"</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene in Practice</div>
+<div class="scene">
+<div class="setup">Setup: hiring, and HR says "we have too few women candidates because they don't apply, they don't push themselves."</div>
+<div class="dialog bad">
+<div class="speaker">✗ Don't attribute it this way</div>
+<p>"Then let's get the women we have to lean in more, advocate harder." — Outsourcing a systemic problem (pipeline, wording, criteria) to individual willpower.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Reframe as "fix the table"</div>
+<p>"Instead of waiting for them to be more confident, let's look at our end: does the JD pile on words that deter women from applying (rockstar / aggressive / 'killer instinct')? Does the interview panel include women? Do our promotion criteria reward <strong>actual output, or self-promotion</strong>? We can fix all three today."</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist · Fix Process, Not People</div>
+<ul class="checklist">
+<li>Am I asking the <strong>individual to change</strong>, or am I <strong>fixing the process</strong>? (the first is cheap, the second is effective)</li>
+<li>Does the JD contain masculine-coded words (rockstar / ninja / aggressive)? Have I run it through a gender decoder?</li>
+<li>Do promotion and recognition reward "good at self-promotion" over "real output"?</li>
+<li>In the rooms where interviews, reviews, and decisions happen, is there structural representation of women?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Worshipping the "confidence gap."</strong> Chamorro-Premuzic's research notes the problem often isn't that women lack confidence — it's that <strong>overconfident men get mistaken for competent</strong>. We misread confidence as competence.</li>
+<li><strong>Treating Lean In as the whole answer.</strong> It's an individual strategy, not an organizational excuse. You can't refuse to fix the table and then blame her for not sitting down.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">The Honest Gray Zone</span>
+Both sides are half right: individuals really can improve their situation by advocating (Lean In isn't wrong); but talking only about individual effort hides the structural cost and reverses into victim-blaming. The mature stance is <strong>two-track</strong> — encourage agency while actually fixing the system. Doing only one is laziness.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref">Take a recent JD from your team, scan it word by word for masculine-coded language, and rewrite at least three spots.<br><strong>Reflection:</strong> among the people you've promoted, do the "askers" or the "heads-down doers" dominate? What does that ratio say you're rewarding?</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>The Invisible Tax: Office Housework, Interruptions, Stolen Credit
+<span class="en">The Invisible Tax — Glue Work, Interruptions, Stolen Credit</span></h2>
+<span class="tag">Non-Promotable Tasks</span><span class="tag">Amplification</span><span class="tag">Rotation</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle</div>
+<div class="principle">Women are more often defaulted into "organizational housework" — note-taking, ordering lunch, onboarding newcomers, running offsites: important, but non-promotable. They're also more likely to be interrupted and to have credit taken. <strong>This is an invisible tax, and the manager must actively collect it back — not wait for the person to protest.</strong></div>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle + Master's Words</div>
+<div class="quote">
+<span class="en">"Non-promotable tasks—work that benefits the organization but doesn't help you advance—fall disproportionately on women."</span>
+<span class="zh">Glue work is essential, yet it caps career advancement; it lands on women far more than its fair share.</span>
+<span class="source">— Linda Babcock et al., <em>The No Club: Putting a Stop to Women's Dead-End Work</em>; see also Tanya Reilly, "Being Glue"</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene in Practice</div>
+<div class="scene">
+<div class="setup">Setup: in a meeting a woman engineer proposes an idea, no one engages; five minutes later a male colleague repeats it almost verbatim, and the room nods in approval.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Don't do this</div>
+<p>Let it pass silently, or comfort her privately afterward: "I thought your idea was good." — Private comfort doesn't change credit attribution.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Credit on the spot (amplification)</div>
+<p>"Hold on — that's exactly the idea [her name] raised five minutes ago. I'd like to hear her expand on it." <strong>On the spot, by name, hand the mic back.</strong> This "amplification" tactic came from women on the Obama White House staff: when one spoke, others immediately restated and credited the original author.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist · Collecting the Invisible Tax</div>
+<ul class="checklist">
+<li>Note-taking / running offsites / onboarding / on-call chores — broken down by gender, is it skewed toward women?</li>
+<li>Have I made these <strong>non-promotable tasks a rotation</strong>, or does whoever is "good at it" keep doing it by default?</li>
+<li>Who gets interrupted most in meetings? Have I said "let her finish" on the spot?</li>
+<li>When someone repeats another's idea, do I return the credit to the original author on the spot?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Treating glue work as "she volunteered / she's good at it."</strong> Being good at it doesn't mean she should always do it — and certainly not that it shouldn't count toward promotion.</li>
+<li><strong>Praising without counting.</strong> Thanking her for "carefully organizing the offsite" while promotion only weighs "technical impact" leads her down a dead end and praises her for running fast on it.</li>
+<li><strong>Expecting her to claim credit herself.</strong> Credit-stealing happens in public; the correction must be public too — and made by the person with power.</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref">This week, pick a meeting and quietly count how many times each person is interrupted, noting it by gender; then list the team's "office housework" and look at the distribution.<br><strong>Reflection:</strong> over the past quarter, is the work that actually counted toward promotion done by the same people who keep the team running?</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>The Motherhood Penalty & Sponsorship: Don't "Protectively" Decide for Her
+<span class="en">Motherhood Penalty & Sponsorship</span></h2>
+<span class="tag">Motherhood Penalty</span><span class="tag">Benevolent Bias</span><span class="tag">Sponsor</span>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle</div>
+<div class="principle">With identical credentials, mothers are rated as less competent and less committed (the motherhood penalty), while fathers get a bonus (the fatherhood bonus) — an experimentally confirmed bias. The most effective lever to offset it is <strong>not mentorship (giving advice) but sponsorship (spending your political capital to vouch for her and win her opportunities).</strong></div>
+</div>
+
+<div class="section">
+<div class="section-label">The Principle + Master's Words</div>
+<div class="quote">
+<span class="en">"Mothers were recommended for hire significantly less often than childless women; fathers were not penalized—if anything, they benefited." / "Mentors advise; sponsors act."</span>
+<span class="zh">The motherhood penalty is real and measurable; the fatherhood bonus is its mirror image. Advice is cheap — acting on someone's behalf is what moves them.</span>
+<span class="source">— Shelley Correll et al. (2007), "Getting a Job: Is There a Motherhood Penalty?" AJS; Sylvia Ann Hewlett, <em>(Forget a Mentor) Find a Sponsor</em></span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Mentor vs Sponsor</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+<rect x="30" y="30" width="290" height="160" rx="8" fill="#faecd8" stroke="#c47040" stroke-width="2"/>
+<rect x="360" y="30" width="290" height="160" rx="8" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<text x="175" y="60" text-anchor="middle" font-family="Georgia" font-size="16" font-weight="700" fill="#a04020">Mentor</text>
+<text x="505" y="60" text-anchor="middle" font-family="Georgia" font-size="16" font-weight="700" fill="#4a6a28">Sponsor</text>
+<text x="50" y="92" font-family="Georgia" font-size="12" fill="#5a3818">· advises you, listens</text>
+<text x="50" y="118" font-family="Georgia" font-size="12" fill="#5a3818">· helps you to your face</text>
+<text x="50" y="144" font-family="Georgia" font-size="12" fill="#5a3818">· spends time</text>
+<text x="50" y="170" font-family="Georgia" font-size="12" fill="#5a3818">· "You should…"</text>
+<text x="380" y="92" font-family="Georgia" font-size="12" fill="#2f4a18">· gives opportunity, vouches</text>
+<text x="380" y="118" font-family="Georgia" font-size="12" fill="#2f4a18">· speaks for you when you're absent</text>
+<text x="380" y="144" font-family="Georgia" font-size="12" fill="#2f4a18">· spends political capital</text>
+<text x="380" y="170" font-family="Georgia" font-size="12" fill="#2f4a18">· "I've already gotten you…"</text>
+</svg>
+<div style="font-size:0.82rem;color:#8a6d3b;margin-top:8px">Women often get over-mentored and under-sponsored — plenty of advice, no extra opportunity.</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Scene in Practice</div>
+<div class="scene">
+<div class="setup">Setup: a woman report returns from parental leave, and you're assigning next quarter's projects — you hold a high-visibility, high-pressure one.</div>
+<div class="dialog bad">
+<div class="speaker">✗ "Well-meaning" maternal-wall bias</div>
+<p>"She just got back — give her something lighter, don't put her on this high-pressure project, let her ease in." — This is benevolent sexism: kind in motive, but it kicks her off the promotion track and decides for her.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Ask her, don't decide for her</div>
+<p>"There's a high-visibility project and you were the first person I thought of. Are you interested? If you need some kind of flexibility (timing, handoff, pace), we can design it together." — <strong>Return the choice to her</strong>, and speak for her in the promotion meetings she's not in.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Checklist · Sponsor, Not Just Mentor</div>
+<ul class="checklist">
+<li>Am I giving her <strong>advice (mentor) or opportunity (sponsor)</strong>? When did I last spend political capital for her?</li>
+<li>In calibration / promotion discussions she's not in, do I speak up for her?</li>
+<li>On return from leave, did I make a "protective" decision for her without asking what she wants?</li>
+<li>Is the allocation of high-visibility projects balanced when viewed by gender?</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">Common Mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Benevolent sexism is as harmful as the hostile kind.</strong> Stripping opportunity "for her own good" is more insidious and harder to push back on.</li>
+<li><strong>Mentoring but not sponsoring.</strong> Advice is a low-cost gesture; spending capital to vouch is real support — and it's your scarce value as a manager.</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">The Honest Cost</span>
+Sponsorship has a price — you stake your own credibility vouching for someone, and if she stumbles, part of the bill is yours. That's exactly why it's valuable. But don't only sponsor the "safe" people, or you're just replicating the existing distribution of winners.
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">This Week's Exercise + Reflection</div>
+<div class="ref">List the people you actually spent political capital to sponsor over the past year (not advice — winning opportunities, vouching), and look at the distribution by gender.<br><strong>Reflection:</strong> if a mother on your team came to discuss promotion tomorrow, could you name three things you've <strong>already done</strong> for her? Or only three "pieces of advice"?</div>
+</div>
+</div>
+
+<!-- ============ Deep Think ============ -->
+<div class="deepthink">
+<h3>Think Deeper · Push to the Edge</h3>
+<details>
+<summary>1. If a male manager loudly champions women's leadership, does it become a performative gesture?</summary>
+<div>That risk is real. The distinction is <strong>gesture vs mechanism</strong>: posting a statement, sharing a thread, taking people to dinner on Women's Day is gesture; rewriting JD wording, rotating glue work, vouching for her in a room she's not in is mechanism. A mechanism doesn't need you on stage — ideally no one sees you doing it. Simple test: did what you did change some concrete resource allocation or evaluation rule? If not, it was theater.</div>
+</details>
+<details>
+<summary>2. Could these debiasing measures become "reverse discrimination" and label women as "given a hand-up"?</summary>
+<div>It hinges on whether you fix <strong>process</strong> or <strong>outcome</strong>. De-gendering a JD, rotating non-promotable tasks, judging by behavior not personality — these fix process, are fairer to everyone, and create no labels. By contrast, "promote her because she's a woman" moves outcome — unfair, and yes, it invites doubt. Every action in this issue deliberately stops at the process layer: make the rules neutral, don't open a back door for anyone. Hold that line.</div>
+</details>
+<details>
+<summary>3. This research is mostly from North America — does it hold in East Asia / big-company contexts?</summary>
+<div>The core mechanisms hold (the competence–likability double standard and the motherhood penalty are widespread), but the parameters differ. In East Asian contexts the "hard to work with" penalty may be heavier, the expectation of "humility" higher, and the social cost of self-promotion greater — meaning Lean In's "just ask" works even less well, and <strong>fixing the table is relatively more valuable</strong>. Localize the scripts (amplification needs rewording in a harmony-prioritizing room), but the underlying moves — judge by behavior, rotate chores, sponsor not just mentor — are cross-culturally portable.</div>
+</details>
+<details>
+<summary>4. When "fixing the table" collides with "this quarter's delivery," who bears the cost of structural reform?</summary>
+<div>Honestly: in the short term, you do. Reworking JDs, interrupting the interrupters in meetings, staking your credibility to vouch — all are present-cost with lagging, hard-to-attribute returns. That's exactly why structural problems go unfixed for so long: every manager's rational move is to deliver first. The way through is to do the <strong>zero-marginal-cost</strong> actions first (the double-standard test, crediting, asking-not-deciding — nearly free), and push the high-cost ones (redesigning promotion criteria) up to those with power to change the system. Don't pretend you can carry the whole system alone — but your own room, you can.</div>
+</details>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Issue's Exercise · Your Day 42 Action</h3>
+<p>Do two concrete things this week — not reflection, not reading:</p>
+<div class="action">
+<strong>Step 1 (wording audit):</strong> pull up feedback, calibration notes, or a JD you recently wrote; circle every personality adjective and masculine-coded word (aggressive / abrasive / rockstar…) and run the <strong>double-standard test</strong> on each — does it still hold for the opposite gender? If not, rewrite it as a specific behavior or delete it.<br><br>
+<strong>Step 2 (one sponsor act):</strong> pick a report you think is undervalued (likely the one carrying a lot of glue work) and do <strong>one thing that's sponsor, not mentor</strong>: speak for her in a room she's not in, or hand her a high-visibility opportunity directly. Note what you staked and how it went.<br><br>
+One reflection: <strong>if you laid out your past year of "opportunity allocation" and "credit attribution" as two tables broken down by gender, would you be willing to show them to your team?</strong> Wherever you wouldn't is where you fix next.
+</div>
+</div>
+
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 42 · 2026.06.30</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>领导力 Day 42：女性领导力</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.deepthink{margin-top:50px;padding:28px 26px;background:#fffaf0;border-radius:8px;border-top:3px solid #5c3a18;box-shadow:0 2px 14px rgba(92,58,24,0.09)}
+.deepthink h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:16px;color:#5c3a18}
+.deepthink details{border-bottom:1px dashed #d8c8a8;padding:12px 0}
+.deepthink summary{cursor:pointer;font-weight:600;color:#6b4a1f;font-size:0.98rem}
+.deepthink details div{margin-top:10px;font-size:0.93rem;color:#4a3a20}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<div class="week-tag">Day 42 · 2026.06.30</div>
+<h1>女性领导力：作为管理者，别劝她更自信，先修好那张桌子</h1>
+<div class="meta"><span>主题：Women in Leadership</span><span>·</span><span>4 个原则</span></div>
+<div class="subtitle">"Success and likeability are positively correlated for men and negatively correlated for women." — Sheryl Sandberg</div>
+</header>
+
+<div class="intro">
+<strong>本期的命题：</strong>这一期不是给女性的鸡汤，是给<strong>带着混合团队的男性管理者</strong>的操作手册。性别偏差多不是"坏人故意为之"，而是评价系统里的认知噪声——藏在 calibration 的措辞、谁记笔记的默认、产假回归后"好意"的项目分配里。你改变不了整个行业，但<strong>你能改变你这个房间里的规则</strong>。本期四步：看清双重束缚、理解 Lean In 的有用与盲区、征收"隐形税"（office housework、被打断、被夺功）、用 sponsorship 对冲母职惩罚。给的是可勾选的动作，不是态度。
+</div>
+
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2>双重束缚：能干被嫌不讨喜，讨喜被嫌不够格
+<span class="en">The Double Bind — Competence vs Likability</span></h2>
+<span class="tag">双重束缚</span><span class="tag">去偏措辞</span><span class="tag">绩效校准</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">女性领导者面对一个男性几乎没有的两难：<strong>表现得果断强势会被评价为「不好相处」，表现得温暖配合又被评价为「不够 leader 料」。</strong>这通常不是她的性格问题，是评价者的认知偏差——你的工作是不让这种偏差写进绩效。</div>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="quote">
+<span class="en">"Success and likeability are positively correlated for men and negatively correlated for women. When a man is successful, he is liked by both men and women. When a woman is successful, people of both genders like her less."</span>
+<span class="zh">"对男性，成功与受欢迎度正相关；对女性，负相关。男人成功，男女都更喜欢他；女人成功，两性都更不喜欢她。"</span>
+<span class="source">— Sheryl Sandberg,《Lean In》Ch.2（引 Flynn & Anderson 的 Heidi/Howard 实验：同一份简历，换个名字，能力评价一致，但「Heidi」被评为更自私、更不讨喜）</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">看清机制</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+<line x1="60" y1="240" x2="640" y2="240" stroke="#5c3a18" stroke-width="2"/>
+<line x1="60" y1="240" x2="60" y2="30" stroke="#5c3a18" stroke-width="2"/>
+<text x="350" y="270" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18">成功 / 果断 / 能力 →</text>
+<text x="28" y="135" text-anchor="middle" font-family="Georgia" font-size="13" fill="#5c3a18" transform="rotate(-90 28 135)">受欢迎度 →</text>
+<line x1="80" y1="210" x2="610" y2="70" stroke="#5c8a3a" stroke-width="3"/>
+<text x="615" y="70" font-family="Georgia" font-size="12" font-weight="700" fill="#4a6a28">男性</text>
+<line x1="80" y1="90" x2="610" y2="215" stroke="#b85c3a" stroke-width="3"/>
+<text x="615" y="220" font-family="Georgia" font-size="12" font-weight="700" fill="#a04020">女性</text>
+<text x="200" y="55" font-family="Georgia" font-size="11" fill="#8a6d3b">越成功越被喜欢</text>
+<text x="330" y="170" font-family="Georgia" font-size="11" fill="#8a6d3b">越成功越被「嫌」</text>
+</svg>
+<div style="font-size:0.82rem;color:#8a6d3b;margin-top:8px">同一个果断行为，落在不同性别上得到相反的社会评价——这是结构噪声，不是个人特质。</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：calibration 会上，有人评价你团队一位资深女工程师「她有点 aggressive，team 反馈她不太好相处」。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 不要这样写/附和</div>
+<p>「确实，她需要 soften 一下风格，多注意一下 likability。」——把模糊的人格标签直接写进绩效语言，等于把偏差制度化。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 试着这样说</div>
+<p>「先停一下。『aggressive』是具体行为还是印象？如果是『她在 design review 打断了人 3 次』，那是可改的行为，我会直接跟她讲。但如果是模糊的『不好相处』——<strong>如果 [某男同事] 做同样的事，我们会用同一个词吗？</strong>不会的话，这条不进评语。」</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">检查表 · 去偏措辞自检</div>
+<ul class="checklist">
+<li>我的反馈针对的是<strong>具体行为</strong>，还是人格/风格标签（aggressive / emotional / abrasive / bossy）？</li>
+<li>同样的行为，我对男性下属会用同样的形容词吗？（「果断」vs「强势」的双标测试）</li>
+<li>「team 觉得她不好相处」——这是可验证的行为证据，还是匿名的 likability 投诉？</li>
+<li>calibration 上别人用性格词评价女性时，我有没有要求他换成行为？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>把 likability 投诉当 performance 证据。</strong>「不好相处」常常衡量的是评价者的舒适度，不是她的产出。</li>
+<li><strong>用「culture fit」做模糊否决。</strong>说不清的 fit，往往是「不像我」的体面说法。</li>
+<li><strong>建议她「柔和一点」。</strong>这是把系统偏差的成本，转嫁到受害者身上去修。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">男性管理者的盲区</span>
+你大概率从没被要求过「在能干和讨喜之间二选一」——所以这束缚对你是隐形的。别用「我没感觉到歧视」否定它：你感觉不到，恰恰因为它不向你收税。把「双标测试」变成肌肉记忆——每次想用一个性格形容词，先换成男同事试一遍。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref">翻出你最近写的一份对女性下属的反馈（或一次 calibration 发言），圈出所有人格形容词，逐个改成「具体行为」或删掉。<br><strong>思考题：</strong>你最近一次说某人「不好相处 / 太强势」，如果换成异性，你还会用这个词吗？</div>
+</div>
+</div>
+
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2>Lean In 有用，但别把结构问题甩给个人努力
+<span class="en">Lean In — Useful, and Its Blind Spot</span></h2>
+<span class="tag">Lean In 之辩</span><span class="tag">信心 vs 能力</span><span class="tag">修流程</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">Sandberg 的「坐到桌前、别提前离场」对个体确有用，但它最大的盲区是<strong>把系统性障碍当成个人不够自信来治</strong>。作为管理者，你的杠杆不在劝女性更 push 自己，而在<strong>改你能改的流程</strong>。</div>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="quote">
+<span class="en">"Don't leave before you leave." / Critique: "It's not always enough to lean in, because that shit doesn't work all the time."</span>
+<span class="zh">「别在真正离开之前，就先把自己从事业里撤出来。」（Sandberg）/ 批评一方：「光靠 lean in 不总是够的，因为那套东西不总管用。」（Michelle Obama, 2018）</span>
+<span class="source">— Sheryl Sandberg,《Lean In》Ch.7「Don't Leave Before You Leave」；批评见 Michelle Obama 公开演讲，及 bell hooks 称其为「faux feminism」</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：团队招人，HR 说「我们女性候选人太少，是因为她们不主动 apply、不够 push 自己」。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 不要这样归因</div>
+<p>「那让现有的女工程师多 lean in、多争取吧。」——把系统问题（管道、措辞、评价标准）外包给个人意志。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 改成「修桌子」的动作</div>
+<p>「与其等她们更自信，先看我们这端：JD 里是不是堆了『rockstar / aggressive / 狼性』这类劝退女性投递的措辞？面试 panel 有没有女性？晋升标准奖励的是<strong>实际产出，还是自我推销</strong>？这三条我们今天就能改。」</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">检查表 · 改流程而非改个人</div>
+<ul class="checklist">
+<li>我是在要求<strong>个体改变</strong>，还是在<strong>改流程</strong>？（前者廉价，后者有效）</li>
+<li>JD 是否含 masculine-coded 词（rockstar / ninja / aggressive / 狼性）？用 gender-decoder 过一遍了吗？</li>
+<li>晋升与评优，是否在奖励「会自我推销」多于「真实产出」？</li>
+<li>面试、评审、决策的房间里，有没有结构性的女性在场？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>迷信「信心差距」。</strong>Chamorro-Premuzic 的研究指出：问题常不是女性不够自信，而是<strong>过度自信的男性被错当成有能力</strong>——我们把 confidence 误读成 competence。</li>
+<li><strong>把 Lean In 当全部答案。</strong>它是个体策略，不是组织借口。你不能既不修桌子，又怪她没坐上来。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">诚实的灰色处</span>
+两边各对一半：个体确能靠主动争取改善处境（Lean In 不假）；但只讲个体努力，就掩盖结构成本，还反过来 victim-blame。成熟的立场是<strong>双轨</strong>——鼓励能动性，同时动手修系统。只做一边都是偷懒。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref">拿你团队最近一份 JD，用 gender-decoder 的思路逐词扫描 masculine-coded 措辞，改写至少三处。<br><strong>思考题：</strong>你晋升过的人里，「敢要」的和「埋头做」的，哪类占多数？这个比例说明你在奖励什么？</div>
+</div>
+</div>
+
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2>隐形税：组织家务、被打断、被夺功
+<span class="en">The Invisible Tax — Glue Work, Interruptions, Stolen Credit</span></h2>
+<span class="tag">非晋升任务</span><span class="tag">放大策略</span><span class="tag">轮值机制</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">女性更常被默认分派「组织性家务」——记笔记、订午餐、带新人、办 offsite：重要，但不可晋升。她们又更容易在会上被打断、被抢功。<strong>这是一笔隐形税，管理者必须主动把它征收回来，而不是指望当事人自己抗议。</strong></div>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="quote">
+<span class="en">"Non-promotable tasks—work that benefits the organization but doesn't help you advance—fall disproportionately on women."</span>
+<span class="zh">「非晋升任务——对组织有益、却无助于你晋升的工作——不成比例地落在女性身上。」</span>
+<span class="source">— Linda Babcock et al.,《The No Club: Putting a Stop to Women's Dead-End Work》；另见 Tanya Reilly「Being Glue」：glue work 至关重要，却会限制职业上升</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：会上一位女工程师提了个方案，没人接话；五分钟后一位男同事几乎原样重复，全场点头称赞。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 不要这样</div>
+<p>沉默地让它过去，或会后私下安慰她「我觉得你那个想法挺好的」。——私下安慰不改变功劳归属。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 当场归功（amplification）</div>
+<p>「等一下——这正是 [她的名字] 五分钟前提的那个方案，我想请她展开讲讲。」<strong>当场、点名、把麦克风还给她。</strong>这套「放大」策略源自奥巴马白宫的女性幕僚：一人发言，其他人立刻复述并归功原作者。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">检查表 · 征收隐形税</div>
+<ul class="checklist">
+<li>记笔记 / 办 offsite / 带新人 / on-call 杂务——按性别看，是否倾斜在女性身上？</li>
+<li>这些<strong>非晋升任务我做成轮值了吗</strong>，还是默认谁「擅长」谁一直做？</li>
+<li>会上谁最常被打断？我有没有当场说「让她说完」？</li>
+<li>有人重复别人的点子时，我有没有当场把功劳归还原作者？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>把 glue work 当「她自愿 / 她擅长」。</strong>擅长不等于该一直由她做，更不等于这活该不计入晋升。</li>
+<li><strong>只夸不算。</strong>感谢她「细心负责地组织了团建」，却在晋升时只看「技术影响力」——这是把人引到死胡同还夸她跑得好。</li>
+<li><strong>指望她自己争取署名。</strong>抢功发生在公开场合，纠正也必须在公开场合，且该由有权力的人来做。</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref">这周挑一次会议，安静地数一下每个人被打断的次数，按性别记下来；再把团队的「组织家务」清单列出，看分布。<br><strong>思考题：</strong>过去一个季度真正算进晋升叙事的工作，和实际维系团队运转的工作，是不是同一批人在做？</div>
+</div>
+</div>
+
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2>母职惩罚与赞助：别替她「保护性」地决定
+<span class="en">Motherhood Penalty & Sponsorship</span></h2>
+<span class="tag">母职惩罚</span><span class="tag">善意偏见</span><span class="tag">Sponsor</span>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则</div>
+<div class="principle">同样资历，母亲被评价为能力更低、更不投入（motherhood penalty），父亲反而获得加分（fatherhood bonus）——这是实验证实的偏差。对冲它最有效的杠杆，<strong>不是 mentorship（给建议），是 sponsorship（用你的政治资本替她背书、争机会）。</strong></div>
+</div>
+
+<div class="section">
+<div class="section-label">一句话原则 + 名家原话</div>
+<div class="quote">
+<span class="en">"Mothers were recommended for hire significantly less often than childless women; fathers were not penalized—if anything, they benefited." / "Mentors advise; sponsors act."</span>
+<span class="zh">「母亲被推荐录用的概率显著低于无子女女性；父亲不仅没被扣分，反而受益。」/「导师给建议，赞助人采取行动。」</span>
+<span class="source">— Shelley Correll et al. (2007),「Getting a Job: Is There a Motherhood Penalty?」AJS；Sylvia Ann Hewlett,《(Forget a Mentor) Find a Sponsor》</span>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">Mentor vs Sponsor</div>
+<div class="frame-diagram">
+<svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+<rect x="30" y="30" width="290" height="160" rx="8" fill="#faecd8" stroke="#c47040" stroke-width="2"/>
+<rect x="360" y="30" width="290" height="160" rx="8" fill="#e6efdc" stroke="#5c8a3a" stroke-width="2"/>
+<text x="175" y="60" text-anchor="middle" font-family="Georgia" font-size="16" font-weight="700" fill="#a04020">Mentor 导师</text>
+<text x="505" y="60" text-anchor="middle" font-family="Georgia" font-size="16" font-weight="700" fill="#4a6a28">Sponsor 赞助人</text>
+<text x="50" y="92" font-family="Georgia" font-size="12" fill="#5a3818">· 给你建议、听你倾诉</text>
+<text x="50" y="118" font-family="Georgia" font-size="12" fill="#5a3818">· 在你面前帮你</text>
+<text x="50" y="144" font-family="Georgia" font-size="12" fill="#5a3818">· 花的是时间</text>
+<text x="50" y="170" font-family="Georgia" font-size="12" fill="#5a3818">· 「你应该…」</text>
+<text x="380" y="92" font-family="Georgia" font-size="12" fill="#2f4a18">· 给你机会、替你背书</text>
+<text x="380" y="118" font-family="Georgia" font-size="12" fill="#2f4a18">· 在你不在的房间替你说话</text>
+<text x="380" y="144" font-family="Georgia" font-size="12" fill="#2f4a18">· 花的是政治资本</text>
+<text x="380" y="170" font-family="Georgia" font-size="12" fill="#2f4a18">· 「我已经帮你…」</text>
+</svg>
+<div style="font-size:0.82rem;color:#8a6d3b;margin-top:8px">女性常被给予过量 mentorship、不足 sponsorship——建议听了一堆，机会没多一个。</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">场景示范</div>
+<div class="scene">
+<div class="setup">情境：一位女下属休完产假回来，你正在分配下季度项目，手里有一个高可见度、压力也大的项目。</div>
+<div class="dialog bad">
+<div class="speaker">✗ 「好意」的母墙偏见</div>
+<p>「她刚回来，先给她轻松点的，别给这种高压项目，让她缓缓。」——这是 benevolent sexism：动机是善意，结果是把她踢出晋升轨道，还替她做了决定。</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ 问她，别替她决定</div>
+<p>「有个高可见度的项目，我第一个想到你。你有兴趣吗？如果需要某种灵活安排（时间、交接、节奏），我们可以一起设计。」——<strong>把选择权交还给她</strong>，并在她不在场的晋升会上替她说话。</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">检查表 · Sponsor 而非只 Mentor</div>
+<ul class="checklist">
+<li>我给她的是<strong>建议（mentor）还是机会（sponsor）</strong>？我上一次为她动用政治资本是什么时候？</li>
+<li>在她不在场的 calibration / 晋升讨论里，我有没有替她发声？</li>
+<li>产假 / 育儿期回归，我是不是替她做了「保护性」决定，而没问她本人意愿？</li>
+<li>高可见度项目的分配，按性别看是否均衡？</li>
+</ul>
+</div>
+
+<div class="section">
+<div class="section-label">常见错误</div>
+<div class="pitfall">
+<ul>
+<li><strong>善意偏见（benevolent sexism）和敌意偏见一样有害。</strong>「为她好」地剥夺机会，伤害更隐蔽、更难反驳。</li>
+<li><strong>只 mentor 不 sponsor。</strong>给建议是低成本姿态；动用资本背书才是真支持，也才是你作为管理者的稀缺价值。</li>
+</ul>
+</div>
+<div class="female">
+<span class="female-label">诚实的成本</span>
+sponsorship 有代价——你押上信誉为人背书，她若失手，账也记你一份。这正是它珍贵的原因。但别只挑「安全」的人 sponsor，否则你只是在复制现有的赢家分布。
+</div>
+</div>
+
+<div class="section">
+<div class="section-label">本周习作 + 思考题</div>
+<div class="ref">列出过去一年你真正动用政治资本 sponsor 过的人（不是给建议，是争机会 / 替背书），按性别看分布。<br><strong>思考题：</strong>如果你下属里某位母亲明天来谈晋升，你能立刻说出三件你<strong>已经替她做过</strong>的事吗？还是只有三条「建议」？</div>
+</div>
+</div>
+
+<!-- ============ Deep Think ============ -->
+<div class="deepthink">
+<h3>深入思考 · 推到边界</h3>
+<details>
+<summary>1. 男性管理者高调谈女性领导力，会不会变成 performative 的姿态？</summary>
+<div>有这个风险，而且很真实。区分点是<strong>姿态 vs 机制</strong>：发个声明、转个帖、在三八节请人吃饭，是姿态；改 JD 措辞、把 glue work 做成轮值、在她不在的房间替她背书，是机制。机制不需要你站台，甚至最好别人看不见你在做。判准很简单：你做的事，有没有改变某个具体的资源分配或评价规则？没有，就是表演。</div>
+</details>
+<details>
+<summary>2. 这些去偏措施会不会变成「逆向歧视」，反而给女性贴上「被照顾」的标签？</summary>
+<div>关键在于你修的是<strong>流程</strong>还是<strong>结果</strong>。把 JD 去性别化、把非晋升任务轮值、按行为而非性格评价——这些是修流程，对所有人都更公平，不制造标签。反过来，「因为是女性所以直接晋升」是动结果，既不公也确实会引来质疑。本期所有动作都刻意停在流程层：让规则中立，而不是替谁开后门。这条线要守住。</div>
+</details>
+<details>
+<summary>3. 双重束缚、母职惩罚这些研究多来自北美，在东亚 / 大厂语境一样成立吗？</summary>
+<div>核心机制成立（能力—讨喜双标、母职惩罚普遍存在），但参数不同。东亚语境里「不好相处」的惩罚可能更重，对「谦逊」的期待更高，女性自我推销的社会成本更大——这意味着 Lean In 式「敢要」在这里更不奏效，<strong>修桌子的相对价值更高</strong>。话术要本地化（amplification 在讲求和谐的会议室要换个说法），但底层动作——按行为评价、轮值杂务、sponsor 而非只 mentor——跨文化通用。</div>
+</details>
+<details>
+<summary>4. 当「修桌子」和「这季度交付」冲突时，结构改革的成本由谁承担？</summary>
+<div>诚实说：短期内由你承担。改 JD、在会上打断打断者、押信誉背书，都是当期成本，回报滞后且难归因——这正是结构问题长期无人修的原因，每个管理者的理性选择都是先交付。破局点是把<strong>零边际成本</strong>的动作先做掉（双标测试、归功、问意愿而非替决定，几乎不花时间），把高成本的（重设晋升标准）往上推给有权改制度的人。别假装你能一个人扛整个系统——但你这个房间，是你扛得住的。</div>
+</details>
+</div>
+
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>本期习作 · Your Day 42 Action</h3>
+<p>本期做两件具体的事，不是反思也不是阅读：</p>
+<div class="action">
+<strong>第一步（措辞审计）：</strong>翻出你最近写的反馈、calibration 笔记或一份 JD，圈出所有人格形容词与 masculine-coded 词（aggressive / abrasive / rockstar / 狼性…），逐个跑「双标测试」——换成异性还成立吗？不成立就改成具体行为或删掉。<br><br>
+<strong>第二步（一次 sponsor 动作）：</strong>本周选一位你认为被低估的下属（大概率是承担了大量 glue work 的那位），做<strong>一件 sponsor 而非 mentor 的事</strong>：在她不在的房间替她说一句话，或把一个高可见度机会直接交给她。记下你押上了什么、结果如何。<br><br>
+一个反思题：<strong>如果把你过去一年的「机会分配」和「功劳归属」按性别拉成两张表，你会愿意把它们公开给团队看吗？</strong>不愿意的地方，就是你下一步要修的地方。
+</div>
+</div>
+
+<nav class="footer-nav">
+<a href="index.html">← 返回目录</a>
+</nav>
+
+<footer>BigCat · Leadership Daily · Day 42 · 2026.06.30</footer>
+</div>
+</body>
+</html>
