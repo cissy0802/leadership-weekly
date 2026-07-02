@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leadership Day 44: Mentor &amp; Sponsor</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#f5f1e8;color:#2a2418;line-height:1.75}
+.container{max-width:780px;margin:0 auto;padding:24px 22px 80px}
+header{text-align:center;padding:56px 0 38px;border-bottom:2px solid #c4a878;position:relative}
+header .week-tag{display:inline-block;font-size:0.78rem;letter-spacing:3px;color:#a8702d;margin-bottom:10px;text-transform:uppercase;font-weight:700}
+header h1{font-size:2.05rem;font-weight:800;color:#5c3a18;letter-spacing:2px;line-height:1.3}
+header .meta{margin-top:14px;font-size:0.92rem;color:#8a6d3b}
+header .meta span{margin:0 8px}
+header .subtitle{margin-top:18px;font-size:1rem;color:#a8702d;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+.intro{margin:36px 0 12px;padding:22px 26px;background:#fffaf0;border-left:4px solid #a8702d;border-radius:4px;font-size:0.97rem;color:#3a2f1c}
+.intro strong{color:#5c3a18}
+.card{margin-top:42px;background:#fffaf0;border-radius:8px;padding:34px 32px;box-shadow:0 2px 14px rgba(92,58,24,0.09);border-top:3px solid #a8702d}
+.card-header{border-bottom:1px solid #e6d9bf;padding-bottom:18px;margin-bottom:22px}
+.card-num{display:inline-block;font-size:0.76rem;color:#a8702d;letter-spacing:3px;font-weight:700;margin-bottom:6px}
+.card h2{font-size:1.42rem;color:#5c3a18;font-weight:700;line-height:1.35}
+.card h2 .en{display:block;font-size:0.92rem;color:#8a6d3b;font-weight:400;font-style:italic;margin-top:4px}
+.tag{display:inline-block;font-size:0.74rem;background:#e8dcc0;color:#6b4a1f;padding:3px 10px;border-radius:12px;margin-top:10px;margin-right:6px;letter-spacing:1px}
+.section{margin-top:20px}
+.section-label{font-size:0.78rem;letter-spacing:2.5px;color:#a8702d;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.principle{font-size:1.08rem;color:#3a2f1c;font-weight:600;background:#f3e9d2;padding:14px 18px;border-radius:4px;border-left:3px solid #5c3a18}
+.quote{background:#f8f0dd;padding:16px 20px;border-radius:4px;font-style:italic;color:#4a3a20}
+.quote .en{display:block;color:#3a2f1c;margin-bottom:8px}
+.quote .zh{display:block;color:#6b4a1f;font-style:normal;font-size:0.94rem}
+.quote .source{display:block;margin-top:8px;font-size:0.82rem;color:#8a6d3b;font-style:normal;text-align:right}
+.scene{background:#fcf6e8;padding:18px 20px;border-radius:4px;border:1px solid #e6d9bf}
+.scene .setup{color:#6b4a1f;font-size:0.95rem;margin-bottom:10px}
+.dialog{margin:10px 0;padding:10px 14px;border-radius:4px;font-size:0.95rem}
+.dialog.bad{background:#f5e0d0;border-left:3px solid #b85c3a}
+.dialog.good{background:#e6efdc;border-left:3px solid #5c8a3a}
+.dialog .speaker{font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.dialog.bad .speaker{color:#a04020}
+.dialog.good .speaker{color:#4a6a28}
+.dialog p{margin:4px 0;color:#3a2f1c}
+ul.checklist{list-style:none;padding:0}
+ul.checklist li{padding:8px 0 8px 30px;position:relative;color:#3a2f1c;font-size:0.96rem;border-bottom:1px dashed #e6d9bf}
+ul.checklist li:last-child{border-bottom:none}
+ul.checklist li::before{content:"☐";position:absolute;left:6px;color:#a8702d;font-size:1.1rem;top:6px}
+.pitfall{background:#fbf0e8;padding:14px 18px;border-radius:4px;border-left:3px solid #c47040;font-size:0.94rem;color:#5a3818}
+.pitfall ul{margin-left:20px;margin-top:6px}
+.pitfall li{margin:4px 0}
+.female{background:#f3e8f0;padding:16px 20px;border-radius:4px;border-left:3px solid #8a3a6a;font-size:0.94rem;color:#4a1f3a;margin-top:12px}
+.female-label{font-weight:700;color:#7a2a5a;font-size:0.82rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block}
+.ref{font-size:0.9rem;color:#4a3a20}
+.ref strong{color:#5c3a18}
+.deepthink{margin-top:50px;padding:28px 26px;background:#fffaf0;border-radius:8px;border-top:3px solid #5c3a18;box-shadow:0 2px 14px rgba(92,58,24,0.09)}
+.deepthink h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:16px;color:#5c3a18}
+.deepthink details{border-bottom:1px dashed #d8c8a8;padding:12px 0}
+.deepthink summary{cursor:pointer;font-weight:600;color:#6b4a1f;font-size:0.98rem}
+.deepthink details div{margin-top:10px;font-size:0.93rem;color:#4a3a20}
+.homework{margin-top:50px;padding:28px 26px;background:linear-gradient(135deg,#5c3a18 0%,#7a4a20 100%);color:#f5f1e8;border-radius:8px}
+.homework h3{font-size:1.15rem;letter-spacing:2px;margin-bottom:14px;color:#f5e8c8}
+.homework p{font-size:1rem;color:#f0e4c8;margin-bottom:8px}
+.homework .action{background:rgba(255,250,240,0.1);padding:14px 18px;border-radius:4px;margin-top:12px;font-style:italic;border-left:3px solid #c4a878}
+.frame-diagram{background:#fcf6e8;padding:22px;border-radius:6px;margin:16px 0;border:1px solid #e6d9bf;text-align:center}
+.frame-diagram svg{max-width:100%;height:auto}
+nav.footer-nav{margin-top:60px;text-align:center;padding:30px 0;border-top:1px solid #c4a878}
+nav.footer-nav a{color:#a8702d;text-decoration:none;font-size:0.95rem;padding:8px 20px;border:1px solid #c4a878;border-radius:20px;transition:all 0.2s}
+nav.footer-nav a:hover{background:#a8702d;color:#fffaf0}
+footer{text-align:center;padding:20px 0 4px;font-size:0.8rem;color:#b8a888}
+@media(max-width:600px){
+header h1{font-size:1.55rem}
+.card{padding:24px 20px}
+.card h2{font-size:1.2rem}
+.container{padding:16px 14px 60px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="week-tag">Day 44 · 2026.07.02</div>
+<h1 data-tts="a41c7e6b2d905f18">Mentor &amp; Sponsor: Tell Apart "Who Advises You" From "Who Spends Political Capital For You"</h1>
+<div class="meta"><span>Topic: Mentor &amp; Sponsor</span><span>·</span><span>4 principles</span></div>
+<div class="subtitle">"A sponsor is someone who will go out on a limb on your behalf." — Sylvia Ann Hewlett</div>
+</header>
+<div class="intro">
+<strong>This week's thesis:</strong> Mentor and Sponsor are not two words for the same thing. Plenty of engineers hustle to "find a mentor," accumulate a stack of senior people happy to grab coffee and hand out advice, and years later their level hasn't budged—because the person who actually decides whether you move up is the one who says your name in the calibration room when you're <strong>not there</strong>, and stakes their own reputation on it. <strong>A mentor gives you advice; a sponsor spends capital.</strong> Four moves this week: separating the two, finding a mentor without the awkward ask, <em>earning</em> (not begging for) a sponsor, and—as a manager—how to sponsor others, especially the ones quietly carrying load-bearing work who never market themselves.
+</div>
+<!-- ============ Card 1 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 01</div>
+<h2 data-tts="1b2f8c4a6e70d391">The Core Difference: Mentors Talk With You, Sponsors Talk About You
+<span class="en">Mentors Talk With You; Sponsors Talk About You</span></h2>
+<span class="tag">Difference</span><span class="tag">Political capital</span><span class="tag">Diagnosis</span>
+</div>
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">A mentor advises you to your face, at <strong>zero risk</strong>; a sponsor fights for you in a room you're not in, <strong>staking their own reputation</strong>. You need both—but never mistake a warm mentor for your backer, or on promo day you'll find no one in the room speaking for you.</div>
+</div>
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"A sponsor is someone who believes in you and will go out on a limb on your behalf—expending hard-won political capital to advocate for your advancement. Mentors advise; sponsors act."</span>
+<span class="source">— Sylvia Ann Hewlett,《(Forget a Mentor) Find a Sponsor》Intro</span>
+</div>
+</div>
+<div class="section">
+<div class="section-label">One diagram to see both clearly</div>
+<div class="frame-diagram">
+<svg viewbox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8f0dd" height="290" rx="6" stroke="#a8702d" stroke-width="2" width="330" x="18" y="18"></rect>
+<rect fill="#e6efdc" height="290" rx="6" stroke="#5c8a3a" stroke-width="2" width="330" x="360" y="18"></rect>
+<text fill="#8a6d3b" font-family="Georgia" font-size="16" font-weight="700" text-anchor="middle" x="183" y="46">MENTOR</text>
+<text fill="#8a6d3b" font-family="Georgia" font-size="11" text-anchor="middle" x="183" y="66">gives you advice</text>
+<text fill="#4a6a28" font-family="Georgia" font-size="16" font-weight="700" text-anchor="middle" x="525" y="46">SPONSOR</text>
+<text fill="#4a6a28" font-family="Georgia" font-size="11" text-anchor="middle" x="525" y="66">bets on you</text>
+<line stroke="#d8c8a8" stroke-width="1" x1="34" x2="332" y1="82" y2="82"></line>
+<line stroke="#c8dcb8" stroke-width="1" x1="376" x2="674" y1="82" y2="82"></line>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="104">Relation: talks WITH you</text>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="130">Where: 1:1s, coffee</text>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="156">Spends: time</text>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="182">Risk: almost none</text>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="208">Gives: perspective, answers</text>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="234">How to get: can ask</text>
+<text fill="#3a2f1c" font-family="Georgia" font-size="12" x="34" y="260">You can have: several</text>
+<text fill="#a04020" font-family="Georgia" font-size="12" font-weight="700" x="34" y="290">Result: you get smarter</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="104">Relation: talks ABOUT you</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="130">Where: calibration, promo</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="156">Spends: reputation / capital</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="182">Risk: vouches for you</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="208">Gives: opportunity, level</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="234">How to get: earn, can't ask</text>
+<text fill="#2a3a18" font-family="Georgia" font-size="12" x="376" y="260">You need: at least one</text>
+<text fill="#4a6a28" font-family="Georgia" font-size="12" font-weight="700" x="376" y="290">Result: you rise</text>
+</svg>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Scene</div>
+<div class="scene">
+<div class="setup">Situation: BigCat has coffee with a Director each quarter, gets plenty of career advice, and has always felt "I've got a backer." At Staff calibration, his packet gets bounced: "insufficient visible impact."</div>
+<div class="dialog bad">
+<div class="speaker">✗ The misread</div>
+<p>Treating "a senior person willing to give me advice" as "someone who'll fight for me." The Director played mentor the whole time—giving perspective, never spending a cent of political capital to vouch for you in any decision room. You logged the warmth of mentorship as the commitment of sponsorship.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ The diagnostic (ask yourself one thing)</div>
+<p>To tell whether someone is your sponsor, ask a single question: <strong>"When I'm not in that room, will he say my name unprompted—and take on risk to do it?"</strong> If the answer is "not sure" or "no," he's a mentor—that doesn't diminish him, but you can't stake your promotion on him.</p>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Common mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Comforting yourself with mentor count.</strong> "I have three mentors" sounds safe, but your sponsor count may be zero.</li>
+<li><strong>Only seeking people like you.</strong> A good mentor may lack the power to vouch for you; a powerful sponsor may not be someone you click with. Don't conflate them.</li>
+<li><strong>Passively waiting for a sponsor to descend.</strong> Sponsors are drawn by "performance + visibility," not by being moved.</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Sylvia Ann Hewlett,《(Forget a Mentor) Find a Sponsor》</strong>— the Center for Talent Innovation research that established the "two currencies" frame.<br/><strong>Herminia Ibarra et al.,《Why Men Still Get More Promotions Than Women》</strong>(HBR, 2010) — source of "over-mentored and under-sponsored."</div>
+</div>
+</div>
+<!-- ============ Card 2 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 02</div>
+<h2 data-tts="7d3e9a1c5b82f460">How To Find A Mentor: Don't Ask "Will You Be My Mentor?"
+<span class="en">How To Find A Mentor Without The Awkward Ask</span></h2>
+<span class="tag">Finding a mentor</span><span class="tag">A specific question</span><span class="tag">Low commitment</span>
+</div>
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">"Will you be my mentor?" is the worst opener—too heavy, too vague, forcing someone to commit on the spot to an open-ended relationship. Do this instead: bring a <strong>specific question</strong> for a single <strong>low-commitment</strong> ask, and let the relationship grow itself, rather than signing a contract first.</div>
+</div>
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"If someone has to ask the question, the answer is probably no. When someone finds the right mentor, it is obvious. The question becomes a statement dripping with implied commitment."</span>
+<span class="source">— Sheryl Sandberg,《Lean In》Ch.5 "Are You My Mentor?"</span>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Scene: how to open</div>
+<div class="scene">
+<div class="setup">Situation: BigCat wants to consult a senior Principal Engineer who is busy and whom he barely knows.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Don't send this</div>
+<p>"Hi, I really admire you—<strong>would you be my mentor</strong>, say monthly?" — He'll either vaguely agree out of politeness and then vanish, or feel handed a boundary-less long-term obligation. You gave him an open-ended commitment question instead of a concrete request he can help with right now.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Try this instead</div>
+<p>"I'm working through an <strong>X decision</strong> (whether to split a service into two team-owned modules). I read up on the Y migration you led and have <strong>three specific questions</strong>—20 minutes of your time—especially on how you handled the cross-team ownership disputes. Does Thursday or next Tuesday work?"</p>
+<p>(After one high-quality consult, continue naturally: "That helped a lot—I may hit a similar problem next quarter, could I grab 20 minutes again then?"—mentorship gets <strong>accumulated</strong> one exchange at a time, not signed all at once.)</p>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Finding-a-mentor checklist</div>
+<ul class="checklist">
+<li>Do I have a <strong>specific question</strong> for this consult? Or do I just want to "build a relationship"? (The latter gives them nothing to help with.)</li>
+<li>Did I do my homework? (Read their doc / project first, so the question is worth their time.)</li>
+<li>Am I making a one-time low-commitment ask, or forcing them into a long-term obligation?</li>
+<li>Did I send a "here's how I used your advice" follow-up? (A mentor keeps investing only when they see it landed.)</li>
+<li>Am I hunting for one "do-it-all mentor"? (You want <strong>a set</strong>: different people for tech, career, and politics.)</li>
+</ul>
+</div>
+<div class="section">
+<div class="section-label">Common mistakes</div>
+<div class="pitfall">
+<ul>
+<li><strong>Turning a consult into a dump.</strong> "I've been so lost lately…" for 40 minutes with no answerable question—they'll dodge you next time.</li>
+<li><strong>Taking advice, giving no feedback.</strong> What a mentor cares about most is "did my words help." No feedback, their sense of investment goes to zero.</li>
+<li><strong>Making one person carry it all.</strong> There's no do-it-all mentor: tech, career pivots, org politics are often three different people; a peer or even a junior strong in one area counts too.</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Sheryl Sandberg,《Lean In》</strong>(Ch. 5 "Are You My Mentor?") — the classic "don't ask, just do" argument.<br/><strong>Julie Zhuo,《The Making of a Manager》</strong>— the practical view of a mentor as "a set of people for specific problems" rather than a single guru.</div>
+</div>
+</div>
+<!-- ============ Card 3 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 03</div>
+<h2 data-tts="c58b0f27a9e4d613">How To Earn A Sponsor: Sponsors Are Won, Not Requested
+<span class="en">Sponsors Are Earned, Not Requested</span></h2>
+<span class="tag">Earning a sponsor</span><span class="tag">Performance+loyalty</span><span class="tag">Visibility</span>
+</div>
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">You can't "request" a sponsor—senior people only bet on things that are <strong>zero-risk, high-return</strong> for them. What you can do is make yourself "bettable": <strong>solid performance + reliable loyalty + a clear personal brand</strong>, so vouching for you is like gilding their own face, not taking a risk.</div>
+</div>
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"Protégés earn a sponsor's backing with two currencies: stellar performance and fierce loyalty. Sponsorship is a two-way street, an alliance—not an act of charity."</span>
+<span class="source">— Sylvia Ann Hewlett,《(Forget a Mentor) Find a Sponsor》Ch.2</span>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Scene: making yourself "bettable"</div>
+<div class="scene">
+<div class="setup">Situation: BigCat has decided a certain VP is the ideal sponsor (she has promo influence and prizes reliable delivery).</div>
+<div class="dialog bad">
+<div class="speaker">✗ The direct beg</div>
+<p>Grabs coffee with the VP and opens: "Could you <strong>champion me</strong>, help me out on promotion?" — You've dumped all the risk on her: she doesn't know your work, yet you're asking her to pledge her reputation on the spot. She'll just politely deflect.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Three steps to "earn" the backing</div>
+<p><strong>1) Take on work she cares about:</strong> volunteer for a high-visibility project the VP values (not something in your comfort zone), and deliver it cleanly.</p>
+<p><strong>2) Make the result attributable:</strong> present it where she'll see it, in a <strong>quantified, named-to-you</strong> way—"we cut P99 by 40%; I led two people to rebuild the scheduling layer." Not credit-grabbing—keeping the contribution from drowning.</p>
+<p><strong>3) Have a mentor make the intro:</strong> let someone who already trusts you say "you should look at what BigCat did"—third-party endorsement beats self-promotion tenfold.</p>
+<p>After all three, sponsorship often happens <strong>without you having to ask</strong>: the VP says your name at the next calibration, because speaking for you gives her face and carries no risk.</p>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">"Bettable" checklist</div>
+<ul class="checklist">
+<li>In my recent work, is there something a potential sponsor <strong>saw firsthand</strong>? Or is it all buried where they can't see?</li>
+<li>Is my contribution <strong>attributable to me personally</strong>? Or blurred into "the team did it together"?</li>
+<li>If they vouch for me, would I embarrass them somewhere? — lowering their sense of risk is key.</li>
+<li>Have I reliably helped them succeed? (Loyalty currency = you helped them hit their goals too.)</li>
+<li>Am I staking it all on a <strong>single</strong> sponsor? (If they leave, you collapse.)</li>
+</ul>
+</div>
+<div class="section">
+<div class="section-label">Common mistakes + a note for women</div>
+<div class="pitfall">
+<ul>
+<li><strong>Reading "loyalty" as "picking a side / flattery."</strong> Hewlett's loyalty is "I reliably help you hit your goals and don't stab you in the back," not unprincipled dependence.</li>
+<li><strong>Delivering without surfacing.</strong> Work buried where no one sees it might as well not exist. Visibility isn't vanity—it's the precondition for a sponsor's bet.</li>
+<li><strong>Treating a sponsor as a wishing well.</strong> You have to help their goals succeed through you first—it's a two-way alliance, not one-way asking.</li>
+</ul>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Research repeatedly shows women are more likely to be "over-mentored and under-sponsored" (Ibarra, HBR)—receiving plenty of well-meaning advice while few actually spend political capital. Two taxes stack on top: first, the <strong>same results demand a longer evidence trail before you're bet on</strong>; second, the <strong>optics worry of cross-gender sponsorship</strong>—some male executives deliberately avoid sponsoring young women one-on-one, shrinking an already-scarce sponsor pool further. The counter isn't to "ask" harder, but to ① make results <strong>undeniably attributable</strong> so the bar to vouch drops to a minimum, and ② actively seek sponsorship in <strong>group, public</strong> settings (reviews, readouts), routing around the sensitivity of one-on-one optics.
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Sylvia Ann Hewlett,《(Forget a Mentor) Find a Sponsor》</strong>(Ch. 2) — the "performance + loyalty" currencies, and how a protégé lowers a sponsor's risk.<br/><strong>Herminia Ibarra,《Why Men Still Get More Promotions Than Women》</strong>(HBR, 2010) — source of the sponsorship-gap data.</div>
+</div>
+</div>
+<!-- ============ Card 4 ============ -->
+<div class="card">
+<div class="card-header">
+<div class="card-num">PRINCIPLE 04</div>
+<h2 data-tts="e2790a4c8b16f5d3">How To Sponsor Others: Spend Your Capital, Speak For The Quiet
+<span class="en">How To Sponsor Others — Spend Your Capital On The Quiet Ones</span></h2>
+<span class="tag">Being a sponsor</span><span class="tag">Manager's lens</span><span class="tag">Load-bearing work</span>
+</div>
+<div class="section">
+<div class="section-label">Principle in one line</div>
+<div class="principle">As a manager, mentoring is your duty; <strong>sponsoring is a choice</strong>: actively spend your reputation to vouch for specific people in calibration and promo rooms. The ones who most deserve your sponsorship are usually those carrying load-bearing work who never market themselves—they won't come ask you, so you have to see them.</div>
+</div>
+<div class="section">
+<div class="section-label">In their words</div>
+<div class="quote">
+<span class="en">"Mentorship is advising; sponsorship is spending your political and reputational capital to advocate for someone when they're not in the room."</span>
+<span class="source">— Lara Hogan,《Resilient Management》/ "What Does Sponsorship Look Like?"</span>
+</div>
+</div>
+<div class="section">
+<div class="section-label">The sponsorship-behavior ladder (lighter → heavier)</div>
+<div class="frame-diagram">
+<svg viewbox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="grad" x1="0" x2="1"><stop offset="0" stop-color="#c8dcb8"></stop><stop offset="1" stop-color="#5c8a3a"></stop></lineargradient>
+</defs>
+<rect fill="url(#grad)" height="34" rx="4" width="620" x="40" y="30"></rect>
+<text fill="#2a3a18" font-family="Georgia" font-size="13" x="52" y="52">Political capital spent ——— from little to a lot ———→</text>
+<rect fill="#eef4e6" height="26" rx="4" stroke="#5c8a3a" width="120" x="40" y="86"></rect>
+<text fill="#2a3a18" font-family="Georgia" font-size="11.5" text-anchor="middle" x="100" y="103">① Amplify</text>
+<text fill="#4a5a38" font-family="Georgia" font-size="10.5" x="170" y="103">boost their overlooked work in chat/meetings, by name</text>
+<rect fill="#e6efdc" height="26" rx="4" stroke="#5c8a3a" width="120" x="40" y="122"></rect>
+<text fill="#2a3a18" font-family="Georgia" font-size="11.5" text-anchor="middle" x="100" y="139">② Endorse</text>
+<text fill="#4a5a38" font-family="Georgia" font-size="10.5" x="170" y="139">publicly back their judgment ("trust XX here")</text>
+<rect fill="#dce8c8" height="26" rx="4" stroke="#5c8a3a" width="120" x="40" y="158"></rect>
+<text fill="#2a3a18" font-family="Georgia" font-size="11.5" text-anchor="middle" x="100" y="175">③ Connect</text>
+<text fill="#4a5a38" font-family="Georgia" font-size="10.5" x="170" y="175">introduce them to people who grant opportunity</text>
+<rect fill="#cfe0b4" height="26" rx="4" stroke="#5c8a3a" width="120" x="40" y="194"></rect>
+<text fill="#2a3a18" font-family="Georgia" font-size="11.5" text-anchor="middle" x="100" y="211">④ Advocate</text>
+<text fill="#4a5a38" font-family="Georgia" font-size="10.5" x="170" y="211">fight for their level in calibration, taking the pushback</text>
+<rect fill="#bcd49c" height="26" rx="4" stroke="#4a6a28" width="120" x="40" y="230"></rect>
+<text fill="#2a3a18" font-family="Georgia" font-size="11.5" text-anchor="middle" x="100" y="247">⑤ Stake</text>
+<text fill="#4a5a38" font-family="Georgia" font-size="10.5" x="170" y="247">give a stretch role, put your own reputation on them</text>
+</svg>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Scene: laying groundwork for the quiet one before calibration</div>
+<div class="scene">
+<div class="setup">Situation: a senior engineer on your team quietly carries "cross-team coordination + on-call optimization + mentoring newcomers"—strong technically, never self-promotes. Promo calibration is next week.</div>
+<div class="dialog bad">
+<div class="speaker">✗ Passive</div>
+<p>You think he's great, but at calibration only the self-marketers get named repeatedly; you didn't lay any groundwork, and by the time it's his turn the room is "out of budget." The good one gets systematically dropped.</p>
+</div>
+<div class="dialog good">
+<div class="speaker">✓ Active sponsoring (before + during)</div>
+<p><strong>Amplify beforehand:</strong> a week ahead, privately catch two peer managers with a voice: "This round I want to focus on XX—he halved our cross-team incident rate this half; you've probably seen his fingerprints in reviews."—plant the awareness first.</p>
+<p><strong>Advocate in the room (attributable framing):</strong> "XX's impact isn't a single feature, it's at the <strong>systems level</strong>: he rebuilt the on-call flow, cut pager volume 60%, and grew two people who can now hold the rotation. That's the definition of Staff-level 'amplifying team output.' I'll vouch for this nomination."</p>
+<p>Note the last line—<strong>"I'll vouch for this"</strong>—that's spending political capital, not just praising.</p>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section-label">Self-check before sponsoring</div>
+<ul class="checklist">
+<li>When did I last truly spend political capital to vouch for a report? (Can't name it = you're only mentoring.)</li>
+<li>Are the people I sponsor all "like me / good self-marketers"? Which quiet load-bearers did I miss?</li>
+<li>Before I fight for him, do I have <strong>attributable, quantified</strong> evidence? (Advocacy needs ammunition, not "I think he's good.")</li>
+<li>Did I lay <strong>private groundwork</strong> for the person I want to sponsor, a week before calibration?</li>
+<li>Did I tell the person "here's what I'm fighting for," so they know the direction and keep delivering?</li>
+</ul>
+</div>
+<div class="section">
+<div class="section-label">Common mistakes + a note for women</div>
+<div class="pitfall">
+<ul>
+<li><strong>Mistaking praise for sponsorship.</strong> Saying "he's great" in the room spends no capital. Sponsorship is "I'll vouch for this / I'll use my quota to nominate him."</li>
+<li><strong>Only sponsoring people like you.</strong> Affinity bias makes sponsorship replicate the in-group and ossify homogeneity (see Deeper Questions).</li>
+<li><strong>Advocating without ammunition.</strong> A vouch with no attributable evidence pops at the first poke in calibration—and burns your reputation.</li>
+</ul>
+<div class="female">
+<span class="female-label">Female Leader's Note</span>
+Among people "carrying load-bearing work but not marketing it," women and minorities are over-represented—they're more often assigned glue work / office housework (coordination, note-taking, mentoring newcomers, organizing offsites), and those contributions are naturally invisible in reviews that favor "shiny features" (see Tanya Reilly, "Being Glue"). Your leverage as a sponsor is exactly here: <strong>translate invisible load-bearing work into attributable impact that calibration understands</strong>. This isn't charity—it's correcting a systematic measurement bias, or the people actually holding the team up keep getting squeezed off the promo list by the loud.
+</div>
+</div>
+<div class="section">
+<div class="section-label">Key references</div>
+<div class="ref"><strong>Lara Hogan,《Resilient Management》</strong> and her post "What Does Sponsorship Look Like?" — source of the concrete behavior list (amplify / endorse / connect / advocate).<br/><strong>Tanya Reilly, "Being Glue"</strong>— the account of load-bearing yet invisible glue work, and what a sponsor should translate.</div>
+</div>
+</div>
+</div>
+<!-- ============ Deep Think ============ -->
+<div class="deepthink">
+<h3>Deeper Questions</h3>
+<details>
+<summary>Where exactly is the line between a sponsor and "hitching to a patron / a faction"?</summary>
+<div>The line is the <strong>basis of the vouch</strong>: a sponsor speaks for you based on your <strong>real, attributable contribution</strong>; a faction binds interests based on <strong>side-picking and personal dependence</strong>. With the former you can always prove yourself with results; with the latter, once your patron falls you have nothing. Healthy signal: several people with a voice will vouch because of your real impact. Danger signal: you start distorting judgment, grabbing credit, hiding information to please a single patron. Alliances rest on value; factions rest on fear—you know in your heart which you're in.</div>
+</details>
+<details>
+<summary>Doesn't sponsorship naturally replicate the in-group—the powerful only lifting those like themselves?</summary>
+<div>Yes, and this is its biggest systemic side effect. Similarity bias makes a sponsor unconsciously spend capital on those who "remind me of my younger self," so power self-replicates along gender, race, background. Countering it takes mechanism: ① your own sponsor list has <strong>at least one person not like you</strong>; ② base the vouch on attributable evidence, not "chemistry"; ③ count glue work explicitly. Personal awareness + structural constraint—neither alone is enough.</div>
+</details>
+<details>
+<summary>Small / flat orgs have no calibration room—does the sponsor concept still hold?</summary>
+<div>It holds; only the venue changes. Without formal calibration, "who speaks for you when you're absent" still decides your opportunities—the room just becomes the founder's dinner table, the investor's call, the key customer's verdict. The smaller the scale, the higher a single sponsor's weight (the founder's one word is life-or-death), and the greater the fragility. So at a small company, win that key person's backing and let more stakeholders see you—don't stake your life on one person's whims.</div>
+</details>
+<details>
+<summary>If my sponsor leaves or falls, is my career now over-fragile?</summary>
+<div>Yes—a single sponsor is a classic <strong>single point of failure</strong>: if they leave, lose power, or fall out with you, the backing you accumulated can zero out overnight. The fix is to run sponsorship as a <strong>portfolio</strong>—have two or three people, across different factions and levels, root for you based on your real contribution. This loops back to Card 3: the more you win backing through "attributable results" rather than "a single relationship," the more transferable and shock-resistant your career capital. Bet on work over people—work can be seen by many.</div>
+</details>
+<details>
+<summary>The optics worry of cross-gender / cross-race sponsorship is real—is avoiding it fair? Who bears the cost?</summary>
+<div>The worry is real (especially post-#MeToo, some male execs avoid sponsoring young women one-on-one), but the cost is unfairly shifted onto the avoided—they thus find it harder to get already-scarce sponsorship. Treating "avoidance" as the solution trades the weaker party's opportunity cost for the stronger party's psychological safety. The more responsible move is to <strong>de-privatize</strong> sponsorship: vouch in group, public, recordable settings (reviews, project readouts, team forums), lowering optics sensitivity while making sponsorship transparent and accountable. Avoidance isn't neutral—avoidance is itself a choice with consequences.</div>
+</details>
+</div>
+<!-- ============ Homework ============ -->
+<div class="homework">
+<h3>This Week's Exercise · Your Day 44 Action</h3>
+<p>Do two concrete things this week—one upward, one downward:</p>
+<div class="action">
+<strong>Step 1 (map your relationships):</strong> list your current senior relationships and label each with Card 1's question: <strong>"Will he speak for me in a room I'm not in, and take on risk to do it?"</strong> Yes → Sponsor, No → Mentor. Many will find the Sponsor column empty. If so, pick one of Card 3's three steps and <strong>start it this week</strong> (simplest: surface one already-finished result, attributably, once, where a potential sponsor can see it).<br/><br/>
+<strong>Step 2 (do one real sponsor act):</strong> pick a report who "carries load-bearing work but doesn't market it," and in a <strong>public setting</strong> (chat, review, weekly sync) use Card 4's method to amplify one of their undervalued contributions, <strong>by name + attributable</strong>. Then reflect: <strong>"When did I last truly spend political capital to vouch for someone? If I can't recall, have I been only mentoring, never sponsoring?"</strong>
+</div>
+</div>
+<nav class="footer-nav">
+<a href="index.en.html">← Back to Index</a>
+</nav>
+<footer>BigCat · Leadership · Day 44 · 2026.07.02</footer>
+</div>
+</body>
+</html>
